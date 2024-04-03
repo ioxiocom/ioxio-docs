@@ -1,32 +1,15 @@
 <script>
-  import A from "$lib/A.svelte"
-  import Header from "$lib/Header.svelte"
+  import Layout from "$lib/components/Layout.svelte"
 
   import "@fontsource/poppins"
 
-  import "./styles.css"
+  import "$styles/_init.scss"
   import "svelte-highlight/styles/github.css"
-  import Breadcrumbs from "$lib/Breadcrumbs.svelte"
 </script>
 
-<div class="app">
-  <div class="content">
-    <Header />
-
-    <main>
-      <slot />
-    </main>
-
-    <footer>
-      <p>
-        Try out our technologies for free on the <A href="https://sandbox.ioxio-dataspace.com"
-          >IOXIO Dataspace&trade; sandbox</A
-        > and the <A href="https://testbed.fi">Finnish data economy testbed</A>.
-      </p>
-      <p>Visit <A href="https://ioxio.com">ioxio.com</A> to learn more about IOXIO&reg;</p>
-    </footer>
-  </div>
-</div>
+<Layout>
+  <slot />
+</Layout>
 
 <style lang="scss">
   $targetOpacity: 0.85;
