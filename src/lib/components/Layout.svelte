@@ -80,7 +80,7 @@
     position: relative;
   }
 
-  :global(.main-grid .mdc-layout-grid__inner) {
+  :global(.main-grid, .main-grid .mdc-layout-grid__inner) {
     height: 100%;
   }
 
