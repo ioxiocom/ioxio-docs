@@ -13,13 +13,14 @@
   const popover = createPopover({})
   const size = breakpointObserver()
   $: isSmallScreen = size.smallerThan("md")
-  popover.open()
 </script>
 
 <section>
   <NavBar {popover} />
   <Container class="main-container">
-    <!--        <Sidebar/>-->
+    {#if !$isSmallScreen}
+      <Sidebar />
+    {/if}
     <!-- needs to stay there for better keyboard navigation on mobile -->
     {#if $isSmallScreen && $popover.expanded}
       <div class="mobile-sidebar-wrapper" use:popover.panel transition:fade={{ duration: 100 }}>
@@ -35,7 +36,6 @@
       {#if $page.url.pathname !== "/"}
         {#if !$isSmallScreen}
           <Grid sm={0} md={3} class="left-nav-wrapper">
-            <Sidebar />
             <div class="left-nav" />
           </Grid>
         {/if}
@@ -46,7 +46,6 @@
       {:else}
         {#if !$isSmallScreen}
           <Grid sm={0} md={2} lg={1} class="left-nav-wrapper">
-            <Sidebar />
             <div class="left-nav" />
           </Grid>
         {/if}

@@ -48,14 +48,10 @@
     background-color: $color-primary-highlight;
     border-right: 1px solid $color-primary-dark-hover;
     padding-top: 1rem;
+    z-index: 1;
 
     position: absolute;
     left: 0;
-    //
-    //@include tablet() {
-    //  left: -$spacing-02;
-    //}
-
     top: 0;
     overflow: hidden;
     white-space: nowrap;
