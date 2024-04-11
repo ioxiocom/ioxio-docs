@@ -3,11 +3,23 @@
   import SchemasIcon from "$lib/images/schemas-icon.svg"
   import HomeIcon from "$lib/images/home-icon.svg"
   import { page } from "$app/stores"
+  import { spring } from "svelte/motion"
+
+  const MENU_SMALL = 72
+  const MENU_WIDE = 12 * 16
 
   export let mobile = false
+
+  const width = spring(mobile ? MENU_WIDE : MENU_SMALL)
 </script>
 
-<nav class="sidebar" class:mobile-only={mobile}>
+<nav
+  class="sidebar"
+  class:mobile-only={mobile}
+  style={`width: ${$width}px`}
+  on:mouseover={() => width.set(MENU_WIDE)}
+  on:mouseout={() => width.set(MENU_SMALL)}
+>
   <a href="/" class="menu-item" class:selected={$page.url.pathname === "/"}>
     <div class="icon-wrapper">
       <HomeIcon />
@@ -18,7 +30,7 @@
     <div class="icon-wrapper">
       <QRCodeIcon />
     </div>
-    <div class="name">IOXIO Tags™</div>
+    <div class="name">IOXIO Tags</div>
   </a>
   <a href="/schemas" class="menu-item" class:selected={$page.url.pathname.startsWith("/schemas")}>
     <div class="icon-wrapper">
@@ -32,7 +44,6 @@
   @import "$styles/setup.scss";
 
   nav {
-    width: 72px;
     height: 100%;
     background-color: $color-primary-highlight;
     border-right: 1px solid $color-primary-dark-hover;
@@ -40,8 +51,12 @@
 
     position: absolute;
     left: 0;
+    //
+    //@include tablet() {
+    //  left: -$spacing-02;
+    //}
+
     top: 0;
-    transition: width 250ms ease 0s;
     overflow: hidden;
     white-space: nowrap;
 
@@ -67,7 +82,7 @@
 
       .icon-wrapper {
         flex-shrink: 0;
-        padding: 8px;
+        padding: $spacing-01;
 
         :global(svg) {
           width: $spacing-03;
@@ -85,13 +100,15 @@
         .name {
           color: $color-success-main;
         }
+
+        :global(svg path) {
+          fill: $color-success-main;
+        }
       }
     }
 
     &:hover,
     &.mobile-only {
-      width: 13rem;
-
       .menu-item.selected {
         background-color: $color-success-main;
         margin-right: $spacing-01;

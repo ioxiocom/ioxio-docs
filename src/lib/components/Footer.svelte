@@ -3,10 +3,10 @@
   import Grid from "$lib/components/Grid.svelte"
   import Button from "$lib/components/Button.svelte"
 
-  import IOXIO from "$lib/images/ioxio-logo.svg?dataurl"
-  import mail from "$lib/images/mail-icon.svg"
-  import slack from "$lib/images/slack-icon.svg"
-  import arrow from "$lib/images/link-arrow-icon.svg?dataurl"
+  import IOXIOLogo from "$lib/images/ioxio-logo.svg?dataurl"
+  import MailIcon from "$lib/images/mail-icon.svg"
+  import SlackIcon from "$lib/images/slack-icon.svg"
+  import ArrowIcon from "$lib/images/link-arrow-icon.svg"
 
   const SLACK_URL = "https://slack.ioxio.com"
   const EMAIL_URL = "mailto:support@ioxio.com"
@@ -20,10 +20,15 @@
         <Grid sm={12} md={6}>
           <div class="try-out-section">
             <h3>Try out our technologies for free on</h3>
-            <div class="link">
-              <a href="https://sandbox.ioxio-dataspace.com"> IOXIO Dataspace&trade; Sandbox </a>
-              <img src={arrow} alt="arrow" />
-            </div>
+            <a
+              class="link"
+              href="https://sandbox.ioxio-dataspace.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>IOXIO Dataspace™ Sandbox</span>
+              <ArrowIcon />
+            </a>
           </div>
         </Grid>
         <Grid sm={0} lg={5} />
@@ -39,13 +44,13 @@
           <div class="contact-us-wrapper">
             <h3>Contact us by using the available support options</h3>
             <div class="contact-us-buttons">
-              <Button icon={slack} url={SLACK_URL}>Slack</Button>
-              <Button icon={mail} monochromeIcon url={EMAIL_URL}>Email</Button>
+              <Button icon={SlackIcon} url={SLACK_URL}>Slack</Button>
+              <Button icon={MailIcon} monochromeIcon url={EMAIL_URL}>Email</Button>
             </div>
           </div>
         </Grid>
         <Grid sm={12} md={3} lg={2} class="ioxio-logo-grid-item">
-          <img class="ioxio-logo" src={IOXIO} alt="IOXIO" />
+          <img class="ioxio-logo" src={IOXIOLogo} alt="IOXIO" />
         </Grid>
         <Grid sm={0} lg={1} />
       </Grid>
@@ -84,14 +89,13 @@
 
       .link {
         display: flex;
+        width: max-content;
+        color: $color-success-main;
+        font-weight: 600;
+        line-height: 150%;
+        text-decoration: none;
+        align-items: center;
         gap: $spacing-01;
-
-        a {
-          color: $color-success-main;
-          font-weight: 600;
-          line-height: 150%;
-          text-decoration: none;
-        }
       }
     }
   }
@@ -113,7 +117,7 @@
     }
 
     .ioxio-logo {
-      max-width: 7.8125rem;
+      max-width: 8rem;
       margin: 0 0 0 auto;
       @include mobile() {
         margin: 0 auto 0 0;

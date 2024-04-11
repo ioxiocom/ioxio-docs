@@ -1,8 +1,8 @@
 <script lang="ts">
-  import ioxio from "$lib/images/ioxio-logo.svg?dataurl"
-  import github from "$lib/images/github-icon.svg?dataurl"
+  import IoxioLogo from "$lib/images/ioxio-logo.svg?dataurl"
+  import GitHubLogo from "$lib/images/github-icon.svg?dataurl"
   import Container from "$lib/components/Container.svelte"
-  import Hamburger from "$lib/images/hamburger-icon.svg"
+  import HamburgerIcon from "$lib/images/hamburger-icon.svg"
 
   export let popover: any
 </script>
@@ -12,14 +12,14 @@
     <div class="header">
       <div class="title">
         <button use:popover.button class="hamburger-button">
-          <Hamburger />
+          <HamburgerIcon />
         </button>
-        <img src={ioxio} alt="ioxio" />
+        <img src={IoxioLogo} alt="IOXIO" />
         <div class="separator" />
         <a class="title-link" href="/">Documentation portal</a>
       </div>
       <a href="https://github.com/ioxiocom/ioxio-docs" rel="noopener noreferrer" target="_blank">
-        <img src={github} alt="github" />
+        <img src={GitHubLogo} alt="GitHub repository" />
       </a>
     </div>
   </Container>
@@ -55,8 +55,8 @@
         }
 
         :global(svg) {
-          width: 20px;
-          height: 20px;
+          width: 1.25rem;
+          height: 1.25rem;
         }
       }
 

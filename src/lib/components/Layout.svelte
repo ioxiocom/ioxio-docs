@@ -13,12 +13,14 @@
   const popover = createPopover({})
   const size = breakpointObserver()
   $: isSmallScreen = size.smallerThan("md")
+  popover.open()
 </script>
 
 <section>
   <NavBar {popover} />
   <Container class="main-container">
-    <!--    needs to stay there for better keyboard navigation on mobile-->
+    <!--        <Sidebar/>-->
+    <!-- needs to stay there for better keyboard navigation on mobile -->
     {#if $isSmallScreen && $popover.expanded}
       <div class="mobile-sidebar-wrapper" use:popover.panel transition:fade={{ duration: 100 }}>
         <Grid container>
@@ -38,22 +40,18 @@
           </Grid>
         {/if}
         <Grid sm={12} md={7} class="content-grid">
-          <div class="content">
-            <slot />
-          </div>
+          <slot />
         </Grid>
         <Grid sm={0} md={2} />
       {:else}
         {#if !$isSmallScreen}
-          <Grid sm={0} md={1} class="left-nav-wrapper">
+          <Grid sm={0} md={2} lg={1} class="left-nav-wrapper">
             <Sidebar />
             <div class="left-nav" />
           </Grid>
         {/if}
-        <Grid sm={12} md={11} class="content-grid">
-          <div class="content">
-            <slot />
-          </div>
+        <Grid sm={12} md={10} lg={11} class="content-grid">
+          <slot />
         </Grid>
       {/if}
     </Grid>
@@ -68,7 +66,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: relative;
     background-color: $color-primary-highlight;
@@ -86,10 +84,18 @@
 
   :global(.left-nav-wrapper) {
     position: relative;
+
+    @include mobile() {
+      display: none;
+    }
   }
 
   .left-nav {
     margin-left: 72px;
+  }
+
+  :global(.main-container .content-grid) {
+    margin-bottom: $spacing-05;
   }
 
   .mobile-sidebar-wrapper {
@@ -99,6 +105,7 @@
     width: 100%;
     height: 100%;
     min-height: 100vh;
+    background-color: $color-primary-highlight;
 
     :global(.grid-full-height) {
       height: 100%;
@@ -107,12 +114,6 @@
         height: 100%;
         grid-gap: 0;
       }
-    }
-
-    .mobile-sidebar-background {
-      height: 100%;
-      padding: 1rem;
-      background-color: #ffffff;
     }
 
     :global(.mobile-sidebar-right-column) {
@@ -128,17 +129,6 @@
           fill: $color-neutral-light;
         }
       }
-    }
-  }
-
-  .mobile-sidebar-wrapper {
-    position: absolute;
-    background-color: $color-primary-highlight;
-  }
-
-  :global(.left-nav-wrapper) {
-    @include mobile() {
-      display: none;
     }
   }
 </style>
