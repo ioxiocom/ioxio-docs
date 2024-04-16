@@ -30,7 +30,7 @@
     <div class="icon-wrapper">
       <QRCodeIcon />
     </div>
-    <div class="name">IOXIO Tags</div>
+    <div class="name">IOXIO Tags™</div>
   </a>
   <a href="/schemas" class="menu-item" class:selected={$page.url.pathname.startsWith("/schemas")}>
     <div class="icon-wrapper">
