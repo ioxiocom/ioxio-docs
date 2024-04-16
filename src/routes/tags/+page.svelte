@@ -95,7 +95,7 @@
   > to see how these work in practice.
 </p>
 
-<p>Here's an example of how a signed IOXIO Tag™ could look like.</p>
+<p>Here's an example of how a signed IOXIO Tags™ could look like.</p>
 
 <img alt="example of a signed IOXIO Tag QR code" src="/ioxio-tag-example-signed.png" />
 

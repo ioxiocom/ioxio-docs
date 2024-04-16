@@ -5,8 +5,8 @@
   import { page } from "$app/stores"
   import { spring } from "svelte/motion"
 
-  const MENU_SMALL = 72
-  const MENU_WIDE = 12 * 16
+  const MENU_SMALL = 4.5
+  const MENU_WIDE = 12
 
   export let mobile = false
 
@@ -16,9 +16,11 @@
 <nav
   class="sidebar"
   class:mobile-only={mobile}
-  style={`width: ${$width}px`}
-  on:mouseover={() => width.set(MENU_WIDE)}
-  on:mouseout={() => width.set(MENU_SMALL)}
+  style={`width: ${$width}rem`}
+  on:mouseover={() => !mobile && width.set(MENU_WIDE)}
+  on:mouseout={() => !mobile && width.set(MENU_SMALL)}
+  on:blur={undefined}
+  on:focus={undefined}
 >
   <a href="/" class="menu-item" class:selected={$page.url.pathname === "/"}>
     <div class="icon-wrapper">
@@ -47,6 +49,7 @@
     height: 100%;
     background-color: $color-primary-highlight;
     border-right: 1px solid $color-primary-dark-hover;
+    border-left: 1px solid $color-primary-dark-hover;
     padding-top: 1rem;
     z-index: 1;
 
