@@ -8,21 +8,19 @@
 </script>
 
 <header>
-  <Container>
-    <div class="header">
-      <div class="title">
-        <button use:popover.button class="hamburger-button">
-          <HamburgerIcon />
-        </button>
-        <img src={IoxioLogo} alt="IOXIO" />
-        <div class="separator" />
-        <a class="title-link" href="/">Documentation portal</a>
-      </div>
-      <a href="https://github.com/ioxiocom/ioxio-docs" rel="noopener noreferrer" target="_blank">
-        <img src={GitHubLogo} alt="GitHub repository" />
-      </a>
+  <div class="header">
+    <div class="title">
+      <button use:popover.button class="hamburger-button">
+        <HamburgerIcon />
+      </button>
+      <img src={IoxioLogo} alt="IOXIO" />
+      <div class="separator" />
+      <a class="title-link" href="/">Documentation portal</a>
     </div>
-  </Container>
+    <a href="https://github.com/ioxiocom/ioxio-docs" rel="noopener noreferrer" target="_blank">
+      <img src={GitHubLogo} alt="GitHub repository" />
+    </a>
+  </div>
 </header>
 
 <style lang="scss">
@@ -30,9 +28,12 @@
 
   header {
     background-color: $color-primary-dark-hover;
+    padding: 0 $spacing-03;
   }
 
   .header {
+    $content-with-menu: calc(120rem + 20rem);
+    max-width: calc($content-with-menu + ((100% - $content-with-menu) / 2) - $spacing-03);
     padding: $spacing-02 0;
     display: flex;
     justify-content: space-between;

@@ -13,48 +13,56 @@
   const popover = createPopover({})
   const size = breakpointObserver()
   $: isSmallScreen = size.smallerThan("md")
+
+  $: indexPage = $page.url.pathname === "/"
 </script>
 
 <section>
   <NavBar {popover} />
-  <Container class="main-container">
+  <div class="main-container">
     {#if !$isSmallScreen}
       <Sidebar />
     {/if}
-    <!-- needs to stay there for better keyboard navigation on mobile -->
-    {#if $isSmallScreen && $popover.expanded}
-      <div class="mobile-sidebar-wrapper" use:popover.panel transition:fade={{ duration: 100 }}>
-        <Grid container>
-          <Grid sm={5}>
-            <Sidebar mobile />
-          </Grid>
-          <Grid sm={7} />
-        </Grid>
+    {#if !indexPage}
+      <div class="left-nav-wrapper">
+        <div class="left-nav">
+          <p>IOXIO Tags</p>
+          <p>Fake content</p>
+          <p>More links there is some very long one. Lol it's even longer</p>
+        </div>
       </div>
     {/if}
-    <Grid container class="main-grid">
-      {#if $page.url.pathname !== "/"}
-        {#if !$isSmallScreen}
-          <Grid sm={0} md={3} class="left-nav-wrapper">
-            <div class="left-nav" />
+    <Container class="main-container">
+      <!-- needs to stay there for better keyboard navigation on mobile -->
+      {#if $isSmallScreen && $popover.expanded}
+        <div class="mobile-sidebar-wrapper" use:popover.panel transition:fade={{ duration: 100 }}>
+          <Grid container>
+            <Grid sm={5}>
+              <Sidebar mobile />
+            </Grid>
+            <Grid sm={7} />
           </Grid>
-        {/if}
-        <Grid sm={12} md={7} class="content-grid">
-          <slot />
-        </Grid>
-        <Grid sm={0} md={2} />
-      {:else}
-        {#if !$isSmallScreen}
-          <Grid sm={0} md={2} lg={1} class="left-nav-wrapper">
-            <div class="left-nav" />
-          </Grid>
-        {/if}
-        <Grid sm={12} md={10} lg={11} class="content-grid">
-          <slot />
-        </Grid>
+        </div>
       {/if}
-    </Grid>
-  </Container>
+      <Grid container class="main-grid">
+        {#if indexPage}
+          <Grid sm={0} md={2} />
+          <Grid sm={12} md={10} class="content-grid">
+            <slot />
+          </Grid>
+        {:else}
+          <Grid sm={12} lg={9} class="content-grid">
+            <slot />
+          </Grid>
+          <Grid sm={0} lg={3}>
+            <p>
+              There will be in-page navigation that currently doesn't exist this is a placeholder
+            </p>
+          </Grid>
+        {/if}
+      </Grid>
+    </Container>
+  </div>
   <Footer />
 </section>
 
@@ -72,6 +80,7 @@
   }
 
   :global(.main-container) {
+    display: flex;
     flex-grow: 1;
     background-color: $color-primary-highlight;
     position: relative;
@@ -83,18 +92,23 @@
 
   :global(.left-nav-wrapper) {
     position: relative;
+    max-width: 20rem;
 
     @include mobile() {
       display: none;
     }
-  }
 
-  .left-nav {
-    margin-left: 72px;
+    .left-nav {
+      margin-left: 5.25rem;
+    }
   }
 
   :global(.main-container .content-grid) {
     margin-bottom: $spacing-05;
+  }
+
+  :global(.main-container .mdc-layout-grid) {
+    width: 100%;
   }
 
   .mobile-sidebar-wrapper {

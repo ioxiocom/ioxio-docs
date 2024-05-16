@@ -22,24 +22,27 @@
   on:blur={undefined}
   on:focus={undefined}
 >
-  <a href="/" class="menu-item" class:selected={$page.url.pathname === "/"}>
-    <div class="icon-wrapper">
-      <HomeIcon />
-    </div>
-    <div class="name">Home</div>
-  </a>
-  <a href="/tags" class="menu-item" class:selected={$page.url.pathname.startsWith("/tags")}>
-    <div class="icon-wrapper">
-      <QRCodeIcon />
-    </div>
-    <div class="name">IOXIO Tags™</div>
-  </a>
-  <a href="/schemas" class="menu-item" class:selected={$page.url.pathname.startsWith("/schemas")}>
-    <div class="icon-wrapper">
-      <SchemasIcon />
-    </div>
-    <div class="name">Schemas</div>
-  </a>
+  <div class="sticky-wrapper">
+    <a href="/" class="menu-item" class:selected={$page.url.pathname === "/"}>
+      <div class="icon-wrapper">
+        <HomeIcon />
+      </div>
+      <div class="name">Home</div>
+    </a>
+    <a href="/tags" class="menu-item" class:selected={$page.url.pathname.startsWith("/tags")}>
+      <div class="icon-wrapper">
+        <QRCodeIcon />
+      </div>
+      <div class="name">IOXIO Tags™</div>
+    </a>
+    <a href="/schemas" class="menu-item" class:selected={$page.url.pathname.startsWith("/schemas")}>
+      <div class="icon-wrapper">
+        <SchemasIcon />
+      </div>
+      <div class="name">Schemas</div>
+    </a>
+  </div>
+  <div />
 </nav>
 
 <style lang="scss">
@@ -56,8 +59,12 @@
     position: absolute;
     left: 0;
     top: 0;
-    overflow: hidden;
     white-space: nowrap;
+
+    .sticky-wrapper {
+      position: sticky;
+      top: $spacing-02;
+    }
 
     .menu-item {
       border-radius: 5px;
