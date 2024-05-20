@@ -7,6 +7,7 @@
   import MailIcon from "$lib/images/mail-icon.svg"
   import SlackIcon from "$lib/images/slack-icon.svg"
   import ArrowIcon from "$lib/images/link-arrow-icon.svg"
+  import GitHubLogo from "$lib/images/github-icon.svg?dataurl"
 
   const SLACK_URL = "https://slack.ioxio.com"
   const EMAIL_URL = "mailto:support@ioxio.com"
@@ -53,6 +54,15 @@
           <img class="ioxio-logo" src={IOXIOLogo} alt="IOXIO" />
         </Grid>
         <Grid sm={0} lg={1} />
+      </Grid>
+      <Grid container>
+        <Grid sm={0} lg={1} />
+        <Grid sm={12} lg={11}>
+          <a class="github-link" rel="noopener noreferrer" target="_blank" href="/">
+            <img src={GitHubLogo} width="16px" height="16px" alt="GitHub repository" />
+            <div>Contribute to these docs</div>
+          </a>
+        </Grid>
       </Grid>
       <Grid container>
         <Grid sm={0} lg={1} />
@@ -121,6 +131,21 @@
       margin: 0 0 0 auto;
       @include mobile() {
         margin: 0 auto 0 0;
+      }
+    }
+
+    .github-link {
+      display: flex;
+      align-items: center;
+      gap: $spacing-01;
+      margin-bottom: $spacing-02;
+      color: $color-neutral-light;
+      text-decoration: none;
+      width: max-content;
+      font-size: 0.75rem;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
 

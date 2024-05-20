@@ -25,11 +25,7 @@
     {/if}
     {#if !indexPage}
       <div class="left-nav-wrapper">
-        <div class="left-nav">
-          <p>IOXIO Tags</p>
-          <p>Fake content</p>
-          <p>More links there is some very long one. Lol it's even longer</p>
-        </div>
+        <div class="left-nav" />
       </div>
     {/if}
     <Container class="main-container">
@@ -54,11 +50,7 @@
           <Grid sm={12} lg={9} class="content-grid">
             <slot />
           </Grid>
-          <Grid sm={0} lg={3}>
-            <p>
-              There will be in-page navigation that currently doesn't exist this is a placeholder
-            </p>
-          </Grid>
+          <Grid sm={0} lg={3} />
         {/if}
       </Grid>
     </Container>

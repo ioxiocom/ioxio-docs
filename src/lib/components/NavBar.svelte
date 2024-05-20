@@ -1,7 +1,5 @@
 <script lang="ts">
   import IoxioLogo from "$lib/images/ioxio-logo.svg?dataurl"
-  import GitHubLogo from "$lib/images/github-icon.svg?dataurl"
-  import Container from "$lib/components/Container.svelte"
   import HamburgerIcon from "$lib/images/hamburger-icon.svg"
 
   export let popover: any
@@ -17,9 +15,6 @@
       <div class="separator" />
       <a class="title-link" href="/">Documentation portal</a>
     </div>
-    <a href="https://github.com/ioxiocom/ioxio-docs" rel="noopener noreferrer" target="_blank">
-      <img src={GitHubLogo} alt="GitHub repository" />
-    </a>
   </div>
 </header>
 
@@ -32,8 +27,6 @@
   }
 
   .header {
-    $content-with-menu: calc(120rem + 20rem);
-    max-width: calc($content-with-menu + ((100% - $content-with-menu) / 2) - $spacing-03);
     padding: $spacing-02 0;
     display: flex;
     justify-content: space-between;
@@ -77,11 +70,6 @@
       img {
         height: $spacing-02;
       }
-    }
-
-    // github
-    img {
-      height: $spacing-03;
     }
   }
 </style>
