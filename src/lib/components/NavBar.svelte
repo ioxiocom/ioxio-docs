@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Hamburger from "./Hamburger.svelte"
+  import MenuButton from "./MenuButton.svelte"
 
   import IoxioLogo from "$lib/images/ioxio-logo.svg?dataurl"
   import GitHubLogo from "$lib/images/github-icon.svg?dataurl"
@@ -12,7 +12,7 @@
   <Container>
     <div class="header">
       <div class="title">
-        <Hamburger {popover} />
+        <MenuButton {popover} />
         <img src={IoxioLogo} alt="IOXIO" />
         <div class="separator" />
         <a class="title-link" href="/">Documentation portal</a>

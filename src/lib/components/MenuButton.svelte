@@ -9,9 +9,9 @@
 
 <button
   use:popover.button
-  class={`hamburger-button ${showInTablet ? "tablet" : ""} ${
-    alignIconToRight ? "align-right" : ""
-  }`}
+  class="hamburger-button"
+  class:tablet={showInTablet}
+  class:align-right={alignIconToRight}
 >
   {#if !$popover.expanded}
     <HamburgerIcon />
@@ -40,12 +40,15 @@
     }
 
     &.align-right {
-      float: right;
+      margin-left: auto;
     }
 
     :global(svg) {
       width: 2rem;
       height: 2rem;
+      padding: 0.375rem;
+      border: 1px solid $color-primary-dark-hover;
+      border-radius: 4px;
     }
   }
 </style>

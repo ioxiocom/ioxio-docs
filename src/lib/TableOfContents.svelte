@@ -4,13 +4,12 @@
   import breakpointObserver from "$lib/breakpointObserver.js"
   import { tableOfContents } from "../routes/store"
   import Grid from "./components/Grid.svelte"
-  import Hamburger from "./components/Hamburger.svelte"
+  import MenuButton from "./components/MenuButton.svelte"
 
   type Entry = {
     title: string
     level: number
     id: string
-    active: boolean
   }
   let entries: Entry[] = []
 
@@ -31,17 +30,6 @@
   onDestroy(() => {
     tableOfContents.set([])
   })
-
-  function updateActiveEntry(entryId: string) {
-    entries.map((entry) => {
-      if (entry.id === entryId) {
-        entry.active = true
-      } else {
-        entry.active = false
-      }
-    })
-    tableOfContents.set(entries)
-  }
 </script>
 
 <Grid class="main-grid" container>
@@ -53,27 +41,19 @@
       <div class="content">
         <p>On this page</p>
         {#each $tableOfContents as entry}
-          <a
-            on:click={updateActiveEntry(entry.id)}
-            class={`links ${entry.active ? "active" : ""}`}
-            href={`#${entry.id}`}>{entry.title}</a
-          >
+          <a class="link" href={`#${entry.id}`}>{entry.title}</a>
         {/each}
       </div>
     </Grid>
   {/if}
   {#if $isSmallScreen}
     <Grid sm={2} class="table-of-contents">
-      <Hamburger {popover} showInTablet={true} alignIconToRight={true} />
+      <MenuButton {popover} showInTablet={true} alignIconToRight={true} />
       {#if $popover.expanded}
         <div class="content mobile">
           <p>On this page</p>
           {#each $tableOfContents as entry}
-            <a
-              on:click={updateActiveEntry(entry.id)}
-              class={`links ${entry.active ? "active" : ""}`}
-              href={`#${entry.id}`}>{entry.title}</a
-            >
+            <a class="link" href={`#${entry.id}`}>{entry.title}</a>
           {/each}
         </div>
       {/if}
@@ -86,17 +66,6 @@
   :global(.table-of-contents) {
     color: $color-neutral-gray;
     padding-top: 1rem;
-    ::-webkit-scrollbar {
-      width: 3px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: $color-primary-highlight;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: $color-primary-dark-hover;
-    }
 
     .content {
       display: flex;
@@ -107,6 +76,23 @@
       max-height: 90vh;
       overflow-y: auto;
       padding-bottom: 0.5rem;
+
+      @supports (scrollbar-color: auto) {
+        padding-right: 3px;
+        scrollbar-color: $color-primary-dark-hover $color-primary-highlight;
+        scrollbar-width: thin;
+      }
+
+      @supports selector(::-webkit-scrollbar) {
+        &::-webkit-scrollbar {
+          background: $color-primary-highlight;
+          width: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: $color-primary-dark-hover;
+        }
+      }
 
       p {
         margin-bottom: $spacing-03;
@@ -121,21 +107,16 @@
         border-radius: 5px;
         padding-right: 1rem;
       }
-      .links {
+      .link {
         @include text-body-2();
         color: $color-neutral-gray;
         text-decoration: none;
         padding: 0.5rem 0 0.5rem 1rem;
         margin-left: 0.5rem;
         border-left: 2px solid $color-dark-green;
-        transition: color 0.3s ease, border-left-color 0.3s ease;
+        transition: all 0.3s ease;
 
         &:hover {
-          color: $color-success-main;
-          border-left-color: $color-success-main;
-        }
-
-        &.active {
           color: $color-success-main;
           border-left-color: $color-success-main;
         }

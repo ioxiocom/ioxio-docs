@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { getContext, onMount, setContext } from "svelte"
-  import { tableOfContents } from "../routes/store"
+  import { getContext, onMount } from "svelte"
 
   let id: string
   export let level = 1
@@ -17,7 +16,6 @@
           title: title,
           level: level,
           id: id,
-          active: $tableOfContents.length > 0 ? false : true,
         })
       }
     }
