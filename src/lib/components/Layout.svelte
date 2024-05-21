@@ -68,13 +68,13 @@
     height: 100%;
     width: 100%;
     position: relative;
-    background-color: $color-primary-highlight;
+    background-color: $color-primary-dark;
   }
 
   :global(.main-container) {
     display: flex;
     flex-grow: 1;
-    background-color: $color-primary-highlight;
+    background-color: $color-primary-dark;
     position: relative;
   }
 
