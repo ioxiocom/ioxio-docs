@@ -59,7 +59,7 @@
         <Grid sm={0} lg={1} />
         <Grid sm={12} lg={11}>
           <a class="github-link" rel="noopener noreferrer" target="_blank" href="/">
-            <img src={GitHubLogo} width="16px" height="16px" alt="GitHub repository" />
+            <img src={GitHubLogo} alt="GitHub repository" />
             <div>Contribute to these docs</div>
           </a>
         </Grid>
@@ -106,6 +106,10 @@
         text-decoration: none;
         align-items: center;
         gap: $spacing-01;
+
+        span {
+          flex-shrink: 0;
+        }
       }
     }
   }
@@ -141,9 +145,13 @@
       margin-bottom: $spacing-02;
       color: $color-neutral-light;
       text-decoration: none;
-      width: max-content;
       font-size: 0.75rem;
+      width: max-content;
 
+      img {
+        width: 1rem;
+        height: 1rem;
+      }
       &:hover {
         text-decoration: underline;
       }

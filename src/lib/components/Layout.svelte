@@ -1,6 +1,7 @@
 <script lang="ts">
   import { createPopover } from "svelte-headlessui"
   import { fade } from "svelte/transition"
+  import { page } from "$app/stores"
 
   import Container from "$lib/components/Container.svelte"
   import Footer from "$lib/components/Footer.svelte"
@@ -8,13 +9,25 @@
   import NavBar from "$lib/components/NavBar.svelte"
   import breakpointObserver from "$lib/breakpointObserver.js"
   import Sidebar from "$lib/components/Sidebar.svelte"
-  import { page } from "$app/stores"
+  import { navigation } from "$lib/navigation"
 
   const popover = createPopover({})
   const size = breakpointObserver()
   $: isSmallScreen = size.smallerThan("md")
 
   $: indexPage = $page.url.pathname === "/"
+
+  let subNavigation: { href: string; name: string }[] = []
+  let currentSectionName = ""
+  $: for (let section of navigation) {
+    if (section.route !== "" && $page.url.pathname.startsWith(`/${section.route}`)) {
+      currentSectionName = section.name
+      subNavigation = (section.children || []).map((child) => ({
+        href: `/${section.route}/${child.route}`,
+        name: child.name,
+      }))
+    }
+  }
 </script>
 
 <section>
@@ -25,7 +38,12 @@
     {/if}
     {#if !indexPage}
       <div class="left-nav-wrapper">
-        <div class="left-nav" />
+        <div class="left-nav">
+          <div class="section-title">{currentSectionName}</div>
+          {#each subNavigation as navItem}
+            <a href={navItem.href}>{navItem.name}</a>
+          {/each}
+        </div>
       </div>
     {/if}
     <Container class="main-container">
@@ -47,10 +65,9 @@
             <slot />
           </Grid>
         {:else}
-          <Grid sm={12} lg={9} class="content-grid">
+          <Grid sm={12} class="content-grid">
             <slot />
           </Grid>
-          <Grid sm={0} lg={3} />
         {/if}
       </Grid>
     </Container>
@@ -84,7 +101,7 @@
 
   :global(.left-nav-wrapper) {
     position: relative;
-    max-width: 20rem;
+    width: 25rem;
 
     @include mobile() {
       display: none;
@@ -92,6 +109,25 @@
 
     .left-nav {
       margin-left: 5.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-01;
+      padding-top: $spacing-02;
+      position: sticky;
+      top: 0;
+
+      .section-title {
+        font-weight: 600;
+      }
+
+      a {
+        color: $color-neutral-gray;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-success-main;
+        }
+      }
     }
   }
 

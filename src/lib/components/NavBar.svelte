@@ -66,6 +66,7 @@
 
       // ioxio logo
       img {
+        width: 4rem;
         height: $spacing-02;
       }
     }
