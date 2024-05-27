@@ -68,11 +68,10 @@
         <div class="icon-wrapper">
           <svelte:component this={getIcon(section.icon)} />
         </div>
-        <div class="name">{textHidden ? "" : section.name}</div>
+        <div class="name">{!textHidden || mobile ? section.name : ""}</div>
       </a>
     {/each}
   </div>
-  <div />
 </nav>
 
 <style lang="scss">

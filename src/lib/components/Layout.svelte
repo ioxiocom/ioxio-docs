@@ -54,7 +54,13 @@
             <Grid sm={5}>
               <Sidebar mobile />
             </Grid>
-            <Grid sm={7} />
+            <Grid sm={7}>
+              <div class="mobile-sub-navigation">
+                {#each subNavigation as navItem}
+                  <a href={navItem.href}>{navItem.name}</a>
+                {/each}
+              </div>
+            </Grid>
           </Grid>
         </div>
       {/if}
@@ -168,6 +174,22 @@
 
         :global(path) {
           fill: $color-neutral-light;
+        }
+      }
+    }
+
+    .mobile-sub-navigation {
+      margin: $spacing-04 0 0 $spacing-02;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-01;
+
+      a {
+        color: $color-neutral-gray;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-success-main;
         }
       }
     }
