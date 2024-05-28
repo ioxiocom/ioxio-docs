@@ -13,13 +13,24 @@
 
   const popover = createPopover({})
   const size = breakpointObserver()
-  $: isSmallScreen = size.smallerThan("md")
 
+  $: isSmallScreen = size.smallerThan("md")
   $: indexPage = $page.url.pathname === "/"
+
+  // close the mobile menu after navigating to another page
+  let currentPage = $page.url
+  $: if ($page.url != currentPage) {
+    popover.close()
+    currentPage = $page.url
+  }
 
   let subNavigation: { href: string; name: string }[] = []
   let currentSectionName = ""
   $: for (let section of navigation) {
+    if ($page.url.pathname === "/") {
+      subNavigation = []
+      break
+    }
     if (section.route !== "" && $page.url.pathname.startsWith(`/${section.route}`)) {
       currentSectionName = section.name
       subNavigation = (section.children || []).map((child) => ({
