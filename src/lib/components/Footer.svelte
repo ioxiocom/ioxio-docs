@@ -58,7 +58,12 @@
       <Grid container>
         <Grid sm={0} lg={1} />
         <Grid sm={12} lg={11}>
-          <a class="github-link" rel="noopener noreferrer" target="_blank" href="/">
+          <a
+            class="github-link"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com/ioxiocom/ioxio-docs"
+          >
             <img src={GitHubLogo} alt="GitHub repository" />
             <div>Contribute to these docs</div>
           </a>

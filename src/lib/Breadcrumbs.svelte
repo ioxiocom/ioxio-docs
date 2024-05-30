@@ -35,7 +35,6 @@
   }
 
   const breadcrumbs = getBreadcrumbs()
-  console.log(breadcrumbs)
 </script>
 
 <div class="breadcrumbs">
