@@ -363,11 +363,30 @@ async def data_product(params: BasicCountryInfoRequest):
     available. The help text shows where the API endpoint is expected to be available. The Base URL
     will not be displayed to other users and is only used by the product gateway to connect to the
     productizer. All other applications must connect through the product gateway. For the purpose of
-    this tutorial let's select "private" for the visibility options. The filled in form would look
-    like this:
+    this tutorial let's select <em>Private</em> for the visibility options. The filled in form would
+    look like this:
   </p>
   <GuideImage img={images.CREATE_NEW_DS} />
-  <p>Finally press the CREATE button to create the data source.</p>
+  <p>
+    There are also several options if you want to protect your data source by managing its access
+    control mode:
+  </p>
+  <ul>
+    <li><b>No access control</b> - Default behaviour</li>
+    <li>
+      <b>Self-managed API keys</b> - <em>X-API-Key</em> header will be required to be present for your
+      data source but its contents will not be verified by the Dataspace.
+    </li>
+    <li>
+      <b>Dataspace verified API tokens</b> - The <em>X-API-Key</em> header will be required and verified
+      by the Dataspace. You can manage which groups are allowed to generate API tokens for your source.
+    </li>
+  </ul>
+  <p>
+    This configuration is useful when you want to grant access to your data source only for certain
+    groups. For this guide, we will use "No access control" option for simplicity.
+  </p>
+  <p>Finally press the <em>Create</em> button to create the data source.</p>
   <SectionTitle title="Test your data source" />
   <p>
     You should now be able to test your own data source by querying it through the product gateway.
@@ -387,7 +406,7 @@ async def data_product(params: BasicCountryInfoRequest):
   --request POST \\
   --url 'https://gateway.sandbox.ioxio-dataspace.com/test/ioxio-dataspace-guides/Country/BasicInfo?source=ioxio_dataspace_guides' \\
   --header 'Content-Type: application/json' \\
-  --header 'X-Preview-Token: wgyhTXDAMa3uBwLIziBnpQ' \\
+  --header 'X-Preview-Token: Ku7kOjLMCxLnINfYoiiBdg' \\
   --data '{"code": "FI"}'
 HTTP/2 200
 content-type: application/json
@@ -424,8 +443,8 @@ content-length: 130
   --request POST \\
   --url 'https://gateway.sandbox.ioxio-dataspace.com/test/ioxio-dataspace-guides/Country/BasicInfo?source=ioxio_dataspace_guides' \\
   --header 'Content-Type: application/json' \\
-  --header 'X-Preview-Token: wgyhTXDAMa3uBwLIziBnpQ' \\
-  --data '{"code": "ZZ"}'
+  --header 'X-Preview-Token: Ku7kOjLMCxLnINfYoiiBdg' \\
+  --data '{"code": "XYZ"}'
 HTTP/2 502
 content-type: application/json
 x-frame-options: DENY
