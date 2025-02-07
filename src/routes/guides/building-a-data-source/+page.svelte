@@ -352,8 +352,8 @@ async def data_product(params: BasicCountryInfoRequest):
   </p>
   <h3>Add your data source</h3>
   <p>
-    Use the menu to navigate to My data sources. Press the + ADD A DATASOURCE button. In the Data
-    product definition, pick the definition you used for your productizer. Pick one of your groups
+    Use the menu to navigate to My data sources. Press the <em>+ Add a data source</em> button. In the
+    Data product definition, pick the definition you used for your productizer. Pick one of your groups
     in the dropdown for groups.
   </p>
   <p>
