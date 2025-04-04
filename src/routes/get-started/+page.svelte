@@ -10,10 +10,10 @@
 <div>
   <div class="hero-section">
     <h1>Get started with IOXIO.io</h1>
-    <div>
+    <h3>
       Learn how to share, consume and collaborate with data. Explore data sources, sign up, and get
       your data moving!
-    </div>
+    </h3>
   </div>
 
   <div class="cards">
