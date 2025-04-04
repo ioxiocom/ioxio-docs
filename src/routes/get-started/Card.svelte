@@ -12,7 +12,7 @@
   export let action: { title: string; href: string }
 </script>
 
-<div class="card">
+<div class="get-started-card">
   <div class="card-content">
     <div class="card-index">
       {#if index === "1"}
@@ -42,11 +42,20 @@
 <style lang="scss">
   @use "$styles/setup" as *;
 
-  .card {
+  .get-started-card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+
+    :global(a) {
+      color: $color-neutral-light;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-success-main;
+      }
+    }
   }
 
   .heading-wrapper {
