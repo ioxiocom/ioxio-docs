@@ -3,14 +3,23 @@
 
   export let icon: any = undefined
   export let url: string | undefined = undefined
+  export let variant: "outline" | "fill" = "outline"
 
   // whether to change icon color for hover and active states
   export let monochromeIcon = false
+
+  let className = "button"
+  if (monochromeIcon) {
+    className += " monochrome"
+  }
+  if (variant === "fill") {
+    className += " fill"
+  }
 </script>
 
 {#if url}
   <div class="button-wrapper">
-    <A className="button {monochromeIcon ? 'monochrome' : ''}" href={url}>
+    <A {className} href={url}>
       {#if icon}
         <span><slot /></span>
         <svelte:component this={icon} />
@@ -21,7 +30,7 @@
   </div>
 {:else}
   <div class="button-wrapper">
-    <button class="button" class:monochrome={monochromeIcon}>
+    <button class={className}>
       {#if icon}
         <span><slot /></span>
         <svelte:component this={icon} />
@@ -63,6 +72,12 @@
       width: 1.25rem;
       height: 1.25rem;
     }
+  }
+
+  .button-wrapper :global(.fill) {
+    background-color: $color-success-main;
+    color: $color-neutral-light;
+    font-weight: 600;
   }
 
   .button-wrapper :global(.monochrome) {

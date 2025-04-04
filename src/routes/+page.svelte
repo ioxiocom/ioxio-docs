@@ -9,6 +9,12 @@
 
   const cards = [
     {
+      title: "Get started with IOXIO Dataspace™",
+      href: "/get-started/",
+      cardImageAlt: "",
+      img: DataspaceIcon,
+    },
+    {
       title: "IOXIO Dataspace™ overview",
       href: "/dataspace/",
       cardImageAlt: "Data schemas",
