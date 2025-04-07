@@ -146,7 +146,8 @@
     }
   }
 
-  .second-level-navigation :global(a) {
+  .second-level-navigation :global(a),
+  .second-level-navigation :global(a:visited) {
     color: $color-neutral-gray;
     text-decoration: none;
 
