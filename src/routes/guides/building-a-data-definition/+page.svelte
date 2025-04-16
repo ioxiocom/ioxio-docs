@@ -128,7 +128,7 @@ pre-commit install
     <li>
       Try to make it generic, so it can be used by others, both others providing data or consuming
       data. In some cases it might be better to create multiple definitions rather than one that
-      contains a lot of unrelated information that only apply to a particular use-case.
+      contains a lot of unrelated information that only apply to a particular use case.
     </li>
     <li>Try to follow existing standards where possible (ISO etc).</li>
     <li>Use terminology and units that are commonly used in the field of application.</li>

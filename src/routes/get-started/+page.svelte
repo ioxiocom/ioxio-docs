@@ -62,7 +62,7 @@
           href="https://ioxio.io">IOXIO.io</A
         > you can start sharing your data! Check out the available data definitions from the <A
           href="https://gateway.ioxio.io/redoc">definition viewer</A
-        >. If you can't find a definition that covers your use-case, please contact us at
+        >. If you can't find a definition that covers your use case, please contact us at
         <A href="mailto:support@ioxio.com">support@ioxio.com</A> or through our <A
           href="https://slack.ioxio.com">community Slack</A
         > and describe your usecase, so we can solve the problem together.
