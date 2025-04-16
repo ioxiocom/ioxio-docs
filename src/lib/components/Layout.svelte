@@ -21,7 +21,10 @@
     !$isSmallScreen && popover.close()
   }
 
-  $: indexPage = $page.url.pathname === "/" || $page.url.pathname === "/dataspace/"
+  $: indexPage =
+    $page.url.pathname === "/" ||
+    $page.url.pathname === "/dataspace/" ||
+    $page.url.pathname === "/get-started/"
 
   // close the mobile menu after navigating to another page
   let currentPage = $page.url
