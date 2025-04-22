@@ -33,7 +33,9 @@
   import HowDoesIOXIOIOHelpWithRegulations from "./qa/ioxioio/013-how-does-ioxioio-help-with-regulations.svelte"
   import WillIGetVendorLockedIntoIOXIOIO from "./qa/ioxioio/014-will-i-get-vendor-locked-into-ioxioio.svelte"
   import WhatIsThePricingModelForIOXIOIO from "./qa/ioxioio/015-what-is-the-pricing-model-for-ioxioio.svelte"
+
   import A from "$lib/components/A.svelte"
+  import TableOfContents from "$lib/components/TableOfContents.svelte"
 
   const sections = [
     {
@@ -90,30 +92,32 @@
   ]
 </script>
 
-<div class="faq-page">
-  <h1>Frequently Asked Questions</h1>
-  <div class="description">
-    <div>Find answers to the most commonly asked questions.</div>
-    <div>
-      Can't find the answer to your question? Reach out to us at our <A
-        href="https://slack.ioxio.com/">IOXIO® Community Slack</A
-      > or by email at
-      <A href="mailto:support@ioxio.com">support@ioxio.com</A>!
-    </div>
-  </div>
-  {#each sections as section}
-    <section>
-      <h2>{section.name}</h2>
-      <div class="questions">
-        {#each section.components as Component}
-          <div>
-            <svelte:component this={Component} />
-          </div>
-        {/each}
+<TableOfContents>
+  <div class="faq-page">
+    <h1>Frequently Asked Questions</h1>
+    <div class="description">
+      <div>Find answers to the most commonly asked questions.</div>
+      <div>
+        Can't find the answer to your question? Reach out to us at our <A
+          href="https://slack.ioxio.com/">IOXIO® Community Slack</A
+        > or by email at
+        <A href="mailto:support@ioxio.com">support@ioxio.com</A>!
       </div>
-    </section>
-  {/each}
-</div>
+    </div>
+    {#each sections as section}
+      <section>
+        <h2>{section.name}</h2>
+        <div class="questions">
+          {#each section.components as Component}
+            <div>
+              <svelte:component this={Component} />
+            </div>
+          {/each}
+        </div>
+      </section>
+    {/each}
+  </div>
+</TableOfContents>
 
 <style lang="scss">
   h2 {

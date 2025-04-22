@@ -38,7 +38,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #242c39;
+      background-color: #b3c1d8;
     }
 
     .question {
@@ -48,6 +48,7 @@
       font-size: 1.125rem;
       font-weight: 600;
       color: white;
+      gap: 0.5rem;
     }
 
     .answer {
@@ -60,6 +61,7 @@
   }
 
   :global(.faq svg) {
+    flex-shrink: 0;
     width: 1rem;
     transition: transform 0.3s ease;
     transform: rotate(0);

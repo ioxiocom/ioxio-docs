@@ -2,7 +2,7 @@
   import QRCodeIcon from "$lib/images/qr-code-icon.svg"
   import GuidesIcon from "$lib/images/guides-icon.svg"
   import DataspaceIcon from "$lib/images/dataspace-icon.svg"
-
+  import FAQIcon from "$lib/images/faq-icon.svg"
   import SchemasIcon from "$lib/images/schemas-icon.svg"
   import HomeIcon from "$lib/images/home-icon.svg"
   import { page } from "$app/stores"
@@ -37,6 +37,8 @@
         return DataspaceIcon
       case "guides-icon":
         return GuidesIcon
+      case "faq-icon":
+        return FAQIcon
       default:
         return HomeIcon
     }

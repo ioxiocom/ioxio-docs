@@ -21,10 +21,11 @@
     !$isSmallScreen && popover.close()
   }
 
-  $: indexPage =
+  $: layoutNoExtraColumn =
     $page.url.pathname === "/" ||
     $page.url.pathname === "/dataspace/" ||
-    $page.url.pathname === "/get-started/"
+    $page.url.pathname === "/get-started/" ||
+    $page.url.pathname === "/faq/"
 
   // close the mobile menu after navigating to another page
   let currentPage = $page.url
@@ -56,7 +57,7 @@
     {#if !$isSmallScreen}
       <Sidebar />
     {/if}
-    {#if !indexPage}
+    {#if !layoutNoExtraColumn}
       <div class="second-level-navigation-wrapper">
         <div class="second-level-navigation">
           <div class="section-title">{currentSectionName}</div>
@@ -85,7 +86,7 @@
         </div>
       {/if}
       <Grid container class="main-grid">
-        {#if indexPage}
+        {#if layoutNoExtraColumn}
           <Grid sm={0} md={2} />
           <Grid sm={12} md={10} class="content-grid">
             <slot />
