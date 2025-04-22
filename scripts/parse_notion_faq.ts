@@ -148,7 +148,7 @@ function generateSvelteComponent(item: FaqItem): string {
   <svelte:fragment slot="question">
     ${question}
   </svelte:fragment>
-  
+
   <svelte:fragment slot="answer">
     ${marked.parse(answer)}
   </svelte:fragment>

@@ -95,7 +95,9 @@
   <div class="description">
     <div>Find answers to the most commonly asked questions.</div>
     <div>
-      Can't find the answer to your question? Reach out to us at our <A href="https://slack.ioxio.com/">IOXIO® Community Slack</A> or by email at
+      Can't find the answer to your question? Reach out to us at our <A
+        href="https://slack.ioxio.com/">IOXIO® Community Slack</A
+      > or by email at
       <A href="mailto:support@ioxio.com">support@ioxio.com</A>!
     </div>
   </div>

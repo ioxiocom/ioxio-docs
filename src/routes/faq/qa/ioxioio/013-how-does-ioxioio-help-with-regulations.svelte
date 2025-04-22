@@ -1,15 +1,19 @@
 <script lang="ts">
-  import FAQ from '$lib/components/FAQ.svelte';
+  import FAQ from "$lib/components/FAQ.svelte"
 </script>
 
 <FAQ>
-  <svelte:fragment slot="question">
-    How does IOXIO.io help with regulations?
-  </svelte:fragment>
-  
-  <svelte:fragment slot="answer">
-    <p>We have specialists working with European regulators to ensure we are on the map of upcoming Digital Product Passport requirements.</p>
-<p>Any regulation, business needs or industry standards can be turned into a data product. In the future we will offer data product packages to help you handle regulatory reporting that your industry will need to follow to be compliant with EU regulations.</p>
+  <svelte:fragment slot="question">How does IOXIO.io help with regulations?</svelte:fragment>
 
+  <svelte:fragment slot="answer">
+    <p>
+      We have specialists working with European regulators to ensure we are on the map of upcoming
+      Digital Product Passport requirements.
+    </p>
+    <p>
+      Any regulation, business needs or industry standards can be turned into a data product. In the
+      future we will offer data product packages to help you handle regulatory reporting that your
+      industry will need to follow to be compliant with EU regulations.
+    </p>
   </svelte:fragment>
 </FAQ>
