@@ -144,14 +144,8 @@ function generateSvelteComponent(item: FaqItem): string {
   import FAQ from '$lib/components/FAQ.svelte';
 </script>
 
-<FAQ>
-  <svelte:fragment slot="question">
-    ${question}
-  </svelte:fragment>
-
-  <svelte:fragment slot="answer">
+<FAQ question={"${question}"}>
     ${marked.parse(answer)}
-  </svelte:fragment>
 </FAQ>
 `
 }

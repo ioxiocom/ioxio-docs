@@ -36,6 +36,8 @@
 
   import A from "$lib/components/A.svelte"
   import TableOfContents from "$lib/components/TableOfContents.svelte"
+  import SectionTitle from "$lib/components/SectionTitle.svelte"
+  import FAQHeroImage from "$lib/images/faq-hero-image.svg"
 
   const sections = [
     {
@@ -94,19 +96,21 @@
 
 <TableOfContents>
   <div class="faq-page">
-    <h1>Frequently Asked Questions</h1>
-    <div class="description">
-      <div>Find answers to the most commonly asked questions.</div>
+    <div class="hero">
       <div>
-        Can't find the answer to your question? Reach out to us at our <A
-          href="https://slack.ioxio.com/">IOXIO® Community Slack</A
-        > or by email at
-        <A href="mailto:support@ioxio.com">support@ioxio.com</A>!
+        <h1>Frequently Asked Questions</h1>
+        <div>
+          Find answers to the most commonly asked questions. Can't find the answer to your question?
+          Reach out to us at our <A href="https://slack.ioxio.com/">IOXIO® Community Slack</A> or by
+          email at
+          <A href="mailto:support@ioxio.com">support@ioxio.com</A>!
+        </div>
       </div>
+      <FAQHeroImage />
     </div>
     {#each sections as section}
       <section>
-        <h2>{section.name}</h2>
+        <SectionTitle title={section.name} />
         <div class="questions">
           {#each section.components as Component}
             <div>
@@ -120,8 +124,34 @@
 </TableOfContents>
 
 <style lang="scss">
-  h2 {
-    margin: 3rem 0 1rem 0;
+  @use "$styles/mixins" as *;
+
+  .hero {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+
+    @include tablet-and-below {
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+
+    @include tablet {
+    }
+
+    @include mobile {
+      align-items: center;
+    }
+
+    :global(svg) {
+      height: 100%;
+
+      @include tablet-and-below {
+        height: 10rem;
+        width: fit-content;
+      }
+    }
   }
 
   .questions {
