@@ -60,14 +60,13 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #1e2530;
+    background-color: $color-primary-highlight;
     border: none;
     border-radius: 0.5rem;
     padding: 1.5rem;
     text-align: left;
     cursor: pointer;
     color: white;
-    /* transition: background-color 0.3s ease; */
 
     .question {
       display: flex;
