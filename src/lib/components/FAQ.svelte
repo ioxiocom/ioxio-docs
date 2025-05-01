@@ -29,7 +29,15 @@
   })
 </script>
 
-<button class="faq" on:click={toggleOpen} aria-expanded={isOpen} {id}>
+<div
+  class="faq"
+  on:click={toggleOpen}
+  on:keydown={(e) => e.key === "Enter" && toggleOpen()}
+  aria-expanded={isOpen}
+  tabindex="0"
+  role="button"
+  {id}
+>
   <div class="question">
     <a
       href={`#${id}`}
@@ -47,11 +55,18 @@
     </div>
   </div>
   {#if isOpen}
-    <div class="answer" transition:slide>
+    <div
+      class="answer"
+      transition:slide
+      on:click={(e) => e.stopPropagation()}
+      on:keydown={(e) => e.key === "Enter" && toggleOpen()}
+      tabindex="0"
+      role="button"
+    >
       <slot />
     </div>
   {/if}
-</button>
+</div>
 
 <style lang="scss">
   @import "$styles/setup.scss";
@@ -96,10 +111,16 @@
     }
 
     .answer {
+      cursor: default;
       color: $color-neutral-main;
 
       :global(a) {
         color: $color-success-main;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

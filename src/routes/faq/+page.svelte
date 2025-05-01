@@ -108,18 +108,20 @@
       </div>
       <FAQHeroImage />
     </div>
-    {#each sections as section}
-      <section>
-        <SectionTitle title={section.name} />
-        <div class="questions">
-          {#each section.components as Component}
-            <div>
-              <svelte:component this={Component} />
-            </div>
-          {/each}
-        </div>
-      </section>
-    {/each}
+    <div class="sections">
+      {#each sections as section}
+        <section>
+          <SectionTitle title={section.name} />
+          <div class="questions">
+            {#each section.components as Component}
+              <div>
+                <svelte:component this={Component} />
+              </div>
+            {/each}
+          </div>
+        </section>
+      {/each}
+    </div>
   </div>
 </TableOfContents>
 
@@ -137,13 +139,6 @@
       gap: 0;
     }
 
-    @include tablet {
-    }
-
-    @include mobile {
-      align-items: center;
-    }
-
     :global(svg) {
       height: 100%;
 
@@ -152,6 +147,12 @@
         width: fit-content;
       }
     }
+  }
+
+  .sections {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
   }
 
   .questions {
