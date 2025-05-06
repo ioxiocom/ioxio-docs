@@ -5,6 +5,7 @@
   import DataspaceIcon from "$lib/images/dataspace-card-icon.svg?dataurl"
   import QRCodeIcon from "$lib/images/card-qr-code-icon.svg?dataurl"
   import GuidesIcon from "$lib/images/guides-card-icon.svg?dataurl"
+  import FAQIcon from "$lib/images/faq-card-icon.svg?dataurl"
 
   import ArrowIcon from "$lib/images/link-arrow-icon.svg"
   import Grid from "$lib/components/Grid.svelte"
@@ -35,6 +36,11 @@
       title: "Schemas for data objects",
       href: "/schemas/",
       img: DataSchemasIcon,
+    },
+    {
+      title: "Frequently asked questions",
+      href: "/faq/",
+      img: FAQIcon,
     },
   ]
 </script>

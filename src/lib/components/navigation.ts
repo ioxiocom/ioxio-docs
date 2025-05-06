@@ -46,4 +46,9 @@ export const navigation: NavItem[] = [
       route: sch.route,
     })),
   },
+  {
+    name: "FAQ",
+    icon: "faq-icon",
+    route: "faq",
+  },
 ]
