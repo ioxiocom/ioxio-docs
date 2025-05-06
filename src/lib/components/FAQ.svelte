@@ -122,6 +122,10 @@
           text-decoration: underline;
         }
       }
+
+      :global(p:last-child) {
+        margin-bottom: 0;
+      }
     }
   }
 
