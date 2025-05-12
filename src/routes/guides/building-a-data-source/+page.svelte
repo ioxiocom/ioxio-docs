@@ -2,7 +2,7 @@
   import SectionTitle from "$lib/components/SectionTitle.svelte"
   import Code from "$lib/components/Code.svelte"
   import json from "svelte-highlight/languages/json"
-  import python from "svelte-highlight/languages/python"
+  import bash from "svelte-highlight/languages/bash"
   import Breadcrumbs from "$lib/components/Breadcrumbs.svelte"
   import Title from "$lib/components/Title.svelte"
   import TableOfContents from "$lib/components/TableOfContents.svelte"
@@ -23,49 +23,58 @@
 
   <SectionTitle title="Introduction" />
   <p>
-    In this guide we will explain how to build a new data source or productizer and how to use the
-    developer portal to publish it using the developer portal so it can be queried through the
-    product gateway using <A href="https://sandbox.ioxio-dataspace.com/">
-      IOXIO Sandbox Dataspace
-    </A>. These steps are the same on all IOXIO Dataspaces, while some might miss the particular
-    data products mentioned here.
+    In this guide we will explain how to build a new data source so it can be queried through the
+    product gateway using
+    <A href="https://sandbox.ioxio-dataspace.com/">IOXIO Sandbox Dataspace</A>. These steps are the
+    same on all IOXIO Dataspaces, while some might miss the particular data products mentioned here.
   </p>
   <SectionTitle title="Prerequisites" />
   <li>Data that you want to provide.</li>
-  <li>A data source definition for the data.</li>
+  <li>A data product definition that matches the data you have available.</li>
   <li>
     Ability to host an API that responds to <em>POST</em> requests on the public internet over the https
     protocol.
   </li>
   <SectionTitle title="Choosing a data definition for your source" />
+  <p>You can find the available <em>Data definitions</em> via menu.</p>
+  <GuideImage compact img={images.DEFINITIONS} />
   <p>
-    You can use the <A href="https://sandbox.ioxio-dataspace.com">Data definition viewer</A> to find
-    available data source definitions.
-  </p>
-  <p>
-    If there is no definition for the kind of data that you want to provide you can create your own
+    If there is no definition for the type of data you want to provide, you can create your own
     definition by following the <A href={GUIDES.BUILD_DATA_DEF.href}>
       {GUIDES.BUILD_DATA_DEF.title}
     </A> guide.
   </p>
   <SectionTitle title="What are we building?" />
   <p>
-    In this guide we will build a productizer that provides an API matching the
-    <em>test/ioxio-dataspace-guides/Country/BasicInfo</em> definition that we created in the
-    <A href={GUIDES.BUILD_DATA_DEF.href}>{GUIDES.BUILD_DATA_DEF.title}</A> guide. As the definition is
-    an OpenAPI spec you might want to use se some tool like the Swagger Editor to view it in a more human
-    friendly format.
+    We need to build an integration that provides an API matching one of the available definitions.
+    We'll use <em>Meteorology/Weather_v0.1</em> as our reference example (view
+    <A
+      href="https://raw.githubusercontent.com/ioxio-dataspace/sandbox-definitions/refs/heads/main/DataProducts/Meteorology/Weather_v0.1.json"
+      >OpenAPI Spec</A
+    >,
+    <A
+      href="https://gateway.sandbox.ioxio-dataspace.com/docs#/Data%20Products/Meteorology_Weather_v0_1_Meteorology_Weather_v0_1_post"
+    >
+      SwaggerUI
+    </A> or
+    <A
+      href="https://gateway.sandbox.ioxio-dataspace.com/redoc#tag/Data-Products/operation/Meteorology_Weather_v0_1_Meteorology_Weather_v0_1_post"
+      >ReDoc</A
+    >).
   </p>
   <p>
-    In this case it means we will create an API that accepts a <em>POST</em> request at the path
-    <em>/test/ioxio-dataspace-guides/Country/BasicInfo</em>. It could for example be hosted at
-    <em>https://productizer.example.com/test/ioxio-dataspace-guides/Country/BasicInfo</em>.
+    In this case it means that an API which accepts a <em>POST</em> request at the path
+    <em>/Meteorology/Weather_v0.1</em>
+    needs to be created. It could for example be hosted at
+    <em>https://data-source-guide-example.demos.ioxio.dev/Meteorology/Weather_v0.1</em>.
   </p>
-  <p>The <em>POST</em> request to that endpoint needs to accept a JSON payload, similar to this:</p>
+  <p>This endpoint will expect a <em>POST</em> request with a JSON payload, like this:</p>
   <Code lang={json}>
     {`
 {
-  "code": "FI"
+  "lat": 60.192059,
+  "lon": 24.945831,
+  "when": "2019-10-12T07:20:50.52Z"
 }
 `}
   </Code>
@@ -73,296 +82,52 @@
   <Code lang={json}>
     {`
 {
-  "code": "FI",
-  "name": "Finland",
-  "area": 338455,
-  "languages": [
-    "fi",
-    "sv"
-  ],
-  "capital": {
-    "name": "Helsinki",
-    "lat": 60.170833,
-    "lon": 24.9375
-  }
+  "temperature": 17.3,
+  "humidity": 72,
+  "pressure": 1007,
+  "wind_speed": 2.1,
+  "wind_direction": 220,
+  "precipitation": 120,
+  "visibility": 320
 }
 `}
   </Code>
   <p>
-    If you already know how you can build this using your own preferred tools and how to host it,
-    you can skip ahead to the section where we add the data source using the developer portal.
+    You can build this using your own preferred tools, or have a look at our
+    <A href="https://github.com/ioxio-dataspace/data-source-guide-example"
+      >simple example implementation</A
+    >.
   </p>
-  <SectionTitle title="Building a data source based on the example productizer" />
+  <SectionTitle title="Deploy and host your API" />
   <p>
-    We will use the <A href="http://fastapi.tiangolo.com">FastAPI</A> based
-    <A href="https://github.com/ioxio-dataspace/example-productizer/">example productizer</A> as a starting
-    point and just modify it to provide the country data instead. Feel free to fork the repository or
-    just download the source code as an archive from GitHub to follow along.
+    Deploy and host your API anywhere you prefer. Note that IOXIO doesn't offer API hosting. For the
+    next steps, you'll need the base URL (i.e., the part before the data product path) where your
+    API is accessible, for example:
+    <em>https://data-source-guide-example.demos.ioxio.dev</em>.
   </p>
-  <SectionTitle title="General project setup and cleanup" />
-  <p>
-    You most likely want to update the <em>README.md</em> to better describe your own data source.
-  </p>
-  <p>
-    If you intend to use <A href="https://python-poetry.org/">Poetry</A> to manage your Python dependencies
-    you should change the name of the project and authors found in
-    <em>pyproject.toml</em> and run <em>poetry install</em> to install the dependencies so you then
-    can run the productizer locally by running <em>poetry run invoke dev</em>. If you don't intend
-    to use poetry you can delete the file.
-  </p>
-  <p>
-    You might want to set up <A href="https://pre-commit.com/">pre-commit</A> for your project or get
-    rid of the <em>.pre-commit-config.yaml</em>
-    file.
-  </p>
-  <p>
-    If you don't intend to use <A href="https://www.docker.com/">Docker</A> for your data source, you
-    can also get rid of the <em>Dockerfile</em>,
-    <em>.dockerignore</em> and the <em>docker</em> directory.
-  </p>
-  <SectionTitle title="Adding models for the request and response" />
-  <p>
-    Let's start by deleting the models related to the weather data (
-    <em>CurrentWeatherMetricRequest</em>
-    and <em>CurrentWeatherMetricResponse</em>) from the <em>app/models.py</em>, as we won't need
-    them.
-  </p>
-  <p>
-    Next, let's add the definition for the request and response to <em>app/models.py</em> . We can
-    directly copy the <em>BasicCountryInfoRequest</em>, <em>Capital</em> and
-    <em>BasicCountryInfoResponse</em>
-    classes from the final definition we created in the <A href={GUIDES.BUILD_DATA_DEF.href}>
-      {GUIDES.BUILD_DATA_DEF.title}
-    </A> guide. Note that we also need to add the necessary imports.
-  </p>
-  <p>
-    If you're building a data source for another definition, it's possible it was created using
-    pydantic models, in which you can retrieve those from within the <em>/src</em> directory in the
-    definitions repository. If they are not available you will have to build them yourself. In that
-    case the same guide can be handy, as well as the official pydantic documentation and the
-    <A href="https://fastapi.tiangolo.com/tutorial/body/">Request Body</A> section of the FastAPI docs.
-  </p>
-  <p>The <em>app/models.py</em> file would after these changes look like this:</p>
-
-  <Code lang={python}>
-    {`
-from typing import List, Optional
-
-from pydantic import BaseModel, Field, constr
-from stringcase import camelcase
-
-
-class CamelCaseModel(BaseModel):
-    class Config:
-        alias_generator = camelcase
-        allow_population_by_field_name = True
-
-
-class HealthResponse(CamelCaseModel):
-    status: bool
-
-
-class BasicCountryInfoRequest(CamelCaseModel):
-    code: str = Field(
-        ...,
-        title="Code",
-        description="ISO 3166-1 alpha-2 code for the country",
-        example="FI",
-        min_length=2,
-        max_length=2,
-    )
-
-
-class Capital(CamelCaseModel):
-    name: str = Field(
-        ...,
-        title="Name",
-        description="The name of the capital of the Country",
-        example="Helsinki",
-    )
-    lat: float = Field(
-        ...,
-        title="Latitude",
-        description="The latitude coordinate of the Capital",
-        ge=-90.0,
-        le=90.0,
-        example=60.170833,
-    )
-    lon: float = Field(
-        ...,
-        title="Longitude",
-        description="The longitude coordinate of the Capital",
-        ge=-180.0,
-        le=180.0,
-        example=24.9375,
-    )
-
-
-class BasicCountryInfoResponse(CamelCaseModel):
-    code: str = Field(
-        ...,
-        title="Code",
-        description="ISO 3166-1 alpha-2 code for the country",
-        example="FI",
-        min_length=2,
-        max_length=2,
-    )
-    name: str = Field(
-        ...,
-        title="Name",
-        description="The name of the country",
-        example="Finland",
-    )
-    area: float = Field(
-        ...,
-        title="Area",
-        description="The area of the country in km^2",
-        example=338455,
-    )
-    languages: List[constr(min_length=2, max_length=2)] = Field(
-        ...,
-        title="Official languages",
-        description="ISO 639-1 language codes for the official languages",
-        example=["fi", "sv"],
-    )
-    capital: Optional[Capital] = Field(
-        None,
-        title="Capital",
-        description="The capital of the country, legislative if multiple",
-    )
-`}
-  </Code>
-  <SectionTitle title="Add logic to retrieve data" />
-  <p>
-    We can delete the file <em>app/openweathermap.py</em>. You might find it a useful example in
-    case your productizer will fetch data from some other system, but in our case we won't need it.
-    Instead we will create the file <em>app/datasource.py</em> with the following content:
-  </p>
-  <Code lang={python}>
-    {`
-from typing import Any, Dict
-
-data = {
-    "FI": {
-        "code": "FI",
-        "name": "Finland",
-        "capital": {
-            "name": "Helsinki",
-            "lat": 60.170833,
-            "lon": 24.9375,
-        },
-        "languages": ["fi", "sv"],
-        "area": 338455,
-    },
-    "NR": {
-        "code": "NR",
-        "name": "Nauru",
-        "capital": None,
-        "languages": ["na", "en"],
-        "area": 21,
-    },
-}
-
-
-async def get_data(country: str) -> Dict[str, Any]:
-    """
-    Get the country data.
-
-    This would in practice fetch the data from your underlying data source,
-    such as a database, sensor or another API.
-
-    :param country: Two-letter country code.
-    :return: The data for the country.
-    :raise KeyError: If no data is found for the country.
-    """
-    return data[country.upper()]
-`}
-  </Code>
-  <p>
-    This contains just a hardcoded dictionary of different values and a simple wrapper to fetch
-    them. In practice you would want to change this to actually somehow fetch or generate the
-    necessary data. Note that you might also need to install some Python packages for connecting to
-    and querying your database or other systems. The original implementation required an
-    <em> API_KEY</em>
-    and an <em>API_ENDPOINT</em>, which our data source does not require, so we can remove those
-    from <em>settings.py</em>. Those can however be handy examples for your own implementation.
-  </p>
-  <SectionTitle title="Adding the route" />
-  <p>
-    Let's open the file <em>app/routers/dataproduct.py</em>. We start with emptying it, so we get
-    rid of the old route. Let's add our new route like this:
-  </p>
-  <Code lang={python}>
-    {`
-from fastapi import APIRouter
-from fastapi.exceptions import HTTPException
-
-from app.datasource import get_data
-from app.models import BasicCountryInfoRequest, BasicCountryInfoResponse
-
-router = APIRouter()
-
-
-@router.post(
-    "/test/ioxio-dataspace-guides/Country/BasicInfo",
-    summary="Basic Country Info",
-    description="Data Product for basic country info",
-    response_model=BasicCountryInfoResponse,
-)
-async def data_product(params: BasicCountryInfoRequest):
-    try:
-        data = await get_data(params.code)
-    except KeyError:
-        raise HTTPException(404, "Country not found")
-
-    return BasicCountryInfoResponse(**data)
-`}
-  </Code>
-  <p>
-    We define the route for the path <em>/test/ioxio-dataspace-guides/Country/BasicInfo</em>, which
-    matches the path for our definition and the path defined in the OpenAPI spec file. We also
-    define which pydantic models we use for the request and for the response, as well as define some
-    metadata for the route. We use our <em>get_data</em> function to retrieve the data, raising a 404
-    exception in case the country is not found.
-  </p>
-  <p>
-    Finally we wrap the data into a <em>BasicCountryInfoResponse</em>. We could as well just return
-    the data as a dictionary and let FastAPI take care of the rest automatically using the
-    definition in the
-    <em>response_model</em>. The
-    <A href="https://fastapi.tiangolo.com/learn/">FastAPI documentation</A>
-    is really well written and describes in great detail topics, such as the
-    <A href="https://fastapi.tiangolo.com/tutorial/body/">request body</A>,
-    <A href="https://fastapi.tiangolo.com/tutorial/response-model/">response models</A>
-    and
-    <A href="https://fastapi.tiangolo.com/tutorial/handling-errors/">handling errors</A>, so those
-    resources are well worth a look if the explanation in this guide was too brief.
-  </p>
-  <SectionTitle title="Deploy and host your productizer" />
-  <p>
-    Deploy and host your productizer. For the next steps we will need the base URL at which it is
-    responding, for example <em>https://productizer.example.com/</em>.
-  </p>
-  <SectionTitle title="Register your data source in the Developer Portal" />
-  <p>Log in to the Developer Portal.</p>
+  <SectionTitle title="Register your data source in the Dataspace" />
   <h3>Ensure you have a group</h3>
   <p>
-    In the menu navigate to My groups. If you don't yet have a group, create one. The name of the
-    group should preferably relate to yourself, your company or the data source.
+    Go to the dataspace and click on <em>My groups</em>. If you don't have a group, you will need to
+    create one. The name of the group should relate to yourself, your company, or the data source.
+    Some dataspaces have moderated group creation. If the page has a notice saying so, and you are
+    unable to create the group yourself, please follow the instructions visible in the page to get a
+    group. Note, that if your organization already has a group, you will need to ask your group's
+    administrator to invite you to the existing group.
   </p>
   <h3>Add your data source</h3>
   <p>
-    Use the menu to navigate to My data sources. Press the <em>+ Add a data source</em> button. In the
-    Data product definition, pick the definition you used for your productizer. Pick one of your groups
-    in the dropdown for groups.
+    Use the menu to navigate to <em>My data sources</em>. Press the <em>+ Add</em> a data source
+    button. In the <em>Data product</em> dropdown pick the definition that matches your API. Pick one
+    of your groups in the dropdown for groups.
   </p>
   <p>
     If you want to publish multiple data sources for the same definition using the same group, you
     can add a variant name to distinguish them from each other. Most likely you don't want to use
-    this for your first data source. In the Base URL enter the base URL at which your deployment is
-    available. The help text shows where the API endpoint is expected to be available. The Base URL
-    will not be displayed to other users and is only used by the product gateway to connect to the
-    productizer. All other applications must connect through the product gateway.
+    this for your first data source and thus want to leave the field empty. In the <em>Base URL</em>
+    enter the base URL at which your deployment is available. The help text shows where the API endpoint
+    is expected to be available. The Base URL will not be displayed to other users and is only used by
+    the dataspace to connect to your integration. All other applications must connect through the dataspace.
   </p>
   <p>There's three options for the visibility:</p>
   <ul>
@@ -404,112 +169,89 @@ async def data_product(params: BasicCountryInfoRequest):
     </li>
   </ul>
   <p>
-    For this tutorial, let's for simplicity choose <em>Private</em> for the visibility and
-    <em>No access control</em>. The filled in form would look like this:
+    For this tutorial, let's choose <em>Unlisted</em> for the visibility and
+    <em>Dataspace verified API tokens</em> for access control. The filled in form would look like this:
   </p>
   <GuideImage img={images.CREATE_NEW_DS} />
-  <p>Finally press the <em>Create</em> button to create the data source.</p>
+  <p>Press the <em>Create</em> button to create the data source.</p>
+  <p>
+    As we selected <em>Dataspace verified API tokens</em>, after group is created you will see the
+    <em>Allowed groups</em> section:
+  </p>
+  <GuideImage img={images.ALLOWED_GROUPS} />
+  <p>
+    Each group that wants to access data from this data source, including your group, needs to be in
+    this list. Click <em>+ Add</em>, type in the name of the group, click <em>+ Add</em> again. Once
+    the group appears in the list we're good to continue. The flow for adding other groups is the same.
+  </p>
   <SectionTitle title="Test your data source" />
   <p>
     You should now be able to test your own data source by querying it through the product gateway.
-    Once you've saved the data source, you should see the <em>X-Preview-Token</em>, which is
-    necessary to use as long as it's marked as private. You can also below the Source field see the
-    URL at which you can make requests to the data source.
+    Below the <em>Source</em> field, you can also see the URL where you can make requests to the data
+    source.
   </p>
-  <GuideImage img={images.EDIT_DS} />
+  <GuideImage img={images.SOURCE} />
   <p>
-    You can for example use the cURL command line tool to query it like this (make sure the replace
-    the URL and <em>X-Preview-Token</em> to the one shown to you in the developer portal and change the
-    data to match the expected payload of your own data source):
+    As our data source uses Dataspace verified API tokens, we'll need one before making a request.
+    You can generate one on the <em>Access control keys</em> page.
+    <GuideImage compact img={images.KEYS} />
   </p>
-  <Code lang={python}>
+  <p>Find your data source in the list, click <em>View</em>.</p>
+  <GuideImage img={images.SOURCE_ACCESS_CONTROL} />
+  <p>
+    Then you can generate an API token by clicking the <em>Generate API token</em> button or using the
+    cURL example.
+  </p>
+  <GuideImage img={images.API_TOKEN} />
+  <p>
+    For example, you can use the <em>cURL</em> command-line tool to query it like this. Make sure to
+    replace the URL, adjust the data to match your data source's expected payload, and include a
+    recently generated token in the <em>X-API-KEY</em> header.
+  </p>
+  <p>
+    Note: As long as your datasource remains published or unlisted, you will not need to use the
+    <em>X-Preview-Token</em>
+    header. If the access control mode is changed to private, the header should be added to the request
+    (the value can be found on the data source <em>Edit</em> page).
+  </p>
+  <Code lang={bash}>
     {`
-  curl --include \\
-  --request POST \\
-  --url 'https://gateway.sandbox.ioxio-dataspace.com/test/ioxio-dataspace-guides/Country/BasicInfo?source=ioxio_dataspace_guides' \\
-  --header 'Content-Type: application/json' \\
-  --header 'X-Preview-Token: m7Arq86bNPRO69GRieKG9A' \\
-  --data '{"code": "FI"}'
-HTTP/2 200
-content-type: application/json
-content-security-policy: base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'
-x-frame-options: DENY
-x-content-type-options: nosniff
-x-xss-protection: 1; mode=block
-strict-transport-security: max-age=63072000
-x-powered-by: Dataspace technology by IOXIO
-x-cloud-trace-context: bdf665cf604f8eb05b5af0fe2f52e521;o=1
-date: Mon, 15 Aug 2022 11:36:49 GMT
-server: Google Frontend
-content-length: 130
-
-{"code":"FI","name":"Finland","area":338455.0,"languages":["fi","sv"],"capital":{"name":"Helsinki","lat":60.170833,"lon":24.9375}}
+  curl -X POST "https://gateway.sandbox.ioxio-dataspace.com/Meteorology/Weather_v0.1?source=ioxio_dataspace_guides" \\
+  -H "Content-Type: application/json" \\
+  -H "X-API-KEY: YOUR_KEY" \\
+  -d '{"lat": 60.192059, "lon": 24.945831}'
 `}
   </Code>
-  <p>
-    Note: As long as your datasource remains private you will need to use the
-    <em>X-Preview-Token</em>
-    header, once the datasource is switched to published or unlisted the header should be left out.
-  </p>
-  <p>
-    In case you make a request that causes an unexpected response to be generated by the
-    productizer, like a 404 Not found message, the product gateway will respond with a 502 to
-    indicate there was an error in the productizer:
-  </p>
-  <Code lang={python}>
-    {`
-  `}
-  </Code>
+  <p>A successful response will look something like:</p>
   <Code lang={json}>
-    {`curl --include \\
-  --request POST \\
-  --url 'https://gateway.sandbox.ioxio-dataspace.com/test/ioxio-dataspace-guides/Country/BasicInfo?source=ioxio_dataspace_guides' \\
-  --header 'Content-Type: application/json' \\
-  --header 'X-Preview-Token: m7Arq86bNPRO69GRieKG9A' \\
-  --data '{"code": "XYZ"}'
-HTTP/2 502
-content-type: application/json
-x-frame-options: DENY
-x-content-type-options: nosniff
-x-xss-protection: 1; mode=block
-strict-transport-security: max-age=63072000
-x-powered-by: Dataspace technology by IOXIO
-x-cloud-trace-context: d1fed33eef8fa02f6fa160d28637884c;o=1
-date: Mon, 15 Aug 2022 11:45:45 GMT
-server: Google Frontend
-content-length: 95
-
-{"message":"Data source returned an error","status":404,"error":{"detail":"Country not found"}}
-
-  `}
+    {`
+  {
+  "temperature":-4.5,
+  "humidity":56,
+  "pressure":994,
+  "windSpeed":7.4,
+  "windDirection":33,
+  "precipitation":0.9,
+  "visibility":45130
+}
+`}
   </Code>
+
+  <p>
+    In case you make a request that causes an unexpected response to be generated by your
+    integration, like a 404 Not found message, the product gateway will respond with a 502 to
+    indicate there was an error in the integration:
+  </p>
+  <p>
+    Note: if the data source response has errors, it gets logged into the errors section on the data
+    source edit page after a short while:
+  </p>
+  <GuideImage img={images.ERRORS} />
   <SectionTitle title="Publish the data source" />
   <p>
     When you've verified the data source works as intended you can publish the data source by
     selecting it in the list of your data sources, pressing the <em>Edit</em> button and switching
-    the visibility setting to Published and press the Save button. When it's published, it will be
-    listed to all users in the Available data sources section and it will no longer require an
-    <em>X-Preview-Token</em> header to be queried.
-  </p>
-  <SectionTitle title="Next steps" />
-  <p>
-    If you created the data source definition under your own <em>test/&lt;your-own-name&gt;</em>
-    namespace, you likely want to submit a pull request to copy it outside the test namespace and add
-    a version or copy it to the repository used for definitions in a production Dataspace. Note that
-    you will also need to adjust your productizer to accept the request at the updated path or ensure
-    it will accept requests on multiple different paths.
-  </p>
-  <p>
-    When the definition has been published, you will need to add the data source once more. This
-    time using the definition in the new path. If you want the data source to appear in the list of
-    available data sources for other users of the Dataspace also switch the radio button to
-    <em>Published</em>.
-  </p>
-  <p>
-    You might want to clean up by removing your old data source in the developer portal, and
-    deleting the old data source definition by submitting a pull request to remove it. Please note
-    that this will make it impossible to query it, so make sure to update any applications that
-    might be using it before deleting either one. Due to this, the Delete button is only possible to
-    reach through the Edit view of the data source and requires an extra confirmation.
+    the visibility to <em>Published</em> and press the <em>Save</em> button. When it's published, it
+    will be listed to all users in the <em>Available data sources</em> section.
   </p>
 </TableOfContents>
