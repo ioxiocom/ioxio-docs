@@ -180,9 +180,9 @@
   </p>
   <GuideImage img={images.ALLOWED_GROUPS} />
   <p>
-    Each group that wants to access data from this data source, including your group, needs to be in
-    this list. Click <em>+ Add</em>, type in the name of the group, click <em>+ Add</em> again. Once
-    the group appears in the list we're good to continue. The flow for adding other groups is the same.
+    Each group that wants to access data from this data source, needs to be in this list. You don't
+    need to add your own group explicitly, but if you want to add other groups for testing purposes,
+    - click <em>+ Add</em>, type in the name of the group, click <em>+ Add</em> again.
   </p>
   <SectionTitle title="Test your data source" />
   <p>
