@@ -1,8 +1,4 @@
 export const GUIDES = {
-  BUILD_APP: {
-    title: "Building an application",
-    href: "/guides/building-an-application",
-  },
   BUILD_DATA_SOURCE: {
     title: "Building a data source",
     href: "/guides/building-a-data-source",
@@ -10,10 +6,6 @@ export const GUIDES = {
   BUILD_DATA_DEF: {
     title: "How to create data definitions",
     href: "/guides/building-a-data-definition",
-  },
-  VERIFY_CONSENT: {
-    title: "How to verify consent in data source",
-    href: "/guides/verifying-consent-in-data-source",
   },
   MANAGE_GROUP: {
     title: "How to create and manage a group",
@@ -23,17 +15,25 @@ export const GUIDES = {
     title: "How to manage group members",
     href: "/guides/managing-group-members",
   },
-  USING_LOGIN_PROVIDER: {
-    title: "How to use dataspace login in an application",
-    href: "/guides/using-login-provider",
-  },
-  VERIFY_ID_TOKEN: {
-    title: "Verify id_token in data source",
-    href: "/guides/verifying-id-token",
-  },
   VERIFYING_API_TOKENS: {
     title: "Verifying API tokens",
     href: "https://ioxio.notion.site/Verifying-API-tokens-1528e3ae865b804c9f2dd354b143c743",
+  },
+  BUILD_APP: {
+    title: "Legacy: Building an application",
+    href: "/guides/building-an-application",
+  },
+  VERIFY_CONSENT: {
+    title: "Legacy: How to verify consent in data source",
+    href: "/guides/verifying-consent-in-data-source",
+  },
+  USING_LOGIN_PROVIDER: {
+    title: "Legacy: How to use dataspace login in an application",
+    href: "/guides/using-login-provider",
+  },
+  VERIFY_ID_TOKEN: {
+    title: "Legacy: Verify id_token in data source",
+    href: "/guides/verifying-id-token",
   },
 }
 
