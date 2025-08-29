@@ -53,8 +53,8 @@
       For a really simple example of how the code flow authentication can be built, you can have a
       look at the codebase for the
       <A href="https://github.com/ioxio-dataspace/mycompany-consent-demo">
-        My Company Consent demo application
-      </A>. It's lacking a lot of cleanup related things, but should be enough to show how you could
+        My Company Consent demo application</A
+      >. It's lacking a lot of cleanup related things, but should be enough to show how you could
       build it.
     </p>
     <SectionTitle title="OpenID Configurations" />
@@ -64,8 +64,8 @@
       for example on the sandbox at the address <A
         href="https://login.sandbox.ioxio-dataspace.com/.well-known/openid-configuration"
       >
-        https://login.sandbox.ioxio-dataspace.com/.well-known/openid-configuration
-      </A>.
+        https://login.sandbox.ioxio-dataspace.com/.well-known/openid-configuration</A
+      >.
     </p>
     <p>The content looks like this:</p>
     <Code lang={json}>
@@ -101,8 +101,8 @@
     </p>
     <p>
       1. Login in to the <A href="https://developer.sandbox.ioxio-dataspace.com/">
-        Developer portal
-      </A>.
+        Developer portal</A
+      >.
     </p>
     <p>2. Go to the <em>My applications</em> page in the menu.</p>
     <GuideImage img={images.MY_APPLICATIONS_PAGE} />

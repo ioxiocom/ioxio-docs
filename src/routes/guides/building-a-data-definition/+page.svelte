@@ -684,8 +684,8 @@ git push --set-upstream origin adding-my-definition
     <A
       href="https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository"
     >
-      pushing commits to a remote repository
-    </A>.
+      pushing commits to a remote repository</A
+    >.
   </p>
   <h3>Create a pull request</h3>
   <p>

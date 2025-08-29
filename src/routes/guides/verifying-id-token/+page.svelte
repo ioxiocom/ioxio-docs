@@ -64,15 +64,15 @@
     illustrated in the <A
       href="https://github.com/tiangolo/fastapi/blob/0.71.0/tests/test_security_http_bearer.py#L7-L12"
     >
-      HTTPBearer test cases
-    </A>. However you would likely want to adapt that slightly to make it an optional dependency for
+      HTTPBearer test cases</A
+    >. However you would likely want to adapt that slightly to make it an optional dependency for
     easier reuse.
   </p>
   <h3>Reading the id_token</h3>
   <p>
     The <em>id_token</em> is a <A href="https://datatracker.ietf.org/doc/html/rfc7519">
-      JSON Web Token (JWT)
-    </A>.
+      JSON Web Token (JWT)</A
+    >.
   </p>
   <p>
     If you are unfamiliar with JWTs you might want to check out the
@@ -166,8 +166,8 @@
     should be found on the sub-path <em>/.well-known/openid-configuration</em>
     relative to the <em>iss</em>. Thus in this case the the OpenID configuration can be fetched from
     <A href="https://login.sandbox.ioxio-dataspace.com/.well-known/openid-configuration">
-      https://login.sandbox.ioxio-dataspace.com/.well-known/openid-configuration
-    </A>. At the time of writing this it returned this JSON content (formatted for readability):
+      https://login.sandbox.ioxio-dataspace.com/.well-known/openid-configuration</A
+    >. At the time of writing this it returned this JSON content (formatted for readability):
   </p>
   <Code lang={json}>
     {`

@@ -37,17 +37,17 @@
   <p>
     All the parties host their own public keys using
     <A href="https://auth0.com/docs/secure/tokens/json-web-tokens/json-web-key-set-properties">
-      JSON Web Key Sets
-    </A>, which then are used for verifying tokens and messages, as well as encryption, whenever it
-    is needed. Trust in JWKS is brought by the existing mechanisms on the internet,
+      JSON Web Key Sets</A
+    >, which then are used for verifying tokens and messages, as well as encryption, whenever it is
+    needed. Trust in JWKS is brought by the existing mechanisms on the internet,
     <A href="https://www.cloudflare.com/en-gb/dns/dnssec/how-dnssec-works/">DNSSEC</A>,
     <A href="https://www.websecurity.digicert.com/security-topics/what-is-ssl-tls-https">
       SSL certificates
     </A>
     (incl.
     <A href="https://www.rapidsslonline.com/ssl/ev-ssl-certificate-requirements/">
-      Extended Validation
-    </A>), and so on.
+      Extended Validation</A
+    >), and so on.
   </p>
   <p>
     <A href="https://jwt.io/introduction/">JSON Web Tokens</A>,
@@ -81,8 +81,8 @@
     products on the Dataspace in the <A
       href="https://github.com/ioxio-dataspace/definitions-template"
     >
-      Definitions repository
-    </A>, and the results are published on the Dataspace so everyone can easily follow the agreed
+      Definitions repository</A
+    >, and the results are published on the Dataspace so everyone can easily follow the agreed
     standards. You will find the currently available data definitions on the
     <A href="https://definitions.sandbox.ioxio-dataspace.com/">Definitions Viewer</A>, and technical
     details in the
@@ -205,8 +205,8 @@
         You can check the source from GitHub, and to help you create your own productizer, you can
         go and check out our guide on
         <A href="https://docs.ioxio.dev/guides/building-a-data-source/">
-          how to build a data source
-        </A>.
+          how to build a data source</A
+        >.
       </p>
       <div class="example-links">
         <IconLink href="https://github.com/ioxio-dataspace/example-productizer" icon={ArrowIcon}>

@@ -66,8 +66,8 @@
   <p>
     You most likely want to use one of the libraries for your programming language rather than try
     to implement it according to the <A href="https://datatracker.ietf.org/doc/html/rfc7519">
-      RFC 7519
-    </A>.
+      RFC 7519</A
+    >.
   </p>
   <p>
     Let's have a look at a valid example token from one of the applications on the IOXIO Sandbox
@@ -122,8 +122,8 @@ eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vY29uc2VudC5zYW5kYm94LmlveGlvLWRhdGFzcGFj
     <A
       href="https://consent.sandbox.ioxio-dataspace.com/.well-known/dataspace/consent-configuration.json"
     >
-      https://consent.sandbox.ioxio-dataspace.com/.well-known/dataspace/consent-configuration.json
-    </A>. At the time of writing this it returned this JSON content (formatted for readability):
+      https://consent.sandbox.ioxio-dataspace.com/.well-known/dataspace/consent-configuration.json</A
+    >. At the time of writing this it returned this JSON content (formatted for readability):
   </p>
   <Code lang={json}>
     {`
@@ -184,8 +184,8 @@ eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vY29uc2VudC5zYW5kYm94LmlveGlvLWRhdGFzcGFj
     <A
       href="https://pyjwt.readthedocs.io/en/stable/usage.html#retrieve-rsa-signing-keys-from-a-jwks-endpoint"
     >
-      retrieving the keys from a JWKS endpoint
-    </A>, thus it's worth checking if the library you are using has support for that before
+      retrieving the keys from a JWKS endpoint</A
+    >, thus it's worth checking if the library you are using has support for that before
     implementing it yourself.
   </p>
   <SectionTitle title="Caching" />
@@ -234,10 +234,10 @@ eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vY29uc2VudC5zYW5kYm94LmlveGlvLWRhdGFzcGFj
     consent.
   </p>
   <p>
-    If your data source also requires authorization, you should also
+    If your data source also requires authorization, you should also see
     <A href={GUIDES.VERIFY_ID_TOKEN.href}>
-      {GUIDES.VERIFY_ID_TOKEN.title}
-    </A>. Check the
+      {GUIDES.VERIFY_ID_TOKEN.title}</A
+    >. Check the
     <em>sub</em> of both tokens match and ensure the <em>app</em> in the consent token matches the
     <em>aud</em>
     of the id_token and the <em>subiss</em> in the consent token matches the <em>iss</em> in the id_token.

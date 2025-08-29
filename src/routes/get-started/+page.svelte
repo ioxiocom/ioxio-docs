@@ -26,7 +26,7 @@
         Creating an account is free and fast. You can create a new account on the fly if you don't
         already have one. Please input all the required details and you will be logged in to the
         service as a new user. Remember the email address you used to sign up to the system, as you
-        will need it when joining a group, or requesting a new group for your organization on the
+        will need it when joining a group, or requesting a new group for your organization in the
         next step.
       </p>
     </Card>
