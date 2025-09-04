@@ -1,5 +1,6 @@
 <script lang="ts">
   import FAQ from "$lib/components/FAQ.svelte"
+  import A from "$lib/components/A.svelte"
 </script>
 
 <FAQ question={"What are Digital Product Passports and IOXIO Tags&trade;?"}>
@@ -17,7 +18,7 @@
     will need to combine a lot of different data points for your product.
   </p>
   <p>
-    Our <a href="https://docs.ioxio.dev/tags/">IOXIO Tags&trade;</a> protocol is a solution that allows
+    Our <A href="https://docs.ioxio.dev/tags/">IOXIO Tags&trade;</A> protocol is a solution that allows
     you to use different data providers on a dataspace to combine all of them into one report, and link
     it onto a physical carrier like QR code or an RFID yarn.
   </p>

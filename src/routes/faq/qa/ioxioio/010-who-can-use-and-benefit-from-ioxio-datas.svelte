@@ -1,5 +1,6 @@
 <script lang="ts">
   import FAQ from "$lib/components/FAQ.svelte"
+  import A from "$lib/components/A.svelte"
 </script>
 
 <FAQ question={"Who can use and benefit from IOXIO Dataspace™?"}>
@@ -10,7 +11,7 @@
     sectors.
   </p>
   <p>
-    Private companies can leverage <a href="http://IOXIO.io">IOXIO.io</a> to optimize supply chains,
+    Private companies can leverage <A href="http://IOXIO.io">IOXIO.io</A> to optimize supply chains,
     enhance data-driven decision-making, and foster partnerships with other businesses. Public organizations
     and governments can use IOXIO.io to improve inter-agency communication, facilitate transparency,
     and deliver better services to citizens.

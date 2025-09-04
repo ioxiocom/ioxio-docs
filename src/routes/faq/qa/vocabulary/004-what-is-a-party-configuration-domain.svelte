@@ -1,5 +1,6 @@
 <script lang="ts">
   import FAQ from "$lib/components/FAQ.svelte"
+  import A from "$lib/components/A.svelte"
 </script>
 
 <FAQ question={"What is a party configuration domain?"}>
@@ -9,8 +10,8 @@
   </p>
   <p>
     We have a prototype for using it to sign your data. It is also used by our experimental consent
-    protocol, which you can try out on our <a href="https://sandbox.ioxio-dataspace.com">Sandbox</a
+    protocol, which you can try out on our <A href="https://sandbox.ioxio-dataspace.com">Sandbox</A
     >. Read more about
-    <a href="https://docs.ioxio.dev/schemas/party-configuration/">party configuration domains</a>.
+    <A href="https://docs.ioxio.dev/schemas/party-configuration/">party configuration domains</A>.
   </p>
 </FAQ>
