@@ -13,6 +13,14 @@
     isOpen = !isOpen
   }
 
+  function handleClick(event: MouseEvent) {
+    // If ctrl/cmd key is pressed, don't toggle, open the link in new tab
+    if (event.ctrlKey || event.metaKey) {
+      return
+    }
+    toggleOpen()
+  }
+
   function makeId(question: string) {
     return question
       .toLowerCase()
@@ -31,7 +39,7 @@
 
 <div
   class="faq"
-  on:click={toggleOpen}
+  on:click={handleClick}
   on:keydown={(e) => e.key === "Enter" && toggleOpen()}
   aria-expanded={isOpen}
   tabindex="0"
@@ -42,7 +50,10 @@
     <a
       href={`#${id}`}
       on:click={(e) => {
-        e.preventDefault()
+        // for opening in new tab
+        if (!e.ctrlKey && !e.metaKey) {
+          e.preventDefault()
+        }
       }}
     >
       <div class="link-icon">
