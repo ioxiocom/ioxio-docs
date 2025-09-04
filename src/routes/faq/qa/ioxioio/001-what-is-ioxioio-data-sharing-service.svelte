@@ -1,12 +1,13 @@
 <script lang="ts">
   import FAQ from "$lib/components/FAQ.svelte"
+  import A from "$lib/components/A.svelte"
 </script>
 
 <FAQ question={"What is IOXIO.io data sharing service?"}>
   <p>
-    Our data sharing service <a href="http://ioxio.io/">IOXIO.io</a> is meant for anyone who wants
-    to make their data available, or consume data from multiple sources. Read more about it on our
-    <a href="https://docs.ioxio.dev/dataspace/">Dataspace page</a>.
+    Our data sharing service <A href="http://ioxio.io/">IOXIO.io</A> is meant for anyone who wants to
+    make their data available, or consume data from multiple sources. Read more about it on our
+    <A href="https://docs.ioxio.dev/dataspace/">Dataspace page</A>.
   </p>
   <p>
     We help you get your data moving and remove the overhead and mess of having multiple different

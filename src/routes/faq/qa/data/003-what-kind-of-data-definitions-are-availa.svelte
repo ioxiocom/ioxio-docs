@@ -1,5 +1,6 @@
 <script lang="ts">
   import FAQ from "$lib/components/FAQ.svelte"
+  import A from "$lib/components/A.svelte"
 </script>
 
 <FAQ question={"What kind of data definitions are available?"}>
@@ -11,7 +12,7 @@
   </p>
   <p>
     If you have an idea what kind of data you would like to share, you can always suggest a data
-    product to us either on our <a href="https://slack.ioxio.com">community Slack</a>, or directly
-    via <a href="https://github.com/ioxio-dataspace/ioxio-io-definitions/">GitHub.</a>
+    product to us either on our <A href="https://slack.ioxio.com">community Slack</A>, or directly
+    via <A href="https://github.com/ioxio-dataspace/ioxio-io-definitions/">GitHub.</A>
   </p>
 </FAQ>
