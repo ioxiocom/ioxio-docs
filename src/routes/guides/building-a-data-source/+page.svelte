@@ -36,7 +36,7 @@
     protocol.
   </li>
   <SectionTitle title="Choosing a data definition for your source" />
-  <p>You can find the available <em>Data definitions</em> via menu.</p>
+  <p>You can find the available <em>Data definitions</em> in the menu.</p>
   <GuideImage compact img={images.DEFINITIONS} />
   <p>
     If there is no definition for the type of data you want to provide, you can create your own
@@ -113,7 +113,7 @@
     Some dataspaces have moderated group creation. If the page has a notice saying so, and you are
     unable to create the group yourself, please follow the instructions visible in the page to get a
     group. Note, that if your organization already has a group, you will need to ask your group's
-    administrator to invite you to the existing group.
+    owner to invite you to the existing group.
   </p>
   <h3>Add your data source</h3>
   <p>
@@ -151,10 +151,6 @@
   <ul>
     <li>
       <b>No access control</b> - The dataspace will allow anyone to request data from the data source.
-    </li>
-    <li>
-      <b>Self-managed API keys</b> - <em>X-API-Key</em> header will be required to be present, but its
-      contents will not be verified by the dataspace.
     </li>
     <li>
       <b>Dataspace verified API tokens</b> - The <em>X-API-Key</em> header will be required and
