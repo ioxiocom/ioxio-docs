@@ -263,7 +263,7 @@
   </p>
   <p>
     On the View access control keys page press the <em>Generate API token</em> button. This will for
-    convenience use one of the long-lived API keys and generate a short lived API token (typically valid
+    convenience use one of the long-lived access control keys and generate a short lived API token (typically valid
     for about an hour) and display it to you for easier testing.
   </p>
   <GuideImage img={images.GENERATE_API_TOKEN_BUTTON} />
