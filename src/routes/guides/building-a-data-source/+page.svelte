@@ -290,10 +290,9 @@
   <p>
     Check the status and response is as you expect or in case of an error check the details in the
     error message. Please note that the API tokens are typically valid for only about an hour, so if
-    you do a lot of testing you might encounter the <em
-      >API token is not valid for this source or it has expired</em
-    > message, which means you need to go back to the Access control keys page and generate a fresh one
-    to use.
+    you do a lot of testing you might encounter the <em>API token is not valid for this source or
+    it has expired</em> message, which means you need to go back to the Access control keys
+    page and generate a fresh one to use.
   </p>
 
   <SectionTitle title="Publish the data source" />
