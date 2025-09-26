@@ -36,7 +36,7 @@
     protocol.
   </li>
   <SectionTitle title="Choosing a data definition for your source" />
-  <p>You can find the available <em>Data definitions</em> via menu.</p>
+  <p>You can find the available <em>Data definitions</em> in the menu.</p>
   <GuideImage compact img={images.DEFINITIONS} />
   <p>
     If there is no definition for the type of data you want to provide, you can create your own
@@ -113,7 +113,7 @@
     Some dataspaces have moderated group creation. If the page has a notice saying so, and you are
     unable to create the group yourself, please follow the instructions visible in the page to get a
     group. Note, that if your organization already has a group, you will need to ask your group's
-    administrator to invite you to the existing group.
+    owner to invite you to the existing group.
   </p>
   <h3>Add your data source</h3>
   <p>
@@ -153,10 +153,6 @@
       <b>No access control</b> - The dataspace will allow anyone to request data from the data source.
     </li>
     <li>
-      <b>Self-managed API keys</b> - <em>X-API-Key</em> header will be required to be present, but its
-      contents will not be verified by the dataspace.
-    </li>
-    <li>
       <b>Dataspace verified API tokens</b> - The <em>X-API-Key</em> header will be required and
       verified by the dataspace. Once you save the data source with this setting you can manage
       which groups are allowed to access the data source. The members of the allowed groups will
@@ -183,6 +179,12 @@
     Each group that wants to access data from this data source, needs to be in this list. You don't
     need to add your own group explicitly, but if you want to add other groups for testing purposes,
     - click <em>+ Add</em>, type in the name of the group, click <em>+ Add</em> again.
+  </p>
+  <p>
+    To test your data source, you can either follow the more in-depth steps in the next
+    <A href="#test-your-data-source">Test your data source</A> section or head to the
+    <A href="#test-your-data-source-using-swagger-ui">Test your data source using Swagger UI</A> section
+    a bit further down for a simpler and quicker approach.
   </p>
   <SectionTitle title="Test your data source" />
   <p>
@@ -247,6 +249,53 @@
     source edit page after a short while:
   </p>
   <GuideImage img={images.ERRORS} />
+
+  <SectionTitle title="Test your data source using Swagger UI" />
+  <p>The quickest and easiest way to test your data source is using these steps with Swagger UI.</p>
+  <p>
+    From the edit data source view, you can quickly jump to the Access control keys for your source
+    by pressing the key icon in the list of <em>Allowed groups</em> section.
+  </p>
+  <GuideImage img={images.ALLOWED_GROUPS_KEY} />
+  <p>
+    Alternatively you can open the <em>Access control keys</em> from the menu and open the details for
+    your own source.
+  </p>
+  <p>
+    On the View access control keys page press the <em>Generate API token</em> button. This will for
+    convenience use one of the long-lived access control keys and generate a short lived API token (typically
+    valid for about an hour) and display it to you for easier testing.
+  </p>
+  <GuideImage img={images.GENERATE_API_TOKEN_BUTTON} />
+  <p>
+    Copy the generated API token, make a note of the source value and open the <em>Swagger UI</em> link.
+  </p>
+  <GuideImage img={images.COPY_API_TOKEN_AND_OPEN_SWAGGER_UI} />
+  <p>
+    Press the <em>Try it out</em> button in Swagger UI.
+  </p>
+  <GuideImage img={images.SWAGGER_UI_TRY_IT_OUT} />
+  <p>
+    Enter the name of the source (the one you were requested earlier to make a note of) and paste in
+    the API token you copied in the <em>x-api-key</em> field. Do any changes you want to the request
+    body and press the
+    <em>Execute</em> button to perform the request.
+  </p>
+  <GuideImage img={images.SWAGGER_UI_FILLED_IN_FORM} />
+  <p>
+    Swagger UI will in the <em>Responses</em> section show you the curl command corresponding to the
+    request that it made and also show the status code and body of the response.
+  </p>
+  <GuideImage img={images.SWAGGER_UI_RESPONSE} />
+  <p>
+    Check the status and response is as you expect or in case of an error check the details in the
+    error message. Please note that the API tokens are typically valid for only about an hour, so if
+    you do a lot of testing you might encounter the
+    <em>API token is not valid for this source or it has expired</em>
+    message, which means you need to go back to the Access control keys page and generate a fresh one
+    to use.
+  </p>
+
   <SectionTitle title="Publish the data source" />
   <p>
     When you've verified the data source works as intended you can publish the data source by

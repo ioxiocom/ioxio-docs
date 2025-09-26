@@ -14,6 +14,10 @@
       "src": "/guides/building-a-data-source/allowed_groups.png",
       "alt": "Allowed groups section in data source edit form"
     },
+    "ALLOWED_GROUPS_KEY": {
+      "src": "/guides/building-a-data-source/allowed_groups_key.png",
+      "alt": "Allowed groups section in data source edit form with arrow pointing at the key icon."
+    },
     "API_TOKEN": {
       "src": "/guides/building-a-data-source/api_token.png",
       "alt": "Access control keys of a data source"
@@ -41,6 +45,26 @@
     "SOURCE_ACCESS_CONTROL": {
       "src": "/guides/building-a-data-source/source_access_control.png",
       "alt": "Data source in the list of data sources with Dataspace verified API keys"
+    },
+    "GENERATE_API_TOKEN_BUTTON": {
+      "src": "/guides/building-a-data-source/generate_api_token_button.png",
+      "alt": "Generate API token button on the view access control keys page."
+    },
+    "COPY_API_TOKEN_AND_OPEN_SWAGGER_UI": {
+      "src": "/guides/building-a-data-source/copy_api_token_and_open_swagger_ui.png",
+      "alt": "Arrows pointing at the copy API token button, the source and the Swagger UI link."
+    },
+    "SWAGGER_UI_TRY_IT_OUT": {
+      "src": "/guides/building-a-data-source/swagger_ui_try_it_out.png",
+      "alt": "Arrow pointing at the Try it out button in Swagger UI."
+    },
+    "SWAGGER_UI_FILLED_IN_FORM": {
+      "src": "/guides/building-a-data-source/swagger_ui_filled_in_form.png",
+      "alt": "Swagger UI form with arrows pointing at the source and x-api-key input fields, as well as the Request body textarea and Execute button."
+    },
+    "SWAGGER_UI_RESPONSE": {
+      "src": "/guides/building-a-data-source/swagger_ui_response.png",
+      "alt": "Swagger UI Responses section showing the curl command and server response."
     }
   },
   "BUILD_APP": {
