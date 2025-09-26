@@ -181,9 +181,8 @@
     - click <em>+ Add</em>, type in the name of the group, click <em>+ Add</em> again.
   </p>
   <p>
-    To test your data source, you can either follow the more in-depth steps in the next <A
-      href="#test-your-data-source-">Test your data source</A
-    > section or head to the
+    To test your data source, you can either follow the more in-depth steps in the next
+    <A href="#test-your-data-source-">Test your data source</A> section or head to the
     <A href="#test-your-data-source-using-swagger-ui">Test your data source using Swagger UI</A> section
     a bit further down for a simpler and quicker approach.
   </p>
