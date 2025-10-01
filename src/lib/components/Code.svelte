@@ -16,6 +16,7 @@
 
   $: {
     code = codeContainer ? codeContainer.innerHTML.trim() : ""
+    code = code.replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&amp;", "&")
   }
 </script>
 
