@@ -116,9 +116,7 @@
     You should point the <em>Open ID URLs</em> to a URL of the form
     <em>https://&lt;dataspace-domain&gt;/.well-known/openid-configuration</em>. So for example for
     <A href="https://IOXIO.io">IOXIO.io</A>
-    you would set it to <A href="https://ioxio.io/.well-known/openid-configuration">
-      https://ioxio.io/.well-known/openid-configuration</A
-    >.
+    you would set it to <em>https://ioxio.io/.well-known/openid-configuration</em>.
   </p>
 
   <p>
