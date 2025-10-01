@@ -67,6 +67,16 @@
       "alt": "Swagger UI Responses section showing the curl command and server response."
     }
   },
+  "VERIFYING_API_TOKENS": {
+    "JWT_IO_DECODED_TOKEN": {
+      "src": "/guides/verifying-api-tokens/jwt-io-decoded-token.png",
+      "alt": "Interface of JWT.io showing tje decoded and verified token."
+    },
+    "AZURE_API_MANAGEMENT_POLICY": {
+      "src": "/guides/verifying-api-tokens/azure_api_management_policy.png",
+      "alt": "Azure API Management screen with inbound processing policy for validating JWT."
+    }
+  },
   "BUILD_APP": {
     "API_DOCS": {
       "src": "/guides/building-an-application/api_docs.png",

@@ -17,7 +17,7 @@ export const GUIDES = {
   },
   VERIFYING_API_TOKENS: {
     title: "Verifying API tokens",
-    href: "https://ioxio.notion.site/Verifying-API-tokens-1528e3ae865b804c9f2dd354b143c743",
+    href: "/guides/verifying-api-tokens",
   },
   BUILD_APP: {
     title: "Legacy: Building an application",
