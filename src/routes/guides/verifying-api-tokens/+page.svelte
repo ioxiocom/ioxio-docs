@@ -251,10 +251,25 @@
   </p>
 
   <p>
-    You can equally well make the request against your final deployed instance or against your own
+    You can equally well make the request against your actual deployed instance or against your own
     local development setup by changing the URL to something like
     <em>https://my-server.example.com/Meteorology/Weather_v0.1?source=my_group</em> or
     <em>http://localhost:8080/Meteorology/Weather_v0.1?source=my_group</em>.
+  </p>
+
+  <p>
+    To test with invalid tokens you can let the token expire or you can make it invalid by removing
+    the last character (the token consists of three parts, separated by dots <em>.</em>, the first
+    one contains the header, the middle one the payload and the last part is the signature, so any
+    change after the last dot will invalidate the signature, but keep the header and payload
+    intact).
+  </p>
+
+  <p>
+    You could also register a temporary dummy data source using another <em>variant</em> when
+    creating it or create it using a different definition just to be able to generate API tokens for
+    them. API tokens generated for those sources should not be valid due to the differences in the
+    <em>aud</em> field compared to the real source.
   </p>
 
   <SectionTitle title="Granting access" />
