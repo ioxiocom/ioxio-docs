@@ -75,6 +75,10 @@
     "AZURE_API_MANAGEMENT_POLICY": {
       "src": "/guides/verifying-api-tokens/azure_api_management_policy.png",
       "alt": "Azure API Management screen with inbound processing policy for validating JWT."
+    },
+    "SWAGGER_UI_RESPONSE_CURL": {
+      "src": "/guides/verifying-api-tokens/swagger_ui_response_curl.png",
+      "alt": "Swagger UI Responses section highlighting the curl command."
     }
   },
   "BUILD_APP": {

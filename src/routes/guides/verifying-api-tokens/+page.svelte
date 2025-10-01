@@ -10,6 +10,7 @@
   import type { PageData } from "./$types"
   import GuideImage from "$lib/components/GuideImage.svelte"
   import A from "$lib/components/A.svelte"
+  import { GUIDES } from "../urls"
 
   export let data: PageData
   const images = data.images
@@ -227,4 +228,45 @@
   </Code>
 
   <p>Any other possible errors should also be treated as failures.</p>
+
+  <SectionTitle title="Testing" />
+
+  <p>
+    The <A href={GUIDES.BUILD_DATA_SOURCE.href}>
+      {GUIDES.BUILD_DATA_SOURCE.title}
+    </A> guide explains in the
+    <A href="{GUIDES.BUILD_DATA_SOURCE.href}#test-your-data-source-using-swagger-ui">
+      Test your data source using Swagger UI
+    </A>
+    section how you can easily obtain an API token and use the Swagger UI to test your data source through
+    the product gateway of the dataspace.
+  </p>
+
+  <GuideImage img={images.SWAGGER_UI_RESPONSE_CURL} />
+
+  <p>
+    If you want to test the token validation works correctly also in your own implementation, you
+    can simply copy the <em>curl</em> example that is shown there and replace the URL with the one
+    for your own implementation (assuming you have <em>curl</em> installed and can run it in a terminal).
+  </p>
+
+  <p>
+    You can equally well make the request against your final deployed instance or against your own
+    local development setup by changing the URL to something like
+    <em>https://my-server.example.com/Meteorology/Weather_v0.1?source=my_group</em> or
+    <em>http://localhost:8080/Meteorology/Weather_v0.1?source=my_group</em>.
+  </p>
+
+  <SectionTitle title="Granting access" />
+
+  <p>
+    The <A href="{GUIDES.BUILD_DATA_SOURCE.href}#managing-access-to-the-data-source">
+      Managing access to the data source
+    </A>
+    section of the
+    <A href={GUIDES.BUILD_DATA_SOURCE.href}>{GUIDES.BUILD_DATA_SOURCE.title}</A>
+    guide also explains how to grant access to the data source to other groups and how to remove access.
+    Granting them access means they will be able to generate API tokens with their group as the
+    <em>sub</em>.
+  </p>
 </TableOfContents>
