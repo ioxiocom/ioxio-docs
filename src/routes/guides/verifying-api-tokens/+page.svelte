@@ -93,7 +93,7 @@
 
   <p>
     In case you want to do some more fine-grained access control to what data who has access to, you
-    can use the sub to identify the group access was granted to.
+    can use the <em>sub</em> to identify the group access was granted to.
   </p>
 
   <p>
