@@ -28,11 +28,19 @@
     the <em>X-API-Key</em> HTTP Header.
   </p>
 
-  <p>There are two ways a data source can verify this API token:</p>
+  <p>There are two main ways a data source can verify this API token:</p>
 
   <ol>
-    <li>Validate the token as a JWT signed by the dataspace</li>
-    <li>Use the token verification endpoint on the product gateway</li>
+    <li>
+      <A href="#validate-token-as-a-jwt-signed-by-the-dataspace">
+        Validate the token as a JWT signed by the dataspace
+      </A>
+    </li>
+    <li>
+      <A href="#token-verification-api">
+        Use the token verification endpoint on the product gateway
+      </A>
+    </li>
   </ol>
 
   <SectionTitle title="Validate token as a JWT signed by the dataspace" />
