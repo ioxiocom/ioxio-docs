@@ -69,7 +69,7 @@
   },
   "VERIFYING_API_TOKENS": {
     "JWT_IO_DECODED_TOKEN": {
-      "src": "/guides/verifying-api-tokens/jwt-io-decoded-token.png",
+      "src": "/guides/verifying-api-tokens/jwt_io_decoded_token.png",
       "alt": "Interface of JWT.io showing tje decoded and verified token."
     },
     "AZURE_API_MANAGEMENT_POLICY": {
