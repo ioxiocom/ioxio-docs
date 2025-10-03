@@ -170,15 +170,27 @@
   </p>
   <GuideImage img={images.CREATE_NEW_DS} />
   <p>Press the <em>Create</em> button to create the data source.</p>
+
+  <SectionTitle title="Managing access to the data source" />
   <p>
-    As we selected <em>Dataspace verified API tokens</em>, after group is created you will see the
-    <em>Allowed groups</em> section:
+    As we selected <em>Dataspace verified API tokens</em> when creating the data source, you will
+    see the
+    <em>Allowed groups</em> section at the bottom of the page once the source has been created:
   </p>
   <GuideImage img={images.ALLOWED_GROUPS} />
   <p>
-    Each group that wants to access data from this data source, needs to be in this list. You don't
-    need to add your own group explicitly, but if you want to add other groups for testing purposes,
-    - click <em>+ Add</em>, type in the name of the group, click <em>+ Add</em> again.
+    Each group that should be able to access data from this data source, needs to be in this list.
+    Your own group is added automatically, but if you want to add other groups, click
+    <em>+ Add</em>, type in the name of the group, click <em>+ Add</em> again.
+  </p>
+  <p>
+    You likely also want to check the API token in your own data source, at least for any real
+    integrations accessing any data that shouldn't be publicly accessible, by following the
+    instructions in the
+    <A href={GUIDES.VERIFYING_API_TOKENS.href}>
+      {GUIDES.VERIFYING_API_TOKENS.title}
+    </A> -guide. You can also use the name of the group, which is found in the <em>sub</em> field of
+    the token, to restrict which group should have access to what data.
   </p>
   <p>
     To test your data source, you can either follow the more in-depth steps in the next
