@@ -66,9 +66,8 @@
     <em>jwks_url</em>. For example the
     <A href="https://ioxio.io/.well-known/dataspace/dataspace-configuration.json">
       dataspace configuration on ioxio.io
-    </A> points to <A href="https://ioxio.io/.well-known/jwks.json">
-      https://ioxio.io/.well-known/jwks.json</A
-    >.
+    </A> points to
+    <A href="https://ioxio.io/.well-known/jwks.json">https://ioxio.io/.well-known/jwks.json</A>.
   </p>
 
   <p>Things to ensure:</p>
