@@ -158,7 +158,7 @@
     output-token-variable-name="jwt">
   <openid-config url="https://ioxio.io/.well-known/openid-configuration" />
   <audiences>
-    <audience>dpp://ioxio:visual_crossing@ioxio.io/Meteorology/Weather_v0.1</audience>
+    <audience>dpp://group:variant@ioxio.io/Meteorology/Weather_v0.1</audience>
   </audiences>
 </validate-jwt>
     `}
@@ -203,7 +203,7 @@
     {`
 {
   "valid": true,
-  "aud": "dpp://ioxio:visual_crossing@ioxio.io/Meteorology/Weather_v0.1",
+  "aud": "dpp://group:variant@ioxio.io/Meteorology/Weather_v0.1",
   "exp": 1733758438,
   "iat": 1733754838,
   "iss": "https://ioxio.io",
