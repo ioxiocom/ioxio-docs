@@ -15,7 +15,7 @@
   let code = ""
 
   $: {
-    code = codeContainer ? codeContainer.innerHTML.trim() : ""
+    code = codeContainer ? codeContainer.textContent.trim() : ""
   }
 </script>
 
