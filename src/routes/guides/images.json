@@ -149,6 +149,76 @@
       "alt": "Create a group page in Developer Portal"
     }
   },
+  "USING_DATA": {
+    "MENU_DATA_SOURCES": {
+      "src": "/guides/using-data-from-data-sources/menu_data_sources.png",
+      "alt": "Menu with arrow pointing at the Data sources section"
+    },
+    "DATA_SOURCE_SEARCH": {
+      "src": "/guides/using-data-from-data-sources/data_source_search.png",
+      "alt": "Data sources page showing search field and button to view sources"
+    },
+    "DATA_SOURCES_FOR_DEFINITION": {
+      "src": "/guides/using-data-from-data-sources/data_sources_for_definition.png",
+      "alt": "Listing of sources for a definition with links to resources on the right"
+    },
+    "DATA_SOURCES_DETAILS": {
+      "src": "/guides/using-data-from-data-sources/data_source_details.png",
+      "alt": "Details for the data source"
+    },
+    "MENU_ACCESS_CONTROL_KEYS": {
+      "src": "/guides/using-data-from-data-sources/menu_access_control_keys.png",
+      "alt": "Menu with arrow pointing at the Access control keys section"
+    },
+    "ACCESS_CONTROL_KEYS_LISTING": {
+      "src": "/guides/using-data-from-data-sources/access_control_keys_listing.png",
+      "alt": "Listing of access control keys on the Access control keys page"
+    },
+    "ACCESS_CONTROL_KEYS_VIEW": {
+      "src": "/guides/using-data-from-data-sources/access_control_keys_view.png",
+      "alt": "Access control keys view for a data source"
+    },
+    "CURL_EXAMPLE": {
+      "src": "/guides/using-data-from-data-sources/curl_example.png",
+      "alt": "cURL example of requesting an API token using an access control key"
+    },
+    "CURL_REQUEST": {
+      "src": "/guides/using-data-from-data-sources/curl_request.png",
+      "alt": "Curl request in Swagger UI"
+    },
+    "GENERATED_API_TOKEN": {
+      "src": "/guides/using-data-from-data-sources/generated_api_token.png",
+      "alt": "API token generated with the Generate API token button"
+    },
+    "ACCESS_CONTROL_KEYS_MAKING_REQUEST": {
+      "src": "/guides/using-data-from-data-sources/access_control_keys_making_request.png",
+      "alt": "Instructions on making request on the Access control keys page"
+    },
+    "ACCESS_CONTROL_KEYS_LINKS": {
+      "src": "/guides/using-data-from-data-sources/access_control_keys_links.png",
+      "alt": "Access control keys page with links to Swagger UI and ReDoc"
+    },
+    "SWAGGER_UI_EXAMPLE_VALUE": {
+      "src": "/guides/using-data-from-data-sources/swagger_ui_example_value.png",
+      "alt": "Swagger UI showing Example Value"
+    },
+    "SWAGGER_UI_SCHEMA": {
+      "src": "/guides/using-data-from-data-sources/swagger_ui_schema.png",
+      "alt": "Swagger UI showing Schema"
+    },
+    "SWAGGER_UI_TRY_IT_OUT": {
+      "src": "/guides/using-data-from-data-sources/swagger_ui_try_it_out.png",
+      "alt": "Swagger UI with Try it out button"
+    },
+    "SWAGGER_UI_FIELDS": {
+      "src": "/guides/using-data-from-data-sources/swagger_ui_fields.png",
+      "alt": "Swagger UI with the necessary fields highlighted"
+    },
+    "SWAGGER_UI_REQUEST_RESPONSE": {
+      "src": "/guides/using-data-from-data-sources/swagger_ui_request_response.png",
+      "alt": "Swagger UI with the request and response from a source"
+    }
+  },
   "MANAGE_GROUP_MEMBERS": {
     "EDIT_ROLE": {
       "src": "/guides/managing-group-members/edit_role.png",
