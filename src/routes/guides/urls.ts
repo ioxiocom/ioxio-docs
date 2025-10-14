@@ -19,6 +19,10 @@ export const GUIDES = {
     title: "Verifying API tokens",
     href: "/guides/verifying-api-tokens",
   },
+  USING_DATA: {
+    title: "Using data from data sources",
+    href: "/guides/using-data-from-data-sources",
+  },
   BUILD_APP: {
     title: "Legacy: Building an application",
     href: "/guides/building-an-application",
