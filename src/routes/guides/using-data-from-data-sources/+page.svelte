@@ -22,9 +22,9 @@
 
   <p>
     In this guide we will explain how to find, get access to and use data from data sources
-    published on an IOXIO data sharing service. We will be showing the process on the <A
-      href="https://sandbox.ioxio-dataspace.com/">IOXIO Sandbox Dataspace</A
-    >, but this guide also works for most parts on for example
+    published on an IOXIO data sharing service. We will be showing the process on the
+    <A href="https://sandbox.ioxio-dataspace.com/">IOXIO Sandbox Dataspace</A>, but this guide also
+    works for most parts on for example
     <A href="https://ioxio.io/">IOXIO.io</A>.
   </p>
 
