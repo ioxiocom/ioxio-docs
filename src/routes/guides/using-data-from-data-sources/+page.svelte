@@ -113,9 +113,8 @@
 
   <p>
     If you’re interested in trying out bidirectional communication yourself, you might also want to
-    check out the <A href={GUIDES.BUILD_DATA_SOURCE.href}>
-      {GUIDES.BUILD_DATA_SOURCE.title}
-    </A> guide.
+    check out the
+    <A href={GUIDES.BUILD_DATA_SOURCE.href}>{GUIDES.BUILD_DATA_SOURCE.title}</A> guide.
   </p>
 
   <SectionTitle title="Access control keys and API tokens" />
