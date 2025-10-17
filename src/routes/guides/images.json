@@ -140,15 +140,28 @@
     }
   },
   "MANAGE_GROUP": {
-    "EDITING_A_GROUP": {
-      "src": "/guides/managing-groups/editing_a_group.png",
-      "alt": "Editing a group page in Developer Portal"
+    "MY_GROUPS_BUTTON": {
+      "src": "/guides/managing-groups/my_groups_button.png",
+      "alt": "My groups page with the Add a group button"
     },
-    "PAGE_FOR_CREATING_GROUPS": {
-      "src": "/guides/managing-groups/page_for_creating_groups.png",
-      "alt": "Create a group page in Developer Portal"
+    "MY_GROUPS_DISCLAIMER": {
+      "src": "/guides/managing-groups/my_groups_disclaimer.png",
+      "alt": "My groups page with disclaimer"
+    },
+    "CREATE_GROUP_PAGE": {
+      "src": "/guides/managing-groups/create_group_page.png",
+      "alt": "Create a group page"
+    },
+    "GROUP_LISTING": {
+      "src": "/guides/managing-groups/group_listing.png",
+      "alt": "List items on the My groups page"
+    },
+    "EDIT_GROUP": {
+      "src": "/guides/managing-groups/edit_group.png",
+      "alt": "Edit group page"
     }
   },
+  "PARTY_CONFIGURATION": {},
   "USING_DATA": {
     "MENU_DATA_SOURCES": {
       "src": "/guides/using-data-from-data-sources/menu_data_sources.png",
