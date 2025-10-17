@@ -74,7 +74,7 @@
   <GuideImage img={images.EDIT_GROUP} />
 
   <p>
-    If your group was by the support, please ensure you fill in a GDPR contact and a technical
+    If your group was created by support, please ensure you fill in a GDPR contact and a technical
     contact.
   </p>
 
