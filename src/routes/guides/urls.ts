@@ -23,6 +23,10 @@ export const GUIDES = {
     title: "Using data from data sources",
     href: "/guides/using-data-from-data-sources",
   },
+  PARTY_CONFIGURATION: {
+    title: "Setting up a party configuration domain",
+    href: "/guides/party-configuration",
+  },
   BUILD_APP: {
     title: "Legacy: Building an application",
     href: "/guides/building-an-application",
