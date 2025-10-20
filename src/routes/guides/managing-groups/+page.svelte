@@ -42,7 +42,7 @@
   <GuideImage img={images.CREATE_GROUP_PAGE} />
   <p>
     When creating the group, note that the name of the group needs to be unique for the data sharing
-    service and can consist of lower case letters a-z, underscores and numbers and be at most 64
+    service, can consist of lower case letters a-z, underscores and numbers, and be at most 64
     characters long.
   </p>
   <p>
