@@ -51,7 +51,7 @@
       it is missing.
     </li>
     <li>
-      <em>403</em>: <em>forbidden</em> if the API token is valid, but the owner of the token does not
+      <em>403</em>: <em>forbidden</em> if the API token is valid, but the token does not
       have permission to request the data specified by the parameters.
     </li>
     <li>
