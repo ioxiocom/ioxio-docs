@@ -23,6 +23,10 @@ export const GUIDES = {
     title: "Using data from data sources",
     href: "/guides/using-data-from-data-sources",
   },
+  ERROR_RESPONSES: {
+    title: "Error responses",
+    href: "/guides/error-responses",
+  },
   PARTY_CONFIGURATION: {
     title: "Setting up a party configuration domain",
     href: "/guides/party-configuration",
