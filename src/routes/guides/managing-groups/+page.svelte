@@ -48,7 +48,9 @@
   <p>
     The group should also have a GDPR contact, as well as a technical contact that can be contacted
     in case of technical problems, such as problems with requesting data from data sources or
-    requests to data sources made by the group.
+    requests to data sources made by the group. It's recommended that these addresses are generic
+    gdpr@ or support@ -style addresses where applicable so you don't have to worry about updating
+    them as your team changes.
   </p>
   <p>
     The group can also optionally have a party configuration domain; a domain on which a party (the
