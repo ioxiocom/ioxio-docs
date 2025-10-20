@@ -51,8 +51,8 @@
       it is missing.
     </li>
     <li>
-      <em>403</em>: <em>forbidden</em> if the API token is valid, but the token does not
-      have permission to request the data specified by the parameters.
+      <em>403</em>: <em>forbidden</em> if the API token is valid, but the token does not have permission
+      to request the data specified by the parameters.
     </li>
     <li>
       <em>404</em>: <em>not_found</em> when the requested data can not be found.
