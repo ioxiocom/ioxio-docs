@@ -21,8 +21,8 @@
   <SectionTitle title="Introduction" />
 
   <p>
-    In this guide we will explain how to find, get access to and use data from data sources
-    published on an IOXIO data sharing service. We will be showing the process on the
+    In this guide we will explain how to find, get access to and use data sources published on an
+    IOXIO data sharing service. We will be showing the process on the
     <A href="https://sandbox.ioxio-dataspace.com/">IOXIO Sandbox Dataspace</A>, but this guide also
     works for most parts on for example
     <A href="https://ioxio.io/">IOXIO.io</A>.
@@ -31,32 +31,31 @@
   <SectionTitle title="Prerequisites" />
 
   <ul>
-    <li>Knowing what kind of data you want to access/use.</li>
+    <li>Knowing what kind of data source you want to access/use.</li>
     <li>
       An account and a group on one of the data sharing services, such as
       <A href="https://sandbox.ioxio-dataspace.com/">IOXIO Sandbox Dataspace</A> or
       <A href="https://ioxio.io/">IOXIO.io</A>.
     </li>
     <li>
-      To access the data, you need to request access for your group. If you don’t yet know which
-      data, you can find instructions to identify the source below, but you cannot connect to it
-      before your group has been granted access.
+      To access the data source, you need to request access for your group. If you don’t yet know
+      which data source, you can find instructions to identify the source below, but you cannot
+      connect to it before your group has been granted access.
     </li>
   </ul>
 
   <SectionTitle title="Finding a data source" />
 
   <p>
-    The first step is to find a data source providing the kind of data you want to use. You can
-    browse all available data sources by going to the <em>Data sources</em>
-    section in the menu.
+    The first step is to find a data source you want to use. You can browse all available data
+    sources by going to the <em>Data sources</em> section in the menu.
   </p>
 
   <GuideImage img={images.MENU_DATA_SOURCES} compact />
 
   <p>
-    Search for the data relevant to you, e.g. using search words, or tags. In this example we’ve
-    searched for data related to <em>weather</em> and will be using a source for the
+    Search for the data sources relevant to you, e.g. using search words, or tags. In this example
+    we’ve searched for data related to <em>weather</em> and will be using a source for the
     <em>Meteorology/Weather</em> definition.
   </p>
 
@@ -139,26 +138,26 @@
     <li>
       <p>
         API tokens: API tokens are short-lived, typically valid for an hour from being generated,
-        and used in the requests to fetch data products from a data source. They are validated by
-        the IOXIO data sharing service (when the <em>Dataspace verified API tokens</em> option is used
-        for the data source) and optionally validated by the data source.
+        and used in the requests to a data source. They are validated by the IOXIO data sharing
+        service (when the <em>Dataspace verified API tokens</em> option is used for the data source)
+        and optionally validated by the data source.
       </p>
       <p>
-        These can be treated as opaque strings for the practical matters of the group requesting
-        data. Technically they are actually JWTs signed by the data sharing service. They prove that
-        the holder of the token, for a limited time, has the right to request data from a particular
-        source on behalf of a the group that generated them. These tokens can not be invalidated or
-        revoked but automatically expire in a short time.
+        These can be treated as opaque strings for the practical matters of the group making the
+        request. Technically they are actually JWTs signed by the data sharing service. They prove
+        that the holder of the token, for a limited time, has the right to make requests to a
+        particular source on behalf of a the group that generated them. These tokens can not be
+        invalidated or revoked but automatically expire in a short time.
       </p>
       <p>
         They are forwarded by the IOXIO data sharing service to the data source so that it can (if
         it wants to) verify that the request came from the IOXIO data sharing service. The data
-        source can also verify which group is requesting data and might also implement its own
+        source can also verify which group is making the request and might also implement its own
         access control to restrict access based on that.
       </p>
       <p>
         API tokens should also be kept safe and only used in server-to-server connections as they
-        can be used to request any data on behalf of the requesting group from the data source.
+        can be used to make any requests on behalf of the group to the data source.
       </p>
     </li>
   </ul>
@@ -238,14 +237,14 @@
   </p>
 
   <p>
-    To make it easier to test fetching data, the access control keys page also has a
+    To make it easier to make test requests the access control keys page also has a
     <em>Generate API token</em> button, that will use one of your access control keys to generate a fresh
     API token that you can easily copy & paste.
   </p>
 
   <GuideImage img={images.GENERATED_API_TOKEN} />
 
-  <SectionTitle title="Requesting data" />
+  <SectionTitle title="Making requests" />
 
   <p>The details page of the access control keys tell you the main parts of making the request:</p>
 
@@ -306,7 +305,7 @@
 
   <GuideImage img={images.SWAGGER_UI_REQUEST_RESPONSE} />
 
-  <p>You should now have successfully requested data from the data source, congratulations!</p>
+  <p>You should now have made a successful request to the data source, congratulations!</p>
 
   <p>
     Below the response you will also find documentation of all the possible responses, incl. errors,
@@ -324,8 +323,8 @@
   </p>
 
   <p>
-    You should also know how to check the details of the definitions to understand what data you
-    need to send and the structure and meaning of the data you are receiving.
+    You should also know how to check the details of the definitions to understand the format of the
+    request and response, as well as the descriptions and meaning of each field in them.
   </p>
 
   <SectionTitle title="Next steps" />
