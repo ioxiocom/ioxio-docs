@@ -87,6 +87,6 @@
   <ul>
     <li><A href={GUIDES.MANAGE_GROUP_MEMBERS.href}>{GUIDES.MANAGE_GROUP_MEMBERS.title}</A></li>
     <li><A href={GUIDES.BUILD_DATA_SOURCE.href}>{GUIDES.BUILD_DATA_SOURCE.title}</A></li>
-    <li><A href={GUIDES.USING_DATA.href}>{GUIDES.USING_DATA.title}</A></li>
+    <li><A href={GUIDES.USING_DATA_SOURCES.href}>{GUIDES.USING_DATA_SOURCES.title}</A></li>
   </ul>
 </TableOfContents>
