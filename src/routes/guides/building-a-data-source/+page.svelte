@@ -29,12 +29,14 @@
     same on all IOXIO Dataspaces, while some might miss the particular data products mentioned here.
   </p>
   <SectionTitle title="Prerequisites" />
-  <li>Data that you want to provide.</li>
-  <li>A data product definition that matches the data you have available.</li>
-  <li>
-    Ability to host an API that responds to <em>POST</em> requests on the public internet over the https
-    protocol.
-  </li>
+  <ul>
+    <li>Data that you want to provide.</li>
+    <li>A data product definition that matches the data you have available.</li>
+    <li>
+      Ability to host an API that responds to <em>POST</em> requests on the public internet over the
+      https protocol.
+    </li>
+  </ul>
   <SectionTitle title="Choosing a data definition for your source" />
   <p>You can find the available <em>Data definitions</em> in the menu.</p>
   <GuideImage compact img={images.DEFINITIONS} />
