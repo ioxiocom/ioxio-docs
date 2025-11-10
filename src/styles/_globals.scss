@@ -71,7 +71,12 @@ em {
   -webkit-box-decoration-break: clone;
 }
 
+ul {
+  list-style-position: inside;
+}
+
 li {
+  list-style-position: inside;
   margin-bottom: 0.5rem;
 }
 
