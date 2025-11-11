@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+		<link href="../../_app/immutable/assets/0.4a420da5.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Grid.1f4741a5.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/A.48915739.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/MenuButton.daa4f3ea.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Button.e56dcb72.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/IconLink.ef32bd23.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/TableOfContents.8b309c48.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Code.64812c73.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Title.71d83a21.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/GuideImage.d5be000a.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.4d508623.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/scheduler.2e48bd10.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.99aca320.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.b93fb93f.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.6aaf801a.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.ed958696.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.9466c942.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Grid.6b3ec5be.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/A.2ad5f04f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/MenuButton.1ea166fa.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.8515c273.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.32aa8713.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Button.5f1bbe22.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/slack-icon.f588d972.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/link-arrow-icon.69406986.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/IconLink.033f7222.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/breakpointObserver.00fe8a69.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/navigation.34d832ff.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/urls.2ac53403.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/18.3c2a30de.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/TableOfContents.c7a57465.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Code.23820852.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/json.4d993fc0.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Title.c4343f87.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/GuideImage.920a4a56.js"><title>Legacy: Verify id_token in data source - IOXIO Docs</title><!-- HEAD_svelte-1bze8jb_START --><meta property="og:title" content="Legacy: Verify id_token in data source"><!-- HEAD_svelte-1bze8jb_END --><!-- HEAD_svelte-l5d0hf_START --><!-- HTML_TAG_START --><style>pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+  Theme: Tokyo-night-Dark
+  origin: https://github.com/enkia/tokyo-night-vscode-theme
+  Description: Original highlight.js style
+  Author: (c) Henri Vandersleyen <hvandersleyen@gmail.com>
+  License: see project LICENSE
+  Touched: 2022
+*/.hljs-comment,.hljs-meta{color:#565f89}.hljs-deletion,.hljs-doctag,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-tag,.hljs-template-tag,.hljs-variable.language_{color:#f7768e}.hljs-link,.hljs-literal,.hljs-number,.hljs-params,.hljs-template-variable,.hljs-type,.hljs-variable{color:#ff9e64}.hljs-attribute,.hljs-built_in{color:#e0af68}.hljs-keyword,.hljs-property,.hljs-subst,.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#7dcfff}.hljs-selector-tag{color:#73daca}.hljs-addition,.hljs-bullet,.hljs-quote,.hljs-string,.hljs-symbol{color:#9ece6a}.hljs-code,.hljs-formula,.hljs-section{color:#7aa2f7}.hljs-attr,.hljs-char.escape_,.hljs-keyword,.hljs-name,.hljs-operator{color:#bb9af7}.hljs-punctuation{color:#c0caf5}.hljs{background:#1a1b26;color:#9aa5ce}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style><!-- HTML_TAG_END --><!-- HEAD_svelte-l5d0hf_END --><!-- HEAD_svelte-l5d0hf_START --><!-- HTML_TAG_START --><style>pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+  Theme: Tokyo-night-Dark
+  origin: https://github.com/enkia/tokyo-night-vscode-theme
+  Description: Original highlight.js style
+  Author: (c) Henri Vandersleyen <hvandersleyen@gmail.com>
+  License: see project LICENSE
+  Touched: 2022
+*/.hljs-comment,.hljs-meta{color:#565f89}.hljs-deletion,.hljs-doctag,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-tag,.hljs-template-tag,.hljs-variable.language_{color:#f7768e}.hljs-link,.hljs-literal,.hljs-number,.hljs-params,.hljs-template-variable,.hljs-type,.hljs-variable{color:#ff9e64}.hljs-attribute,.hljs-built_in{color:#e0af68}.hljs-keyword,.hljs-property,.hljs-subst,.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#7dcfff}.hljs-selector-tag{color:#73daca}.hljs-addition,.hljs-bullet,.hljs-quote,.hljs-string,.hljs-symbol{color:#9ece6a}.hljs-code,.hljs-formula,.hljs-section{color:#7aa2f7}.hljs-attr,.hljs-char.escape_,.hljs-keyword,.hljs-name,.hljs-operator{color:#bb9af7}.hljs-punctuation{color:#c0caf5}.hljs{background:#1a1b26;color:#9aa5ce}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style><!-- HTML_TAG_END --><!-- HEAD_svelte-l5d0hf_END --><!-- HEAD_svelte-l5d0hf_START --><!-- HTML_TAG_START --><style>pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+  Theme: Tokyo-night-Dark
+  origin: https://github.com/enkia/tokyo-night-vscode-theme
+  Description: Original highlight.js style
+  Author: (c) Henri Vandersleyen <hvandersleyen@gmail.com>
+  License: see project LICENSE
+  Touched: 2022
+*/.hljs-comment,.hljs-meta{color:#565f89}.hljs-deletion,.hljs-doctag,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-tag,.hljs-template-tag,.hljs-variable.language_{color:#f7768e}.hljs-link,.hljs-literal,.hljs-number,.hljs-params,.hljs-template-variable,.hljs-type,.hljs-variable{color:#ff9e64}.hljs-attribute,.hljs-built_in{color:#e0af68}.hljs-keyword,.hljs-property,.hljs-subst,.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#7dcfff}.hljs-selector-tag{color:#73daca}.hljs-addition,.hljs-bullet,.hljs-quote,.hljs-string,.hljs-symbol{color:#9ece6a}.hljs-code,.hljs-formula,.hljs-section{color:#7aa2f7}.hljs-attr,.hljs-char.escape_,.hljs-keyword,.hljs-name,.hljs-operator{color:#bb9af7}.hljs-punctuation{color:#c0caf5}.hljs{background:#1a1b26;color:#9aa5ce}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style><!-- HTML_TAG_END --><!-- HEAD_svelte-l5d0hf_END -->
+    <meta
+      property="og:description"
+      content="Documentation portal for various IOXIO technologies."
+    />
+    <meta property="og:image" content="https://docs.ioxio.dev/og-image.jpg" />
+    <script src="/schema_doc.js"></script>
+
+    <link rel="icon" type="image/png" href="../../favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="IOXIO Docs" />
+    <link rel="manifest" href="../../site.webmanifest" />
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">  <section class="svelte-1uvmp51"><header class="svelte-yofvpi"><div class="header svelte-yofvpi"><div class="title svelte-yofvpi"><button class="hamburger-button svelte-1cozhxg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 21"><path fill="#788996" d="M3.18 15.27h12.718a.797.797 0 0 0 .794-.796.797.797 0 0 0-.794-.794H3.18a.797.797 0 0 0-.795.794c0 .438.357.795.795.795Zm0-3.975h12.718a.797.797 0 0 0 .794-.795.797.797 0 0 0-.794-.795H3.18a.797.797 0 0 0-.795.795c0 .437.357.795.795.795m-.795-4.77c0 .438.357.796.795.796h12.718a.797.797 0 0 0 .794-.795.797.797 0 0 0-.794-.795H3.18a.797.797 0 0 0-.795.795Z"/></svg> </button> <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxMjUgMjMiPjxnIGZpbGw9IiNmZmYiIGNsaXAtcGF0aD0idXJsKCNhKSI+PHBhdGggZD0iTTIuMTYyLjk2OEgtLjVWMjEuNzloMi42NjJ6TTI0LjgzMyAwYTExLjE5IDExLjE5IDAgMSAwIDExLjE5IDExLjE5QTExLjIgMTEuMiAwIDAgMCAyNC44MzQgMFptMCAxOS42NTRhOC40NjcgOC40NjcgMCAxIDEgMC0xNi45MzUgOC40NjcgOC40NjcgMCAwIDEgMCAxNi45MzVNOTAuNTM0Ljk2OGgtMi42NjJWMjEuNzloMi42NjJ6TTExMy4zMTEgMGExMS4xOSAxMS4xOSAwIDAgMC0xMC4zMzkgNi45MDggMTEuMTkgMTEuMTkgMCAwIDAgOC4xNTUgMTUuMjU4IDExLjE5MiAxMS4xOTIgMCAwIDAgMTMuMzc0LTEwLjk3NkExMS4yIDExLjIgMCAwIDAgMTEzLjMxMSAwbTAgMTkuNjU0YTguNDY2IDguNDY2IDAgMCAxLTUuOTg2LTE0LjQ1NyA4LjQ2IDguNDYgMCAwIDEgOS4yMjktMS44MzMgOC40NyA4LjQ3IDAgMCAxIDUuMjI0IDcuODI3IDguNDcgOC40NyAwIDAgMS04LjQ2NyA4LjQ2M000Ni43NDcuNzI4aC00Ljg2MWwxNS4yODEgMTAuNDExLTE1LjYzMiAxMC42NTRoNC44NTdsMTMuMjA0LTguOTk2IDIuNDI4LTEuNjU4LTIuNDI4LTEuNjUzem0xNS45IDE0LjIxMyAxMC4wNiA2Ljg1M2g0LjgzNmwtMTIuNDc3LTguNTAyLTIuNDIgMS42NVpNNzcuMTkyLjcyOGgtNC44NGwtOS43MDYgNi42MTUgMi40MiAxLjY1eiIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDBoMTI1djIyLjM3N0gweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==" alt="IOXIO" class="svelte-yofvpi"> <div class="separator svelte-yofvpi"></div> <a class="title-link svelte-yofvpi" href="/" data-svelte-h="svelte-1045bfj">Documentation portal</a></div></div> </header> <div class="main-container"><nav class="sidebar svelte-l1kp0x" style="width: 4.5rem"><div class="sticky-wrapper svelte-l1kp0x"><a href="/" class="menu-item svelte-l1kp0x"><div class="icon-wrapper svelte-l1kp0x"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#788996" d="M9.998 19.328v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87l-8.36-7.53c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87h1.7v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1"/></svg></div> <div class="name svelte-l1kp0x"></div> </a><a href="/dataspace" class="menu-item svelte-l1kp0x"><div class="icon-wrapper svelte-l1kp0x"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#788996" fill-rule="evenodd" d="m12.053 1 10.053 5.329v11.828l-10.053 5.33L2 18.157V6.33zm0 2.167L4.996 6.908l7.057 3.766 7.057-3.766zM3.915 17.005V8.502l7.18 3.832v8.478zm16.276 0-7.18 3.807v-8.478L20.19 8.5v8.504Zm-9.762-9.054 2.273 1.433.427-.22-2.276-1.437zm3.08 1.013zm0 0 .41-.212-1.418-1.898-.411.217zm2.205-1.132a2 2 0 0 0 .372-.149v.001a1.5 1.5 0 0 0 .301-.198 1 1 0 0 0 .104-.109.7.7 0 0 0 .075-.115.5.5 0 0 0 .044-.361.6.6 0 0 0-.12-.246 1 1 0 0 0-.103-.12 2 2 0 0 0-.13-.117 2.4 2.4 0 0 0-.72-.377 2.8 2.8 0 0 0-.626-.121 2.3 2.3 0 0 0-.63.037 2 2 0 0 0-.736.298 1 1 0 0 0-.133.104 1 1 0 0 0-.103.11.7.7 0 0 0-.115.239.5.5 0 0 0 .006.244.6.6 0 0 0 .048.125 1 1 0 0 0 .182.243q.135.128.294.227a2.3 2.3 0 0 0 .557.261q.301.095.616.115.102.005.206.003.312-.006.611-.094m.102-.445a1 1 0 0 1-.102.06l-.004.001a1.3 1.3 0 0 1-.491.14q-.068.008-.134.006a1.7 1.7 0 0 1-.802-.205 2 2 0 0 1-.235-.15 1 1 0 0 1-.17-.162.6.6 0 0 1-.094-.168.4.4 0 0 1-.018-.163.4.4 0 0 1 .063-.154.5.5 0 0 1 .144-.137q.157-.104.339-.155a1.3 1.3 0 0 1 .4-.05 2 2 0 0 1 .418.056c.231.059.448.164.636.308a1 1 0 0 1 .167.162.6.6 0 0 1 .09.165.33.33 0 0 1-.015.237.4.4 0 0 1-.108.144 1 1 0 0 1-.084.065" clip-rule="evenodd"/></svg></div> <div class="name svelte-l1kp0x"></div> </a><a href="/tags" class="menu-item svelte-l1kp0x"><div class="icon-wrapper svelte-l1kp0x"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#788996" clip-path="url(#a)"><path fill-rule="evenodd" d="M4.8 5.829c0-.569.46-1.029 1.028-1.029h3.086c.568 0 1.029.46 1.029 1.029v3.085c0 .568-.46 1.029-1.029 1.029H5.828c-.568 0-1.028-.46-1.028-1.029V5.83Zm2.057 2.057V6.857h1.029v1.029zm-2.057 7.2c0-.568.46-1.029 1.028-1.029h3.086c.568 0 1.029.46 1.029 1.029v3.085c0 .569-.46 1.029-1.029 1.029H5.828c-.568 0-1.028-.46-1.028-1.029zm2.057 2.057v-1.029h1.029v1.029zM15.085 4.8c-.568 0-1.028.46-1.028 1.029v3.085c0 .568.46 1.029 1.028 1.029h3.086c.568 0 1.029-.46 1.029-1.029V5.83c0-.569-.46-1.029-1.029-1.029h-3.085Zm1.03 2.057v1.029h1.028V6.857z" clip-rule="evenodd"/><path d="M13.028 5.829a1.029 1.029 0 1 0-2.057 0v1.028a1.029 1.029 0 0 0 2.057 0V5.83ZM12 8.914c.568 0 1.028.46 1.028 1.029v1.028h2.057a1.029 1.029 0 1 1 0 2.058H12c-.568 0-1.029-.46-1.029-1.029V9.943c0-.568.46-1.029 1.029-1.029m6.171 2.057a1.029 1.029 0 1 0 0 2.058 1.029 1.029 0 0 0 0-2.058m-7.2 4.115c0-.568.46-1.029 1.029-1.029h1.028a1.029 1.029 0 0 1 0 2.057v2.057a1.029 1.029 0 1 1-2.057 0zm-2.057-2.057a1.029 1.029 0 0 0 0-2.058H5.828a1.029 1.029 0 1 0 0 2.058zM19.2 15.086c0 .568-.46 1.028-1.029 1.028h-2.057a1.029 1.029 0 1 1 0-2.057h2.057c.568 0 1.029.46 1.029 1.029M18.171 19.2a1.029 1.029 0 1 0 0-2.057h-3.085a1.029 1.029 0 0 0 0 2.057z"/><path stroke="#788996" stroke-width=".4" d="M19.248 22.732c0 .148.12.268.268.268h1.93c.858 0 1.554-.696 1.554-1.554V19.55a.268.268 0 1 0-.535 0v1.896c0 .563-.456 1.019-1.019 1.019h-1.93a.27.27 0 0 0-.267.267Zm0-21.464c0 .148.12.267.268.267h1.93a1.02 1.02 0 0 1 1.019 1.02v1.963a.268.268 0 1 0 .535 0V2.554C23 1.696 22.304 1 21.446 1h-1.93a.27.27 0 0 0-.267.268Zm-14.496 0A.27.27 0 0 0 4.484 1h-1.93C1.696 1 1 1.696 1 2.554v1.964a.268.268 0 1 0 .536 0V2.554a1.02 1.02 0 0 1 1.018-1.019h1.93c.148 0 .268-.12.268-.267Zm0 21.464a.27.27 0 0 0-.268-.267h-1.93a1.02 1.02 0 0 1-1.018-1.02V19.55a.268.268 0 1 0-.536 0v1.896C1 22.304 1.696 23 2.554 23h1.93c.148 0 .268-.12.268-.268Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg></div> <div class="name svelte-l1kp0x"></div> </a><a href="/guides" class="menu-item svelte-l1kp0x selected"><div class="icon-wrapper svelte-l1kp0x"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#788996" d="M19 5v14H5V5zm0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2"/><path fill="#788996" d="M14 17H7v-2h7zm3-4H7v-2h10zm0-4H7V7h10z"/></svg></div> <div class="name svelte-l1kp0x"></div> </a><a href="/schemas" class="menu-item svelte-l1kp0x"><div class="icon-wrapper svelte-l1kp0x"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#788996" d="M3.6 4.8a1.2 1.2 0 0 1 1.2-1.2h14.4a1.2 1.2 0 0 1 1.2 1.2v2.4a1.2 1.2 0 0 1-1.2 1.2H4.8a1.2 1.2 0 0 1-1.2-1.2zm0 7.2a1.2 1.2 0 0 1 1.2-1.2H12a1.2 1.2 0 0 1 1.2 1.2v7.2a1.2 1.2 0 0 1-1.2 1.2H4.8a1.2 1.2 0 0 1-1.2-1.2zm13.2-1.2a1.2 1.2 0 0 0-1.2 1.2v7.2a1.2 1.2 0 0 0 1.2 1.2h2.4a1.2 1.2 0 0 0 1.2-1.2V12a1.2 1.2 0 0 0-1.2-1.2z"/></svg></div> <div class="name svelte-l1kp0x"></div> </a><a href="/faq" class="menu-item svelte-l1kp0x"><div class="icon-wrapper svelte-l1kp0x"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#788996" fill-rule="evenodd" d="M11.402 3.16 4.666 7.13A1.22 1.22 0 0 0 4 8.217v7.284a1.23 1.23 0 0 0 .638 1.072q.027.014.055.032l6.72 4.251a1.27 1.27 0 0 0 1.174 0l6.72-4.251.053-.031c.399-.22.64-.63.64-1.072v-7.29a1.23 1.23 0 0 0-.62-1.073 1 1 0 0 1-.162-.115L12.664 3.16a1.33 1.33 0 0 0-1.262 0m9.187 2.377a1 1 0 0 0-.173-.128l-6.75-3.98a3.33 3.33 0 0 0-3.266 0L3.662 5.402A3.22 3.22 0 0 0 2 8.217v7.287a3.23 3.23 0 0 0 1.648 2.807l6.725 4.254.054.032a3.27 3.27 0 0 0 3.2-.032l6.726-4.255A3.22 3.22 0 0 0 22 15.502V8.221a3.23 3.23 0 0 0-1.411-2.684m-9.162 2.521a3 3 0 1 1 .57 5.942 1 1 0 1 1 .006-2 1 1 0 0 0 .457-1.891l-.002-.001a.98.98 0 0 0-1.195.24 1 1 0 0 1-1.526-1.293 2.98 2.98 0 0 1 1.69-.997M12 15a1 1 0 0 1 1 1v.01a1 1 0 1 1-2 0V16a1 1 0 0 1 1-1" clip-rule="evenodd"/></svg></div> <div class="name svelte-l1kp0x"></div> </a></div> </nav> <div class="second-level-navigation-wrapper"><div class="second-level-navigation svelte-1uvmp51"><div class="section-title svelte-1uvmp51">Guides</div> <a class=" svelte-8d18wx" href="/guides/building-a-data-source">Building a data source  </a><a class=" svelte-8d18wx" href="/guides/building-a-data-definition">How to create data definitions  </a><a class=" svelte-8d18wx" href="/guides/managing-groups">How to create and manage a group  </a><a class=" svelte-8d18wx" href="/guides/managing-group-members">How to manage group members  </a><a class=" svelte-8d18wx" href="/guides/verifying-api-tokens">Verifying API tokens  </a><a class=" svelte-8d18wx" href="/guides/using-data-sources">Using data sources  </a><a class=" svelte-8d18wx" href="/guides/error-responses">Error responses  </a><a class=" svelte-8d18wx" href="/guides/party-configuration">Setting up a party configuration domain  </a><a class=" svelte-8d18wx" href="/guides/building-an-application">Legacy: Building an application  </a><a class=" svelte-8d18wx" href="/guides/verifying-consent-in-data-source">Legacy: How to verify consent in data source  </a><a class=" svelte-8d18wx" href="/guides/using-login-provider">Legacy: How to use dataspace login in an application  </a><a class=" svelte-8d18wx" href="/guides/verifying-id-token">Legacy: Verify id_token in data source  </a></div></div> <div class="container main-container svelte-3muwzk">    <div class="main-grid mdc-layout-grid"><div class="mdc-layout-grid__inner">  <div class="content-grid mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone">  <div class="main-grid mdc-layout-grid"><div class="mdc-layout-grid__inner">    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-9-desktop mdc-layout-grid__cell--span-9-tablet mdc-layout-grid__cell--span-9-phone"> <h1>Legacy: Verify id_token in data source</h1> <div class="breadcrumbs"><span class="breadcrumb"><a class=" svelte-8d18wx" href="/">Docs </a></span> <span class="sep svelte-16gl9f1" data-svelte-h="svelte-1ofwb3u">/</span><span class="breadcrumb"><a class=" svelte-8d18wx" href="/guides">Guides </a></span> <span class="sep svelte-16gl9f1" data-svelte-h="svelte-1ofwb3u">/</span><span class="breadcrumb"><a class=" svelte-8d18wx" href="/guides/verifying-id-token">Legacy: Verify id_token in data source </a></span> <span class="sep svelte-16gl9f1" data-svelte-h="svelte-1ofwb3u">/</span> </div> <h2 id="introduction" class="svelte-j11k8l"><a href="#introduction" class="svelte-j11k8l">Introduction <span class="marker svelte-j11k8l" data-svelte-h="svelte-1vcokm2">§</span></a></h2> <p data-svelte-h="svelte-1vfo9sv">In the Dataspace ecosystem the data sources or productizers might want to verify the identity of
+    a user making the request, for example to ensure they are authorized to access the data or for
+    logging purposes.</p> <p data-svelte-h="svelte-13bb3pw">When the user logs in to an application on the Dataspace, the application receives an
+    <em>id_token</em> for the user. The application can use this as a Bearer Token when
+    communicating with the product gateway by adding an <em>Authorization</em> HTTP header with a
+    value of the form
+    <em>Bearer &lt;id_token&gt;</em>. The <em>Authorization</em> header is forwarded by the product gateway
+    to the data source or productizer.</p> <p>The <em data-svelte-h="svelte-vcd9g5">id_token</em> is a <a class=" svelte-8d18wx" href="https://datatracker.ietf.org/doc/html/rfc7519" target="_blank" rel="noreferrer">JSON Web Token (JWT) </a> that can be decoded and verified. This guide will explain in more detail the process of extracting,
+    decoding and verifying it.</p> <h2 id="verifying-the-id_token-in-the-productizer" class="svelte-j11k8l"><a href="#verifying-the-id_token-in-the-productizer" class="svelte-j11k8l">Verifying the id_token in the productizer <span class="marker svelte-j11k8l" data-svelte-h="svelte-1vcokm2">§</span></a></h2> <h3 data-svelte-h="svelte-1h5m34z">Get the Authorization header</h3> <p data-svelte-h="svelte-1a480tv">The productizer or data source needs to first extract the <em>id_token</em> from the
+    <em>Authorization</em> HTTP header of the request. Please note that the header is in many data source
+    definitions optional, so take that in mind when parsing it.</p> <h3 data-svelte-h="svelte-laq6rv">Extracting the id_token from the header</h3> <p data-svelte-h="svelte-ggp0o2">The value of the header should be of the form <em>Bearer &lt;token&gt;</em>, where
+    <em>&lt;token&gt;</em> is the actual <em>id_token</em>.</p> <p>You can split the header at the space character or the right string index and verify the scheme
+    is <em data-svelte-h="svelte-wr7bo7">Bearer</em> and followed by a space character.
+    <a class=" svelte-8d18wx" href="https://datatracker.ietf.org/doc/html/rfc6750#section-2.1" target="_blank" rel="noreferrer">RFC 6750 section 2.1 </a> states
+    the scheme is <em data-svelte-h="svelte-wr7bo7">Bearer</em>, but some frameworks in practice do a case insensitive match to
+    improve compatibility with some client libraries that don&#39;t fully comply with the standard.</p> <p>Some frameworks also have built in support for extracting the Bearer Token. For example
+    <a class=" svelte-8d18wx" href="https://fastapi.tiangolo.com/" target="_blank" rel="noreferrer">FastAPI </a>, where the usage is actually best
+    illustrated in the <a class=" svelte-8d18wx" href="https://github.com/tiangolo/fastapi/blob/0.71.0/tests/test_security_http_bearer.py#L7-L12" target="_blank" rel="noreferrer">HTTPBearer test cases </a>. However you would likely want to adapt that slightly to make it an optional dependency for
+    easier reuse.</p> <h3 data-svelte-h="svelte-mfe3ky">Reading the id_token</h3> <p>The <em data-svelte-h="svelte-vcd9g5">id_token</em> is a <a class=" svelte-8d18wx" href="https://datatracker.ietf.org/doc/html/rfc7519" target="_blank" rel="noreferrer">JSON Web Token (JWT) </a>.</p> <p>If you are unfamiliar with JWTs you might want to check out the
+    <a class=" svelte-8d18wx" href="https://jwt.io/introduction" target="_blank" rel="noreferrer">JSON Web Token Introduction. </a>
+    The same site has a really good tool for decoding JWTs directly in the web browser at
+    <a class=" svelte-8d18wx" href="https://jwt.io" target="_blank" rel="noreferrer">jwt.io, </a>
+    as well as a fairly good list of different
+    <a class=" svelte-8d18wx" href="https://jwt.io/libraries" target="_blank" rel="noreferrer">JWT libraries </a> for different programming languages.</p> <p>You most likely want to use one of the libraries for your programming language rather than try
+    to implement it according to the
+    <a class=" svelte-8d18wx" href="https://datatracker.ietf.org/doc/html/rfc7519" target="_blank" rel="noreferrer">RFC 7519 </a>.</p> <p data-svelte-h="svelte-1yri31c">Let&#39;s have a look at a valid example token from one of the applications on the IOXIO Sandbox
+    Dataspace and how to verify it.</p> <p data-svelte-h="svelte-g8urh1">Let&#39;s examine this token:</p>  <article class="svelte-1k2uy7z"><div aria-hidden="true" class="code svelte-1k2uy7z">
+  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjNjNzk1NmM5YzM2NjFjMGZkYmMwNmQ2NDYzYWIyYTA5In0.eyJzdWIiOiJaR1Z0YjBCMFpYTjBaWEl1YVc5NGFXOHVZMjl0IiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5zYW5kYm94LmlveGlvLWRhdGFzcGFjZS5jb20iLCJpYXQiOjE2NjE0MTc5MjcsImV4cCI6MTY2MTUwNDMyNywiYXVkIjoiODNkNTUxMjYtZTYxNy00M2RjLWEyZmYtNDNmYmViODQ4Y2QxIiwibm9uY2UiOiIyY2U5M2VlNi00ZTFjLTQxNDYtOGRiOC1jMzdmZjg4YWI4YjkiLCJlbWFpbCI6ImRlbW9AdGVzdGVyLmlveGlvLmNvbSIsImFjciI6ImZha2UtYXV0aCJ9.G7A-Jeks4Yfe2PeKts4odXBZ1IvFHtBgjFVU07RnkirsQLQ5ShESWJf7ZOu1IqluhxKlot8ZsQeGgn8lBxr4-CiOoDKJuXQB83wOrGlsnBqo_bAreXNCaDKN69V9X055fCrm20t6m3Sgh9pSBqukvaGh2Ln61l_o1CmZBK2_ETqon1R5-aJMjSRliAStKYQG9yDEolLAIhXqflPq90Yw8TbXE0-FD68lj6AJLEmQO0rPCMxM9Ph3Ja3lqI5hT0kVIZD-Q0xld4FLX4LfbE8qbM_yV8TuSXi1w3vvTy4dDjQTqCihcvsFi-qZR-TDb33mR6y50YASKciGmoxbMy3P-AO4biD2RBi63Pt36MZ-NmAU1PqzLISWNouvnLx4ly_HGqSnzrFlsCD7A_DK4T9dy_5LRTQjNL6O9Re2n8HDFsTt42FmeaD6MO57L-kCGgrOi8khbjjaZV87WoWRV5UYy85zbCF_Qi45i-U0aS9XS_qyVN36QOGJ08pcVmC1DqNBMQZtUs19BuuqfeKDzLJj_5azZkbBY5vxaPr6J7Pj4rwozL6XQDwlHe_FZRRcHVHMPgYLV6XOYtiQuvE5jPXXFAUG2dGwxB1-UyJkVwNvcKrtM-eNaiFFeVIDc9T5Q-6vBXxdwSYPvwobt1XVj2rj1au465Tb7_KR4BS7xmDha8E
+
+</div>  </article> <p data-svelte-h="svelte-7lxeid">Please note that tokens are security sensitive and should not be passed into untrustworthy tools
+    or shared with other people in general. The token used here is for a demo application where
+    anyone can log in with a fake username and no password, so anyone could have acquired this
+    token.</p> <p>At the time you are reading this guide the token will unfortunately have expired, so some of the
+    verifications we will perform here won&#39;t work. However you can log in to the
+    <a class=" svelte-8d18wx" href="https://mycompany.demos.ioxio.com/my-company/" target="_blank" rel="noreferrer">MyCompany Demo App </a> and extract your own
+    <em data-svelte-h="svelte-vcd9g5">id_token</em> from a cookie with that name once you&#39;ve logged in.</p> <p data-svelte-h="svelte-x7bqnn">This is what the content of the token will look like:</p> <img class=" svelte-cvqycj" src="/guides/verifying-id-token/view-jwt-token.png" alt="Decoded JWT token"> <p data-svelte-h="svelte-blt4il">Many JWT libraries also allow you to read the JWT without verifying it. In case your library for
+    some reason does not do that, you can actually note that the token consists of three sections
+    separated by a dot, like <em>AAA.BBB.CCC</em>. The first section (<em>AAA</em>) is the header,
+    the second one (<em>BBB</em>) is the body and the last one (<em>CCC</em>) is the signature. The
+    first two are actually just Base64 encoded JSON strings that can be easily decoded and read.</p> <h2 id="fetch-the-public-key" class="svelte-j11k8l"><a href="#fetch-the-public-key" class="svelte-j11k8l">Fetch the public key <span class="marker svelte-j11k8l" data-svelte-h="svelte-1vcokm2">§</span></a></h2> <p data-svelte-h="svelte-rm2ihe">The JWTs used on the Dataspace are signed with a private key and the public key is made publicly
+    available following the OpenID Connect specification. In order to verify the token we need to
+    get hold of the public key.</p> <p data-svelte-h="svelte-1jl16of">The steps to find the key consists of:</p> <ol data-svelte-h="svelte-1svq98s"><li>Find the JWKS URI from the OpenID Connect Configuration</li> <li>Find the right key from the JWKS URI</li></ol> <p data-svelte-h="svelte-11y9jzs">We will explain the process in detail, but it&#39;s definitely worth checking what kind of support
+    the JWT library you use have for this or if there&#39;s some other library that can be used for this
+    purpose, as this might vary a lot.</p> <p>In Python for example the <a class=" svelte-8d18wx" href="https://pyjwt.readthedocs.io/en/stable/usage.html#retrieve-rsa-signing-keys-from-a-jwks-endpoint" target="_blank" rel="noreferrer">PyJWT library </a>
+    has a <em data-svelte-h="svelte-1oy8iug">PyJWKClient</em> that can fetch the key if you already know the JWKS URI, but it does
+    not support asynchronous execution. There&#39;s however a separate library called
+    <a class=" svelte-8d18wx" href="https://pypi.org/project/pyjwt-key-fetcher/" target="_blank" rel="noreferrer">pyjwt-key-fetcher </a> that supports async and
+    has built in caching and other features.</p> <h3 data-svelte-h="svelte-1irje9j">Find the JWKS URI</h3> <p data-svelte-h="svelte-1nxm9e7">The first step to find the key is to check the issuer of the token, which is found in
+    <em>iss</em> field in the body.</p> <p>Please note that you should check that the <em data-svelte-h="svelte-1tsrox1">iss</em> is one you want to trust. In a typical
+    IOXIO Dataspace this would always be the address of the login portal of the Dataspace. In some
+    cases the Dataspace might use a limited set of different issuers, which should be listed and
+    available to developers of the Dataspace. Querying openid-configurations and JWKs from arbitrary
+    issuers and addresses should be avoided. The
+    <a class=" svelte-8d18wx" href="https://pypi.org/project/pyjwt-key-fetcher/" target="_blank" rel="noreferrer">pyjwt-key-fetcher </a> for example has the option
+    to limit the fetching.</p> <p>In this example the <em data-svelte-h="svelte-1tsrox1">iss</em> (Issuer) is <em data-svelte-h="svelte-4yq54z">https://login.sandbox.ioxio-dataspace.com</em>,
+    which is the login portal of the IOXIO Sandbox Dataspace. The OpenID Connect configuration
+    should be found on the sub-path <em data-svelte-h="svelte-i8jick">/.well-known/openid-configuration</em>
+    relative to the <em data-svelte-h="svelte-1tsrox1">iss</em>. Thus in this case the the OpenID configuration can be fetched from
+    <a class=" svelte-8d18wx" href="https://login.sandbox.ioxio-dataspace.com/.well-known/openid-configuration" target="_blank" rel="noreferrer">https://login.sandbox.ioxio-dataspace.com/.well-known/openid-configuration </a>. At the time of writing this it returned this JSON content (formatted for readability):</p>  <article class="svelte-1k2uy7z"><div aria-hidden="true" class="code svelte-1k2uy7z">
+{
+  "issuer": "https://login.sandbox.ioxio-dataspace.com",
+  "authorization_endpoint": "https://login.sandbox.ioxio-dataspace.com/start-login",
+  "token_endpoint": "https://login.sandbox.ioxio-dataspace.com/api/oauth/token",
+  "jwks_uri": "https://login.sandbox.ioxio-dataspace.com/api/oauth/jwks",
+  "userinfo_endpoint": "https://login.sandbox.ioxio-dataspace.com/api/oauth/userinfo",
+  "end_session_endpoint": "https://login.sandbox.ioxio-dataspace.com/end-session",
+  "response_types_supported": [
+    "code"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ]
+}
+
+</div>  </article> <p data-svelte-h="svelte-9f27da">The <em>jwks_uri</em> specify where we can find the keys of this authentication provider.</p> <h3 data-svelte-h="svelte-4w3g7r">Find the key</h3> <p>At the time of writing this, the <em data-svelte-h="svelte-1dggqs6">jwks_uri</em> <a class=" svelte-8d18wx" href="https://login.sandbox.ioxio-dataspace.com/api/oauth/jwks" target="_blank" rel="noreferrer">https://login.sandbox.ioxio-dataspace.com/api/oauth/jwks </a>
+    returned this JSON content (formatted for readability):</p>  <article class="svelte-1k2uy7z"><div aria-hidden="true" class="code svelte-1k2uy7z">
+    {
+  "keys": [
+    {
+      "kid": "3c7956c9c3661c0fdbc06d6463ab2a09",
+      "kty": "RSA",
+      "use": "sig",
+      "alg": "RS256",
+      "n": "zrDVwF4jpj-UAfdgXs8d0JIZriaZXEIgkWcPYEhOLZ--tBf9PXtbfXnCGj0q6dvPTLeh-Nzhh1oFggN1DCHTUPlT5Xzug2PIkHrFcbZGtULG0-zjZp4SekiHiH6wrYNAZPX99_jdSUj3IRIQLRUrNSihj6PkfVTV_us-WUQpyXHR1FfQo7Te_I4PqbeO4SCHYxik513_O44pU6J7ula8D-HBbrpZKIzV-PMoUA_jPsZVQkDyyJYbtDenp_hPSozMb7IXhJOg3oWSyNwhQBWFm3kXJa_9__EYlqiPQXXZqcvpWS0ortKc70jUHTEueehjsZEiPEiklvfLvPIxV4rxfXCEZadmscmm3pslPN8I3hEo1MeqnL6grKCrUCEIRiHRVXXytO6TJA6yL_ZmjlQ3Fozc8EFMn1EW515ERAkQs1HJWeRqe7WpytMgIPANA_fOWGOGVeB098gdZpm8oFDjwSb_EhQS0wVAxvJoxDXRbAW3C2sDDVuxd7CWu6hcc_ImCtGn_GIMZGjHY8gD20rxDIbC3TavEmQzBbN6eQj9cnUXKh9cilstTUucK-VxJtB7Gl8MJavOljcb-IsDKuePAA7cc7-mE7yru2xtKn5Fiqphqt9DcNbRQ95AiF35W_Wfqr0-ifLRpR5vWBvRTLvCxklFNt9HGxWCmKS9TDhY56U",
+      "e": "AQAB"
+    }
+  ]
+}
+    </div>  </article> <p data-svelte-h="svelte-m6xjtx">Under <em>keys</em> there&#39;s a list of keys, each of which have a <em>kid</em> (Key ID) and
+    <em>alg</em>
+    (Algorithm). If we look back at the decoded header of the JWT, we will notice that it also has a
+    <em>kid</em>
+    and <em>alg</em>. Finding the right key object in the list of <em>keys</em> consists of finding
+    a key with matching <em>kid</em> and
+    <em>alg</em> as well as validating that the <em>use</em> is set to <em>sig</em> which indicates
+    signing. The login portal on the IOXIO Dataspaces will in practice always use a unique
+    <em>kid</em>
+    for each <em>alg</em>, similar to most other OpenID Connect providers and only hand out tokens
+    signed with a key meant for signing (<em>&quot;use&quot;: &quot;sig&quot;</em>). When a key used by a login portal
+    on an IOXIO Dataspace expires (after key rotation) it&#39;s dropped from the list. In other words on
+    the IOXIO Dataspaces using login portals, it&#39;s enough to just match the <em>kid</em> to find the
+    right key.</p> <h3 data-svelte-h="svelte-1jm4b4t">Caching</h3> <p data-svelte-h="svelte-yci1ef">Please note that for performance reasons you should use some level of caching. The address of
+    the <em>jwks_uri</em> is for example not likely to change in practice. The keys are neither rotated
+    frequently, so they could be cached for some time, but it&#39;s still important they get refreshed once
+    in a while.</p> <h3 data-svelte-h="svelte-tx40av">Verifying the token signature</h3> <p data-svelte-h="svelte-g5pvaj">Once you&#39;ve found the matching key (unless your library does that for you), you will need to
+    consult the documentation of your particular JWT library on how to use it to verify the token.
+    This varies a bit by library. In some case you might even need to convert the key to some other
+    format accepted by the library. Covering all these possibilities is however not possible in this
+    guide, but that information can hopefully be found from other sources using the most popular
+    search engines.</p> <h3 data-svelte-h="svelte-19be0sx">Verifying the fields</h3> <p data-svelte-h="svelte-226qtk">After verifying the signature, you should do some basic verification of some of the fields. Many
+    libraries by default verify the <em>iat</em> (Issued At) and <em>exp</em> (Expiration Time), but
+    some do not automatically do it. In that case you should verify that <em>iat</em> ≤ current
+    time ≤ <em>exp</em>. You might also want to check the <em>iss</em> (Issuer) matches what you expect,
+    but this would be good to check already before fetching the keys.</p> <h3 data-svelte-h="svelte-cls288">Using the token</h3> <p data-svelte-h="svelte-1vf29rr">Once you&#39;ve verified the token signature using the key and checked it&#39;s still valid and was
+    issued by a trustworthy issuer you can safely trust the data in it. The field of primary
+    interest is the <em>sub</em> (Subject) which is who the user is. The <em>aud</em> (Audience) might
+    be of interest if you want to know through which Application on the Dataspace the user was authenticated
+    when doing the request.</p> </div>   <div class="table-of-contents mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-phone"><div class="content svelte-1s2weei"><p class="svelte-1s2weei" data-svelte-h="svelte-x2ko2u">On this page</p> </div> </div> </div> </div> </div> </div> </div> </div></div> <footer class="svelte-earpbm"><div class="top-section-wrapper svelte-earpbm"><div class="container  svelte-3muwzk">  <div class="footer-container mdc-layout-grid"><div class="mdc-layout-grid__inner">  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone"><div class="try-out-section svelte-earpbm"><h3 data-svelte-h="svelte-25mv77">Try out our technologies for free on</h3> <a class="icon-link svelte-8d18wx" href="https://sandbox.ioxio-dataspace.com" target="_blank" rel="noreferrer"><span class="svelte-ww9r9u">IOXIO Dataspace™ Sandbox</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" fill="none"><path fill="#3CB08E" d="m12 4.928-1.41 1.41 5.58 5.59H4v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg> </a></div> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div> </div> </div> </div></div> <div class="bottom-section-wrapper svelte-earpbm"><div class="container  svelte-3muwzk">  <div class="mdc-layout-grid"><div class="mdc-layout-grid__inner">  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-9-tablet mdc-layout-grid__cell--span-12-phone"><div class="contact-us-wrapper svelte-earpbm"><h3 data-svelte-h="svelte-1r083he">Contact us by using the available support options</h3> <div class="contact-us-buttons svelte-earpbm"><div class="button-wrapper svelte-j0pf02"><a class="button svelte-8d18wx" href="https://slack.ioxio.com" target="_blank" rel="noreferrer"><span>Slack</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><g clip-path="url(#a)"><path fill="#E91E63" d="M7.574 10.12a2.017 2.017 0 0 0-2.016 2.018v5.045a2.017 2.017 0 0 0 4.033 0v-5.045a2.02 2.02 0 0 0-2.017-2.017ZM.515 12.137a2.019 2.019 0 0 0 4.037 0V10.12H2.534a2.02 2.02 0 0 0-2.019 2.018Z"/><path fill="#00BCD4" d="M7.577 0h-.002a2.019 2.019 0 0 0 0 4.036H9.59V2.014A2.015 2.015 0 0 0 7.577-.001ZM2.52 9.096h5.054a2.019 2.019 0 0 0 0-4.037H2.52a2.019 2.019 0 0 0 0 4.037"/><path fill="#4CAF50" d="M17.666 5.058a2.014 2.014 0 0 0-2.015 2.015v2.022h2.017a2.019 2.019 0 0 0 0-4.037zm-7.053-3.04v5.06a2.017 2.017 0 0 0 4.033 0v-5.06a2.017 2.017 0 0 0-4.033 0"/><path fill="#FF9800" d="M14.645 17.18a2.017 2.017 0 0 0-2.016-2.016h-2.017v2.019a2.017 2.017 0 0 0 4.033-.002Zm3.038-7.06H12.63a2.019 2.019 0 0 0 0 4.036h5.054a2.019 2.019 0 0 0 0-4.037Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.5 0h19.2v19.2H.5z"/></clipPath></defs></svg> </a></div> <div class="button-wrapper svelte-j0pf02"><a class="button monochrome svelte-8d18wx" href="mailto:support@ioxio.com" target="_blank" rel="noreferrer"><span>Email</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><g fill="#EEEFEC" clip-path="url(#a)"><path d="M19.731 3.814 13.908 9.6l5.823 5.785c.105-.22.17-.463.17-.723V4.537c0-.26-.065-.503-.17-.723m-1.519-.964H2.388c-.26 0-.503.064-.723.17l7.442 7.404a1.69 1.69 0 0 0 2.386 0l7.443-7.405a1.7 1.7 0 0 0-.724-.169M.87 3.814a1.66 1.66 0 0 0-.17.723v10.125c0 .26.064.503.17.723L6.691 9.6z"/><path d="m13.113 10.396-.824.823a2.815 2.815 0 0 1-3.978 0l-.823-.823-5.823 5.785c.22.105.463.17.723.17h15.825c.26 0 .502-.065.723-.17z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.7 0h19.2v19.2H.7z"/></clipPath></defs></svg> </a></div></div></div> </div>   <div class="ioxio-logo-grid-item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-12-phone"><img class="ioxio-logo svelte-earpbm" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxMjUgMjMiPjxnIGZpbGw9IiNmZmYiIGNsaXAtcGF0aD0idXJsKCNhKSI+PHBhdGggZD0iTTIuMTYyLjk2OEgtLjVWMjEuNzloMi42NjJ6TTI0LjgzMyAwYTExLjE5IDExLjE5IDAgMSAwIDExLjE5IDExLjE5QTExLjIgMTEuMiAwIDAgMCAyNC44MzQgMFptMCAxOS42NTRhOC40NjcgOC40NjcgMCAxIDEgMC0xNi45MzUgOC40NjcgOC40NjcgMCAwIDEgMCAxNi45MzVNOTAuNTM0Ljk2OGgtMi42NjJWMjEuNzloMi42NjJ6TTExMy4zMTEgMGExMS4xOSAxMS4xOSAwIDAgMC0xMC4zMzkgNi45MDggMTEuMTkgMTEuMTkgMCAwIDAgOC4xNTUgMTUuMjU4IDExLjE5MiAxMS4xOTIgMCAwIDAgMTMuMzc0LTEwLjk3NkExMS4yIDExLjIgMCAwIDAgMTEzLjMxMSAwbTAgMTkuNjU0YTguNDY2IDguNDY2IDAgMCAxLTUuOTg2LTE0LjQ1NyA4LjQ2IDguNDYgMCAwIDEgOS4yMjktMS44MzMgOC40NyA4LjQ3IDAgMCAxIDUuMjI0IDcuODI3IDguNDcgOC40NyAwIDAgMS04LjQ2NyA4LjQ2M000Ni43NDcuNzI4aC00Ljg2MWwxNS4yODEgMTAuNDExLTE1LjYzMiAxMC42NTRoNC44NTdsMTMuMjA0LTguOTk2IDIuNDI4LTEuNjU4LTIuNDI4LTEuNjUzem0xNS45IDE0LjIxMyAxMC4wNiA2Ljg1M2g0LjgzNmwtMTIuNDc3LTguNTAyLTIuNDIgMS42NVpNNzcuMTkyLjcyOGgtNC44NGwtOS43MDYgNi42MTUgMi40MiAxLjY1eiIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDBoMTI1djIyLjM3N0gweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==" alt="IOXIO"> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div> </div> </div>   <div class="mdc-layout-grid"><div class="mdc-layout-grid__inner">  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone"><a class="github-link svelte-8d18wx" href="https://github.com/ioxiocom/ioxio-docs" target="_blank" rel="noreferrer"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTIuMDEuNDhDNS4zNjkuNDggMCA1Ljc2IDAgMTIuMjkyYzAgNS4yMjIgMy40NCA5LjY0MSA4LjIxMiAxMS4yMDYuNTk3LjExNy44MTUtLjI1NS44MTUtLjU2NyAwLS4yNzQtLjAyLTEuMjEzLS4wMi0yLjE5LTMuMzQuNzAzLTQuMDM2LTEuNDA5LTQuMDM2LTEuNDA5LS41MzctMS4zNjktMS4zMzItMS43Mi0xLjMzMi0xLjcyLTEuMDk0LS43MjQuMDgtLjcyNC4wOC0uNzI0IDEuMjEyLjA3OCAxLjg0OSAxLjIxMiAxLjg0OSAxLjIxMiAxLjA3MyAxLjggMi44MDMgMS4yOTEgMy41Ljk3OC4wOTgtLjc2My40MTctMS4yOS43NTUtMS41ODQtMi42NjUtLjI3NC01LjQ2OC0xLjI5LTUuNDY4LTUuODI4IDAtMS4yOS40NzctMi4zNDcgMS4yMzItMy4xNjgtLjExOS0uMjkzLS41MzctMS41MDYuMTItMy4xMjkgMCAwIDEuMDE0LS4zMTMgMy4zIDEuMjEzYTExLjggMTEuOCAwIDAgMSAzLjAwMy0uMzkyYzEuMDE0IDAgMi4wNDguMTM3IDMuMDAyLjM5MiAyLjI4Ny0xLjUyNiAzLjMwMS0xLjIxMyAzLjMwMS0xLjIxMy42NTcgMS42MjMuMjM5IDIuODM2LjEyIDMuMTMuNzc1LjgyIDEuMjMyIDEuODc2IDEuMjMyIDMuMTY3IDAgNC41MzctMi44MDMgNS41MzUtNS40ODggNS44MjguNDM4LjM3Mi44MTUgMS4wNzYuODE1IDIuMTkgMCAxLjU4NC0uMDIgMi44NTUtLjAyIDMuMjQ2IDAgLjMxMy4yMi42ODUuODE2LjU2OEMyMC41NiAyMS45MzMgMjQgMTcuNTEzIDI0IDEyLjI5MiAyNC4wMiA1Ljc2IDE4LjYzLjQ4IDEyLjAxLjQ4IiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=" alt="GitHub repository"> <div data-svelte-h="svelte-jxnbiu">Contribute to these docs</div> </a> </div> </div> </div>   <div class="mdc-layout-grid"><div class="mdc-layout-grid__inner">  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12-phone"><div class="body-2 svelte-earpbm" data-svelte-h="svelte-12895e">IOXIO® is a registered trademark of IOXIO Oy. IOXIO Dataspace™ and IOXIO Tags™ are
+            trademarks of IOXIO Oy.</div> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone"><div class="copyright-text body-2 svelte-earpbm" data-svelte-h="svelte-arag5x">Copyright © IOXIO® 2024</div> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div> </div> </div> </div></div> </footer> </section> 
+			
+			<script>
+				{
+					__sveltekit_vbnve = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":null,"uses":{},"slash":"always"},{"type":"data","data":{path:"/guides/verifying-id-token/",route:"/guides/verifying-id-token",guide:{title:"Legacy: Verify id_token in data source",href:"/guides/verifying-id-token"},images:{VIEW_JWT_TOKEN:{src:"/guides/verifying-id-token/view-jwt-token.png",alt:"Decoded JWT token"}}},"uses":{"route":1,"url":1}}];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.4d508623.js"),
+						import("../../_app/immutable/entry/app.6aaf801a.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 18],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

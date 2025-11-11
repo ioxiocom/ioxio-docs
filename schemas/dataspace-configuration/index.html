@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+		<link href="../../_app/immutable/assets/0.4a420da5.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Grid.1f4741a5.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/A.48915739.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/MenuButton.daa4f3ea.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Button.e56dcb72.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/IconLink.ef32bd23.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/20.da1efc86.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Title.71d83a21.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.4d508623.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/scheduler.2e48bd10.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.99aca320.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.b93fb93f.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.6aaf801a.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.ed958696.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.9466c942.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Grid.6b3ec5be.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/A.2ad5f04f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/MenuButton.1ea166fa.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.8515c273.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.32aa8713.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Button.5f1bbe22.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/slack-icon.f588d972.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/link-arrow-icon.69406986.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/IconLink.033f7222.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/breakpointObserver.00fe8a69.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/navigation.34d832ff.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/urls.2ac53403.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/20.6986cb4f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Title.c4343f87.js"><title>Schema for dataspace-configuration.json - IOXIO Docs</title><!-- HEAD_svelte-1bze8jb_START --><meta property="og:title" content="Schema for dataspace-configuration.json"><!-- HEAD_svelte-1bze8jb_END -->
+    <meta
+      property="og:description"
+      content="Documentation portal for various IOXIO technologies."
+    />
+    <meta property="og:image" content="https://docs.ioxio.dev/og-image.jpg" />
+    <script src="/schema_doc.js"></script>
+
+    <link rel="icon" type="image/png" href="../../favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="IOXIO Docs" />
+    <link rel="manifest" href="../../site.webmanifest" />
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">  <section class="svelte-1uvmp51"><header class="svelte-yofvpi"><div class="header svelte-yofvpi"><div class="title svelte-yofvpi"><button class="hamburger-button svelte-1cozhxg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 21"><path fill="#788996" d="M3.18 15.27h12.718a.797.797 0 0 0 .794-.796.797.797 0 0 0-.794-.794H3.18a.797.797 0 0 0-.795.794c0 .438.357.795.795.795Zm0-3.975h12.718a.797.797 0 0 0 .794-.795.797.797 0 0 0-.794-.795H3.18a.797.797 0 0 0-.795.795c0 .437.357.795.795.795m-.795-4.77c0 .438.357.796.795.796h12.718a.797.797 0 0 0 .794-.795.797.797 0 0 0-.794-.795H3.18a.797.797 0 0 0-.795.795Z"/></svg> </button> <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxMjUgMjMiPjxnIGZpbGw9IiNmZmYiIGNsaXAtcGF0aD0idXJsKCNhKSI+PHBhdGggZD0iTTIuMTYyLjk2OEgtLjVWMjEuNzloMi42NjJ6TTI0LjgzMyAwYTExLjE5IDExLjE5IDAgMSAwIDExLjE5IDExLjE5QTExLjIgMTEuMiAwIDAgMCAyNC44MzQgMFptMCAxOS42NTRhOC40NjcgOC40NjcgMCAxIDEgMC0xNi45MzUgOC40NjcgOC40NjcgMCAwIDEgMCAxNi45MzVNOTAuNTM0Ljk2OGgtMi42NjJWMjEuNzloMi42NjJ6TTExMy4zMTEgMGExMS4xOSAxMS4xOSAwIDAgMC0xMC4zMzkgNi45MDggMTEuMTkgMTEuMTkgMCAwIDAgOC4xNTUgMTUuMjU4IDExLjE5MiAxMS4xOTIgMCAwIDAgMTMuMzc0LTEwLjk3NkExMS4yIDExLjIgMCAwIDAgMTEzLjMxMSAwbTAgMTkuNjU0YTguNDY2IDguNDY2IDAgMCAxLTUuOTg2LTE0LjQ1NyA4LjQ2IDguNDYgMCAwIDEgOS4yMjktMS44MzMgOC40NyA4LjQ3IDAgMCAxIDUuMjI0IDcuODI3IDguNDcgOC40NyAwIDAgMS04LjQ2NyA4LjQ2M000Ni43NDcuNzI4aC00Ljg2MWwxNS4yODEgMTAuNDExLTE1LjYzMiAxMC42NTRoNC44NTdsMTMuMjA0LTguOTk2IDIuNDI4LTEuNjU4LTIuNDI4LTEuNjUzem0xNS45IDE0LjIxMyAxMC4wNiA2Ljg1M2g0LjgzNmwtMTIuNDc3LTguNTAyLTIuNDIgMS42NVpNNzcuMTkyLjcyOGgtNC44NGwtOS43MDYgNi42MTUgMi40MiAxLjY1eiIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDBoMTI1djIyLjM3N0gweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==" alt="IOXIO" class="svelte-yofvpi"> <div class="separator svelte-yofvpi"></div> <a class="title-link svelte-yofvpi" href="/" data-svelte-h="svelte-1045bfj">Documentation portal</a></div></div> </header> <div class="main-container"><nav class="sidebar svelte-l1kp0x" style="width: 4.5rem"><div class="sticky-wrapper svelte-l1kp0x"><a href="/" class="menu-item svelte-l1kp0x"><div class="icon-wrapper svelte-l1kp0x"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#788996" d="M9.998 19.328v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87l-8.36-7.53c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87h1.7v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1"/></svg></div> <div class="name svelte-l1kp0x"></div> </a><a href="/dataspace" class="menu-item svelte-l1kp0x"><div class="icon-wrapper svelte-l1kp0x"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#788996" fill-rule="evenodd" d="m12.053 1 10.053 5.329v11.828l-10.053 5.33L2 18.157V6.33zm0 2.167L4.996 6.908l7.057 3.766 7.057-3.766zM3.915 17.005V8.502l7.18 3.832v8.478zm16.276 0-7.18 3.807v-8.478L20.19 8.5v8.504Zm-9.762-9.054 2.273 1.433.427-.22-2.276-1.437zm3.08 1.013zm0 0 .41-.212-1.418-1.898-.411.217zm2.205-1.132a2 2 0 0 0 .372-.149v.001a1.5 1.5 0 0 0 .301-.198 1 1 0 0 0 .104-.109.7.7 0 0 0 .075-.115.5.5 0 0 0 .044-.361.6.6 0 0 0-.12-.246 1 1 0 0 0-.103-.12 2 2 0 0 0-.13-.117 2.4 2.4 0 0 0-.72-.377 2.8 2.8 0 0 0-.626-.121 2.3 2.3 0 0 0-.63.037 2 2 0 0 0-.736.298 1 1 0 0 0-.133.104 1 1 0 0 0-.103.11.7.7 0 0 0-.115.239.5.5 0 0 0 .006.244.6.6 0 0 0 .048.125 1 1 0 0 0 .182.243q.135.128.294.227a2.3 2.3 0 0 0 .557.261q.301.095.616.115.102.005.206.003.312-.006.611-.094m.102-.445a1 1 0 0 1-.102.06l-.004.001a1.3 1.3 0 0 1-.491.14q-.068.008-.134.006a1.7 1.7 0 0 1-.802-.205 2 2 0 0 1-.235-.15 1 1 0 0 1-.17-.162.6.6 0 0 1-.094-.168.4.4 0 0 1-.018-.163.4.4 0 0 1 .063-.154.5.5 0 0 1 .144-.137q.157-.104.339-.155a1.3 1.3 0 0 1 .4-.05 2 2 0 0 1 .418.056c.231.059.448.164.636.308a1 1 0 0 1 .167.162.6.6 0 0 1 .09.165.33.33 0 0 1-.015.237.4.4 0 0 1-.108.144 1 1 0 0 1-.084.065" clip-rule="evenodd"/></svg></div> <div class="name svelte-l1kp0x"></div> </a><a href="/tags" class="menu-item svelte-l1kp0x"><div class="icon-wrapper svelte-l1kp0x"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#788996" clip-path="url(#a)"><path fill-rule="evenodd" d="M4.8 5.829c0-.569.46-1.029 1.028-1.029h3.086c.568 0 1.029.46 1.029 1.029v3.085c0 .568-.46 1.029-1.029 1.029H5.828c-.568 0-1.028-.46-1.028-1.029V5.83Zm2.057 2.057V6.857h1.029v1.029zm-2.057 7.2c0-.568.46-1.029 1.028-1.029h3.086c.568 0 1.029.46 1.029 1.029v3.085c0 .569-.46 1.029-1.029 1.029H5.828c-.568 0-1.028-.46-1.028-1.029zm2.057 2.057v-1.029h1.029v1.029zM15.085 4.8c-.568 0-1.028.46-1.028 1.029v3.085c0 .568.46 1.029 1.028 1.029h3.086c.568 0 1.029-.46 1.029-1.029V5.83c0-.569-.46-1.029-1.029-1.029h-3.085Zm1.03 2.057v1.029h1.028V6.857z" clip-rule="evenodd"/><path d="M13.028 5.829a1.029 1.029 0 1 0-2.057 0v1.028a1.029 1.029 0 0 0 2.057 0V5.83ZM12 8.914c.568 0 1.028.46 1.028 1.029v1.028h2.057a1.029 1.029 0 1 1 0 2.058H12c-.568 0-1.029-.46-1.029-1.029V9.943c0-.568.46-1.029 1.029-1.029m6.171 2.057a1.029 1.029 0 1 0 0 2.058 1.029 1.029 0 0 0 0-2.058m-7.2 4.115c0-.568.46-1.029 1.029-1.029h1.028a1.029 1.029 0 0 1 0 2.057v2.057a1.029 1.029 0 1 1-2.057 0zm-2.057-2.057a1.029 1.029 0 0 0 0-2.058H5.828a1.029 1.029 0 1 0 0 2.058zM19.2 15.086c0 .568-.46 1.028-1.029 1.028h-2.057a1.029 1.029 0 1 1 0-2.057h2.057c.568 0 1.029.46 1.029 1.029M18.171 19.2a1.029 1.029 0 1 0 0-2.057h-3.085a1.029 1.029 0 0 0 0 2.057z"/><path stroke="#788996" stroke-width=".4" d="M19.248 22.732c0 .148.12.268.268.268h1.93c.858 0 1.554-.696 1.554-1.554V19.55a.268.268 0 1 0-.535 0v1.896c0 .563-.456 1.019-1.019 1.019h-1.93a.27.27 0 0 0-.267.267Zm0-21.464c0 .148.12.267.268.267h1.93a1.02 1.02 0 0 1 1.019 1.02v1.963a.268.268 0 1 0 .535 0V2.554C23 1.696 22.304 1 21.446 1h-1.93a.27.27 0 0 0-.267.268Zm-14.496 0A.27.27 0 0 0 4.484 1h-1.93C1.696 1 1 1.696 1 2.554v1.964a.268.268 0 1 0 .536 0V2.554a1.02 1.02 0 0 1 1.018-1.019h1.93c.148 0 .268-.12.268-.267Zm0 21.464a.27.27 0 0 0-.268-.267h-1.93a1.02 1.02 0 0 1-1.018-1.02V19.55a.268.268 0 1 0-.536 0v1.896C1 22.304 1.696 23 2.554 23h1.93c.148 0 .268-.12.268-.268Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg></div> <div class="name svelte-l1kp0x"></div> </a><a href="/guides" class="menu-item svelte-l1kp0x"><div class="icon-wrapper svelte-l1kp0x"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#788996" d="M19 5v14H5V5zm0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2"/><path fill="#788996" d="M14 17H7v-2h7zm3-4H7v-2h10zm0-4H7V7h10z"/></svg></div> <div class="name svelte-l1kp0x"></div> </a><a href="/schemas" class="menu-item svelte-l1kp0x selected"><div class="icon-wrapper svelte-l1kp0x"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#788996" d="M3.6 4.8a1.2 1.2 0 0 1 1.2-1.2h14.4a1.2 1.2 0 0 1 1.2 1.2v2.4a1.2 1.2 0 0 1-1.2 1.2H4.8a1.2 1.2 0 0 1-1.2-1.2zm0 7.2a1.2 1.2 0 0 1 1.2-1.2H12a1.2 1.2 0 0 1 1.2 1.2v7.2a1.2 1.2 0 0 1-1.2 1.2H4.8a1.2 1.2 0 0 1-1.2-1.2zm13.2-1.2a1.2 1.2 0 0 0-1.2 1.2v7.2a1.2 1.2 0 0 0 1.2 1.2h2.4a1.2 1.2 0 0 0 1.2-1.2V12a1.2 1.2 0 0 0-1.2-1.2z"/></svg></div> <div class="name svelte-l1kp0x"></div> </a><a href="/faq" class="menu-item svelte-l1kp0x"><div class="icon-wrapper svelte-l1kp0x"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#788996" fill-rule="evenodd" d="M11.402 3.16 4.666 7.13A1.22 1.22 0 0 0 4 8.217v7.284a1.23 1.23 0 0 0 .638 1.072q.027.014.055.032l6.72 4.251a1.27 1.27 0 0 0 1.174 0l6.72-4.251.053-.031c.399-.22.64-.63.64-1.072v-7.29a1.23 1.23 0 0 0-.62-1.073 1 1 0 0 1-.162-.115L12.664 3.16a1.33 1.33 0 0 0-1.262 0m9.187 2.377a1 1 0 0 0-.173-.128l-6.75-3.98a3.33 3.33 0 0 0-3.266 0L3.662 5.402A3.22 3.22 0 0 0 2 8.217v7.287a3.23 3.23 0 0 0 1.648 2.807l6.725 4.254.054.032a3.27 3.27 0 0 0 3.2-.032l6.726-4.255A3.22 3.22 0 0 0 22 15.502V8.221a3.23 3.23 0 0 0-1.411-2.684m-9.162 2.521a3 3 0 1 1 .57 5.942 1 1 0 1 1 .006-2 1 1 0 0 0 .457-1.891l-.002-.001a.98.98 0 0 0-1.195.24 1 1 0 0 1-1.526-1.293 2.98 2.98 0 0 1 1.69-.997M12 15a1 1 0 0 1 1 1v.01a1 1 0 1 1-2 0V16a1 1 0 0 1 1-1" clip-rule="evenodd"/></svg></div> <div class="name svelte-l1kp0x"></div> </a></div> </nav> <div class="second-level-navigation-wrapper"><div class="second-level-navigation svelte-1uvmp51"><div class="section-title svelte-1uvmp51">Schemas</div> <a class=" svelte-8d18wx" href="/schemas/consent-configuration">consent-configuration.json  </a><a class=" svelte-8d18wx" href="/schemas/consent-request-token">Consent request token  </a><a class=" svelte-8d18wx" href="/schemas/consent-token">Consent token  </a><a class=" svelte-8d18wx" href="/schemas/dataspace-configuration">dataspace-configuration.json  </a><a class=" svelte-8d18wx" href="/schemas/party-configuration">party-configuration.json  </a></div></div> <div class="container main-container svelte-3muwzk">    <div class="main-grid mdc-layout-grid"><div class="mdc-layout-grid__inner">  <div class="content-grid mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone"> <h1>Schema for dataspace-configuration.json</h1> <div class="breadcrumbs"><span class="breadcrumb"><a class=" svelte-8d18wx" href="/">Docs </a></span> <span class="sep svelte-16gl9f1" data-svelte-h="svelte-1ofwb3u">/</span><span class="breadcrumb"><a class=" svelte-8d18wx" href="/schemas">Schemas </a></span> <span class="sep svelte-16gl9f1" data-svelte-h="svelte-1ofwb3u">/</span><span class="breadcrumb"><a class=" svelte-8d18wx" href="/schemas/dataspace-configuration">dataspace-configuration.json </a></span> <span class="sep svelte-16gl9f1" data-svelte-h="svelte-1ofwb3u">/</span> </div> <article class="svelte-4e7w10"><!-- HTML_TAG_START --><h2>/.well-known/dataspace/dataspace-configuration.json</h2>
+<div class="text-right">
+  <button
+    class="btn btn-primary"
+    type="button"
+    data-toggle="collapse"
+    data-target=".collapse:not(.show)"
+    aria-expanded="false"
+  >
+    Expand all
+  </button>
+  <button
+    class="btn btn-primary"
+    type="button"
+    data-toggle="collapse"
+    data-target=".collapse.show"
+    aria-expanded="false"
+  >
+    Collapse all
+  </button>
+</div>
+<span class="badge badge-dark value-type">Type: object</span><br />
+<span class="description"
+  ><p>
+    This configuration is found on the dataspace base domain, for example at
+    <code
+      >https://sandbox.ioxio-dataspace.com/.well-known/dataspace/dataspace-configuration.json</code
+    >. It lists all the relevant configuration of the dataspace, such as endpoints for different
+    dataspace components.
+  </p>
+</span>
+<br />
+<div class="badge badge-secondary">Example:</div>
+<br />
+<div id="root_ex1" class="jumbotron examples">
+  <div class="highlight">
+    <pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="s2">"dataspace_base_domain"</span><span class="o">:</span><span class="w"> </span><span class="s2">"sandbox.ioxio-dataspace.com"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"product_gateway_url"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://gateway.sandbox.ioxio-dataspace.com"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"developer_portal_url"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://developer.sandbox.ioxio-dataspace.com"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"docs_url"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://docs.sandbox.ioxio-dataspace.com"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"dataspace_name"</span><span class="o">:</span><span class="w"> </span><span class="s2">"IOXIO Sandbox Dataspace"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"authentication_providers"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"developer"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s2">"base_url"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://login.sandbox.ioxio-dataspace.com"</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="s2">"end_user"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s2">"base_url"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://login.sandbox.ioxio-dataspace.com"</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="s2">"consent_providers"</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="s2">"base_url"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://consent.sandbox.ioxio-dataspace.com"</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="s2">"definitions"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"git"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://github.com/ioxio-dataspace/sandbox-definitions.git"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"web"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://github.com/ioxio-dataspace/sandbox-definitions"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre>
+  </div>
+</div>
+<div class="accordion" id="accordiondataspace_base_domain">
+  <div class="card">
+    <div class="card-header" id="headingdataspace_base_domain">
+      <h2 class="mb-0">
+        <button
+          class="btn btn-link property-name-button"
+          type="button"
+          data-toggle="collapse"
+          data-target="#dataspace_base_domain"
+          aria-expanded=""
+          aria-controls="dataspace_base_domain"
+          onclick="setAnchor('#dataspace_base_domain')"
+        >
+          <span class="property-name">dataspace_base_domain</span>
+          <span class="badge badge-warning required-property">Required</span>
+        </button>
+      </h2>
+    </div>
+    <div
+      id="dataspace_base_domain"
+      class="collapse property-definition-div"
+      aria-labelledby="headingdataspace_base_domain"
+      data-parent="#accordiondataspace_base_domain"
+    >
+      <div class="card-body pl-5">
+        <div class="breadcrumbs">
+          root
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-arrow-right-short"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            ></path>
+          </svg>
+          <a href="#dataspace_base_domain" onclick="anchorLink('dataspace_base_domain')"
+            >dataspace_base_domain</a
+          >
+        </div>
+        <span class="badge badge-dark value-type">Type: string</span><br />
+        <span class="description"
+          ><p>
+            The base domain for the whole dataspace, without any protocol. This is the domain at
+            which for example the
+            <code>/.well-known/dataspace/dataspace-configuration.json</code> is found.
+          </p>
+        </span>
+        <br />
+        <div class="badge badge-secondary">Example:</div>
+        <br />
+        <div id="dataspace_base_domain_ex1" class="jumbotron examples">
+          <div class="highlight">
+            <pre><span></span><span class="s2">"sandbox.ioxio-dataspace.com"</span>
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion" id="accordionproduct_gateway_url">
+  <div class="card">
+    <div class="card-header" id="headingproduct_gateway_url">
+      <h2 class="mb-0">
+        <button
+          class="btn btn-link property-name-button"
+          type="button"
+          data-toggle="collapse"
+          data-target="#product_gateway_url"
+          aria-expanded=""
+          aria-controls="product_gateway_url"
+          onclick="setAnchor('#product_gateway_url')"
+        >
+          <span class="property-name">product_gateway_url</span>
+          <span class="badge badge-warning required-property">Required</span>
+        </button>
+      </h2>
+    </div>
+    <div
+      id="product_gateway_url"
+      class="collapse property-definition-div"
+      aria-labelledby="headingproduct_gateway_url"
+      data-parent="#accordionproduct_gateway_url"
+    >
+      <div class="card-body pl-5">
+        <div class="breadcrumbs">
+          root
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-arrow-right-short"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            ></path>
+          </svg>
+          <a href="#product_gateway_url" onclick="anchorLink('product_gateway_url')"
+            >product_gateway_url</a
+          >
+        </div>
+        <span class="badge badge-dark value-type">Type: string</span
+        ><span class="badge badge-info value-type">Format: uri</span><br />
+        <span class="description"
+          ><p>
+            The URL at which the Product Gateway of the dataspace is hosted and on which all the
+            data products are accessed.
+          </p>
+        </span>
+        <p>
+          <span
+            class="badge badge-light restriction min-length-restriction"
+            id="product_gateway_url_minLength"
+            >Must be at least <code>1</code> characters long</span
+          >
+        </p>
+        <p>
+          <span
+            class="badge badge-light restriction max-length-restriction"
+            id="product_gateway_url_maxLength"
+            >Must be at most <code>2083</code> characters long</span
+          >
+        </p>
+        <br />
+        <div class="badge badge-secondary">Example:</div>
+        <br />
+        <div id="product_gateway_url_ex1" class="jumbotron examples">
+          <div class="highlight">
+            <pre><span></span><span class="s2">"https://gateway.sandbox.ioxio-dataspace.com"</span>
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion" id="accordiondeveloper_portal_url">
+  <div class="card">
+    <div class="card-header" id="headingdeveloper_portal_url">
+      <h2 class="mb-0">
+        <button
+          class="btn btn-link property-name-button"
+          type="button"
+          data-toggle="collapse"
+          data-target="#developer_portal_url"
+          aria-expanded=""
+          aria-controls="developer_portal_url"
+          onclick="setAnchor('#developer_portal_url')"
+        >
+          <span class="property-name">developer_portal_url</span>
+          <span class="badge badge-warning required-property">Required</span>
+        </button>
+      </h2>
+    </div>
+    <div
+      id="developer_portal_url"
+      class="collapse property-definition-div"
+      aria-labelledby="headingdeveloper_portal_url"
+      data-parent="#accordiondeveloper_portal_url"
+    >
+      <div class="card-body pl-5">
+        <div class="breadcrumbs">
+          root
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-arrow-right-short"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            ></path>
+          </svg>
+          <a href="#developer_portal_url" onclick="anchorLink('developer_portal_url')"
+            >developer_portal_url</a
+          >
+        </div>
+        <span class="badge badge-dark value-type">Type: string</span
+        ><span class="badge badge-info value-type">Format: uri</span><br />
+        <span class="description"
+          ><p>
+            The URL where the Developer Portal for the dataspace is hosted. This is where developers
+            can register their own data sources and applications.
+          </p>
+        </span>
+        <p>
+          <span
+            class="badge badge-light restriction min-length-restriction"
+            id="developer_portal_url_minLength"
+            >Must be at least <code>1</code> characters long</span
+          >
+        </p>
+        <p>
+          <span
+            class="badge badge-light restriction max-length-restriction"
+            id="developer_portal_url_maxLength"
+            >Must be at most <code>2083</code> characters long</span
+          >
+        </p>
+        <br />
+        <div class="badge badge-secondary">Example:</div>
+        <br />
+        <div id="developer_portal_url_ex1" class="jumbotron examples">
+          <div class="highlight">
+            <pre><span></span><span class="s2">"https://developer.sandbox.ioxio-dataspace.com"</span>
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion" id="accordiondocs_url">
+  <div class="card">
+    <div class="card-header" id="headingdocs_url">
+      <h2 class="mb-0">
+        <button
+          class="btn btn-link property-name-button"
+          type="button"
+          data-toggle="collapse"
+          data-target="#docs_url"
+          aria-expanded=""
+          aria-controls="docs_url"
+          onclick="setAnchor('#docs_url')"
+        >
+          <span class="property-name">docs_url</span>
+          <span class="badge badge-warning required-property">Required</span>
+        </button>
+      </h2>
+    </div>
+    <div
+      id="docs_url"
+      class="collapse property-definition-div"
+      aria-labelledby="headingdocs_url"
+      data-parent="#accordiondocs_url"
+    >
+      <div class="card-body pl-5">
+        <div class="breadcrumbs">
+          root
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-arrow-right-short"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            ></path>
+          </svg>
+          <a href="#docs_url" onclick="anchorLink('docs_url')">docs_url</a>
+        </div>
+        <span class="badge badge-dark value-type">Type: string</span
+        ><span class="badge badge-info value-type">Format: uri</span><br />
+        <span class="description"><p>The URL at which the API documentation is hosted.</p> </span>
+        <p>
+          <span class="badge badge-light restriction min-length-restriction" id="docs_url_minLength"
+            >Must be at least <code>1</code> characters long</span
+          >
+        </p>
+        <p>
+          <span class="badge badge-light restriction max-length-restriction" id="docs_url_maxLength"
+            >Must be at most <code>2083</code> characters long</span
+          >
+        </p>
+        <br />
+        <div class="badge badge-secondary">Example:</div>
+        <br />
+        <div id="docs_url_ex1" class="jumbotron examples">
+          <div class="highlight">
+            <pre><span></span><span class="s2">"https://docs.sandbox.ioxio-dataspace.com"</span>
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion" id="accordiondataspace_name">
+  <div class="card">
+    <div class="card-header" id="headingdataspace_name">
+      <h2 class="mb-0">
+        <button
+          class="btn btn-link property-name-button"
+          type="button"
+          data-toggle="collapse"
+          data-target="#dataspace_name"
+          aria-expanded=""
+          aria-controls="dataspace_name"
+          onclick="setAnchor('#dataspace_name')"
+        >
+          <span class="property-name">dataspace_name</span>
+          <span class="badge badge-warning required-property">Required</span>
+        </button>
+      </h2>
+    </div>
+    <div
+      id="dataspace_name"
+      class="collapse property-definition-div"
+      aria-labelledby="headingdataspace_name"
+      data-parent="#accordiondataspace_name"
+    >
+      <div class="card-body pl-5">
+        <div class="breadcrumbs">
+          root
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-arrow-right-short"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            ></path>
+          </svg>
+          <a href="#dataspace_name" onclick="anchorLink('dataspace_name')">dataspace_name</a>
+        </div>
+        <span class="badge badge-dark value-type">Type: string</span><br />
+        <span class="description"><p>A human readable name for the dataspace</p> </span> <br />
+        <div class="badge badge-secondary">Example:</div>
+        <br />
+        <div id="dataspace_name_ex1" class="jumbotron examples">
+          <div class="highlight">
+            <pre><span></span><span class="s2">"IOXIO Sandbox Dataspace"</span>
+</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion" id="accordionauthentication_providers">
+  <div class="card">
+    <div class="card-header" id="headingauthentication_providers">
+      <h2 class="mb-0">
+        <button
+          class="btn btn-link property-name-button"
+          type="button"
+          data-toggle="collapse"
+          data-target="#authentication_providers"
+          aria-expanded=""
+          aria-controls="authentication_providers"
+          onclick="setAnchor('#authentication_providers')"
+        >
+          <span class="property-name">authentication_providers</span>
+          <span class="badge badge-warning required-property">Required</span>
+        </button>
+      </h2>
+    </div>
+    <div
+      id="authentication_providers"
+      class="collapse property-definition-div"
+      aria-labelledby="headingauthentication_providers"
+      data-parent="#accordionauthentication_providers"
+    >
+      <div class="card-body pl-5">
+        <div class="breadcrumbs">
+          root
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-arrow-right-short"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            ></path>
+          </svg>
+          <a href="#authentication_providers" onclick="anchorLink('authentication_providers')"
+            >authentication_providers</a
+          >
+        </div>
+        <span class="badge badge-dark value-type">Type: object</span><br />
+        <div class="accordion" id="accordionauthentication_providers_developer">
+          <div class="card">
+            <div class="card-header" id="headingauthentication_providers_developer">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link property-name-button"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#authentication_providers_developer"
+                  aria-expanded=""
+                  aria-controls="authentication_providers_developer"
+                  onclick="setAnchor('#authentication_providers_developer')"
+                >
+                  <span class="property-name">developer</span>
+                  <span class="badge badge-warning required-property">Required</span>
+                </button>
+              </h2>
+            </div>
+            <div
+              id="authentication_providers_developer"
+              class="collapse property-definition-div"
+              aria-labelledby="headingauthentication_providers_developer"
+              data-parent="#accordionauthentication_providers_developer"
+            >
+              <div class="card-body pl-5">
+                <div class="breadcrumbs">
+                  root
+                  <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-arrow-right-short"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    ></path>
+                  </svg>
+                  <a
+                    href="#authentication_providers"
+                    onclick="anchorLink('authentication_providers')"
+                    >authentication_providers</a
+                  >
+                  <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-arrow-right-short"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    ></path>
+                  </svg>
+                  <a
+                    href="#authentication_providers_developer"
+                    onclick="anchorLink('authentication_providers_developer')"
+                    >developer</a
+                  >
+                </div>
+                <span class="badge badge-dark value-type">Type: object</span><br />
+                <span class="description"
+                  ><p>
+                    Details about authentication provider used to identify developers on the
+                    dataspace.
+                  </p>
+                </span>
+                <br />
+                <div class="badge badge-secondary">Example:</div>
+                <br />
+                <div id="authentication_providers_developer_ex1" class="jumbotron examples">
+                  <div class="highlight">
+                    <pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="s2">"base_url"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://login.sandbox.ioxio-dataspace.com"</span>
+<span class="p">}</span>
+</pre>
+                  </div>
+                </div>
+                <div class="accordion" id="accordionauthentication_providers_developer_base_url">
+                  <div class="card">
+                    <div
+                      class="card-header"
+                      id="headingauthentication_providers_developer_base_url"
+                    >
+                      <h2 class="mb-0">
+                        <button
+                          class="btn btn-link property-name-button"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#authentication_providers_developer_base_url"
+                          aria-expanded=""
+                          aria-controls="authentication_providers_developer_base_url"
+                          onclick="setAnchor('#authentication_providers_developer_base_url')"
+                        >
+                          <span class="property-name">base_url</span>
+                          <span class="badge badge-warning required-property">Required</span>
+                        </button>
+                      </h2>
+                    </div>
+                    <div
+                      id="authentication_providers_developer_base_url"
+                      class="collapse property-definition-div"
+                      aria-labelledby="headingauthentication_providers_developer_base_url"
+                      data-parent="#accordionauthentication_providers_developer_base_url"
+                    >
+                      <div class="card-body pl-5">
+                        <div class="breadcrumbs">
+                          root
+                          <svg
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 16 16"
+                            class="bi bi-arrow-right-short"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            ></path>
+                          </svg>
+                          <a
+                            href="#authentication_providers"
+                            onclick="anchorLink('authentication_providers')"
+                            >authentication_providers</a
+                          >
+                          <svg
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 16 16"
+                            class="bi bi-arrow-right-short"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            ></path>
+                          </svg>
+                          <a
+                            href="#authentication_providers_developer"
+                            onclick="anchorLink('authentication_providers_developer')"
+                            >developer</a
+                          >
+                          <svg
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 16 16"
+                            class="bi bi-arrow-right-short"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            ></path>
+                          </svg>
+                          <a
+                            href="#authentication_providers_developer_base_url"
+                            onclick="anchorLink('authentication_providers_developer_base_url')"
+                            >base_url</a
+                          >
+                        </div>
+                        <span class="badge badge-dark value-type">Type: string</span
+                        ><span class="badge badge-info value-type">Format: uri</span><br />
+                        <span class="description"
+                          ><p>
+                            Base URL for the authentication provider. Appending
+                            <code>/.well-known/openid-configuration</code> will give the full URL to
+                            the openid-configuration.
+                          </p>
+                        </span>
+                        <p>
+                          <span
+                            class="badge badge-light restriction min-length-restriction"
+                            id="authentication_providers_developer_base_url_minLength"
+                            >Must be at least <code>1</code> characters long</span
+                          >
+                        </p>
+                        <p>
+                          <span
+                            class="badge badge-light restriction max-length-restriction"
+                            id="authentication_providers_developer_base_url_maxLength"
+                            >Must be at most <code>2083</code> characters long</span
+                          >
+                        </p>
+                        <br />
+                        <div class="badge badge-secondary">Example:</div>
+                        <br />
+                        <div
+                          id="authentication_providers_developer_base_url_ex1"
+                          class="jumbotron examples"
+                        >
+                          <div class="highlight">
+                            <pre><span></span><span class="s2">"https://login.sandbox.ioxio-dataspace.com"</span>
+</pre>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion" id="accordionauthentication_providers_end_user">
+          <div class="card">
+            <div class="card-header" id="headingauthentication_providers_end_user">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link property-name-button"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#authentication_providers_end_user"
+                  aria-expanded=""
+                  aria-controls="authentication_providers_end_user"
+                  onclick="setAnchor('#authentication_providers_end_user')"
+                >
+                  <span class="property-name">end_user</span>
+                  <span class="badge badge-warning required-property">Required</span>
+                </button>
+              </h2>
+            </div>
+            <div
+              id="authentication_providers_end_user"
+              class="collapse property-definition-div"
+              aria-labelledby="headingauthentication_providers_end_user"
+              data-parent="#accordionauthentication_providers_end_user"
+            >
+              <div class="card-body pl-5">
+                <div class="breadcrumbs">
+                  root
+                  <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-arrow-right-short"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    ></path>
+                  </svg>
+                  <a
+                    href="#authentication_providers"
+                    onclick="anchorLink('authentication_providers')"
+                    >authentication_providers</a
+                  >
+                  <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-arrow-right-short"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    ></path>
+                  </svg>
+                  <a
+                    href="#authentication_providers_end_user"
+                    onclick="anchorLink('authentication_providers_end_user')"
+                    >end_user</a
+                  >
+                </div>
+                <span class="badge badge-dark value-type">Type: object</span><br />
+                <span class="description"
+                  ><p>
+                    Details about authentication provider used to identify end users on the
+                    dataspace.
+                  </p>
+                </span>
+                <br />
+                <div class="badge badge-secondary">Example:</div>
+                <br />
+                <div id="authentication_providers_end_user_ex1" class="jumbotron examples">
+                  <div class="highlight">
+                    <pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="s2">"base_url"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://login.sandbox.ioxio-dataspace.com"</span>
+<span class="p">}</span>
+</pre>
+                  </div>
+                </div>
+                <div class="accordion" id="accordionauthentication_providers_end_user_base_url">
+                  <div class="card">
+                    <div class="card-header" id="headingauthentication_providers_end_user_base_url">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn btn-link property-name-button"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#authentication_providers_end_user_base_url"
+                          aria-expanded=""
+                          aria-controls="authentication_providers_end_user_base_url"
+                          onclick="setAnchor('#authentication_providers_end_user_base_url')"
+                        >
+                          <span class="property-name">base_url</span>
+                          <span class="badge badge-warning required-property">Required</span>
+                        </button>
+                      </h2>
+                    </div>
+                    <div
+                      id="authentication_providers_end_user_base_url"
+                      class="collapse property-definition-div"
+                      aria-labelledby="headingauthentication_providers_end_user_base_url"
+                      data-parent="#accordionauthentication_providers_end_user_base_url"
+                    >
+                      <div class="card-body pl-5">
+                        <div class="breadcrumbs">
+                          root
+                          <svg
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 16 16"
+                            class="bi bi-arrow-right-short"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            ></path>
+                          </svg>
+                          <a
+                            href="#authentication_providers"
+                            onclick="anchorLink('authentication_providers')"
+                            >authentication_providers</a
+                          >
+                          <svg
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 16 16"
+                            class="bi bi-arrow-right-short"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            ></path>
+                          </svg>
+                          <a
+                            href="#authentication_providers_end_user"
+                            onclick="anchorLink('authentication_providers_end_user')"
+                            >end_user</a
+                          >
+                          <svg
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 16 16"
+                            class="bi bi-arrow-right-short"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                            ></path>
+                          </svg>
+                          <a
+                            href="#authentication_providers_end_user_base_url"
+                            onclick="anchorLink('authentication_providers_end_user_base_url')"
+                            >base_url</a
+                          >
+                        </div>
+                        <span class="badge badge-dark value-type">Type: string</span
+                        ><span class="badge badge-info value-type">Format: uri</span><br />
+                        <span class="description"
+                          ><p>
+                            Base URL for the authentication provider. Appending
+                            <code>/.well-known/openid-configuration</code> will give the full URL to
+                            the openid-configuration.
+                          </p>
+                        </span>
+                        <p>
+                          <span
+                            class="badge badge-light restriction min-length-restriction"
+                            id="authentication_providers_end_user_base_url_minLength"
+                            >Must be at least <code>1</code> characters long</span
+                          >
+                        </p>
+                        <p>
+                          <span
+                            class="badge badge-light restriction max-length-restriction"
+                            id="authentication_providers_end_user_base_url_maxLength"
+                            >Must be at most <code>2083</code> characters long</span
+                          >
+                        </p>
+                        <br />
+                        <div class="badge badge-secondary">Example:</div>
+                        <br />
+                        <div
+                          id="authentication_providers_end_user_base_url_ex1"
+                          class="jumbotron examples"
+                        >
+                          <div class="highlight">
+                            <pre><span></span><span class="s2">"https://login.sandbox.ioxio-dataspace.com"</span>
+</pre>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion" id="accordionconsent_providers">
+  <div class="card">
+    <div class="card-header" id="headingconsent_providers">
+      <h2 class="mb-0">
+        <button
+          class="btn btn-link property-name-button"
+          type="button"
+          data-toggle="collapse"
+          data-target="#consent_providers"
+          aria-expanded=""
+          aria-controls="consent_providers"
+          onclick="setAnchor('#consent_providers')"
+        >
+          <span class="property-name">consent_providers</span>
+          <span class="badge badge-warning required-property">Required</span>
+        </button>
+      </h2>
+    </div>
+    <div
+      id="consent_providers"
+      class="collapse property-definition-div"
+      aria-labelledby="headingconsent_providers"
+      data-parent="#accordionconsent_providers"
+    >
+      <div class="card-body pl-5">
+        <div class="breadcrumbs">
+          root
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-arrow-right-short"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            ></path>
+          </svg>
+          <a href="#consent_providers" onclick="anchorLink('consent_providers')"
+            >consent_providers</a
+          >
+        </div>
+        <span class="badge badge-dark value-type">Type: array</span><br />
+        <h4>Each item of this array must be:</h4>
+        <div class="card">
+          <div class="card-body items-definition" id="consent_providers_items">
+            <div class="breadcrumbs">
+              root
+              <svg
+                width="1em"
+                height="1em"
+                viewBox="0 0 16 16"
+                class="bi bi-arrow-right-short"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                ></path>
+              </svg>
+              <a href="#consent_providers" onclick="anchorLink('consent_providers')"
+                >consent_providers</a
+              >
+              <svg
+                width="1em"
+                height="1em"
+                viewBox="0 0 16 16"
+                class="bi bi-arrow-right-short"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                ></path>
+              </svg>
+              <a href="#consent_providers_items" onclick="anchorLink('consent_providers_items')"
+                >ConsentProviders</a
+              >
+            </div>
+            <span class="badge badge-dark value-type">Type: object</span><br />
+            <div class="accordion" id="accordionconsent_providers_items_base_url">
+              <div class="card">
+                <div class="card-header" id="headingconsent_providers_items_base_url">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link property-name-button"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#consent_providers_items_base_url"
+                      aria-expanded=""
+                      aria-controls="consent_providers_items_base_url"
+                      onclick="setAnchor('#consent_providers_items_base_url')"
+                    >
+                      <span class="property-name">base_url</span>
+                      <span class="badge badge-warning required-property">Required</span>
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="consent_providers_items_base_url"
+                  class="collapse property-definition-div"
+                  aria-labelledby="headingconsent_providers_items_base_url"
+                  data-parent="#accordionconsent_providers_items_base_url"
+                >
+                  <div class="card-body pl-5">
+                    <div class="breadcrumbs">
+                      root
+                      <svg
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 16 16"
+                        class="bi bi-arrow-right-short"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                        ></path>
+                      </svg>
+                      <a href="#consent_providers" onclick="anchorLink('consent_providers')"
+                        >consent_providers</a
+                      >
+                      <svg
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 16 16"
+                        class="bi bi-arrow-right-short"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                        ></path>
+                      </svg>
+                      <a
+                        href="#consent_providers_items"
+                        onclick="anchorLink('consent_providers_items')"
+                        >ConsentProviders</a
+                      >
+                      <svg
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 16 16"
+                        class="bi bi-arrow-right-short"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                        ></path>
+                      </svg>
+                      <a
+                        href="#consent_providers_items_base_url"
+                        onclick="anchorLink('consent_providers_items_base_url')"
+                        >base_url</a
+                      >
+                    </div>
+                    <span class="badge badge-dark value-type">Type: string</span
+                    ><span class="badge badge-info value-type">Format: uri</span><br />
+                    <span class="description"
+                      ><p>
+                        Base URL for the consent provider. Appending
+                        <code>/.well-known/dataspace/consent-configuration.json</code> will give the
+                        full URL to the consent configuration.
+                      </p>
+                    </span>
+                    <p>
+                      <span
+                        class="badge badge-light restriction min-length-restriction"
+                        id="consent_providers_items_base_url_minLength"
+                        >Must be at least <code>1</code> characters long</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        class="badge badge-light restriction max-length-restriction"
+                        id="consent_providers_items_base_url_maxLength"
+                        >Must be at most <code>2083</code> characters long</span
+                      >
+                    </p>
+                    <br />
+                    <div class="badge badge-secondary">Example:</div>
+                    <br />
+                    <div id="consent_providers_items_base_url_ex1" class="jumbotron examples">
+                      <div class="highlight">
+                        <pre><span></span><span class="s2">"https://consent.sandbox.ioxio-dataspace.com"</span>
+</pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion" id="accordiondefinitions">
+  <div class="card">
+    <div class="card-header" id="headingdefinitions">
+      <h2 class="mb-0">
+        <button
+          class="btn btn-link property-name-button"
+          type="button"
+          data-toggle="collapse"
+          data-target="#definitions"
+          aria-expanded=""
+          aria-controls="definitions"
+          onclick="setAnchor('#definitions')"
+        >
+          <span class="property-name">definitions</span>
+          <span class="badge badge-warning required-property">Required</span>
+        </button>
+      </h2>
+    </div>
+    <div
+      id="definitions"
+      class="collapse property-definition-div"
+      aria-labelledby="headingdefinitions"
+      data-parent="#accordiondefinitions"
+    >
+      <div class="card-body pl-5">
+        <div class="breadcrumbs">
+          root
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-arrow-right-short"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            ></path>
+          </svg>
+          <a href="#definitions" onclick="anchorLink('definitions')">definitions</a>
+        </div>
+        <span class="badge badge-dark value-type">Type: object</span><br />
+        <div class="accordion" id="accordiondefinitions_git">
+          <div class="card">
+            <div class="card-header" id="headingdefinitions_git">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link property-name-button"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#definitions_git"
+                  aria-expanded=""
+                  aria-controls="definitions_git"
+                  onclick="setAnchor('#definitions_git')"
+                >
+                  <span class="property-name">git</span>
+                  <span class="badge badge-warning required-property">Required</span>
+                </button>
+              </h2>
+            </div>
+            <div
+              id="definitions_git"
+              class="collapse property-definition-div"
+              aria-labelledby="headingdefinitions_git"
+              data-parent="#accordiondefinitions_git"
+            >
+              <div class="card-body pl-5">
+                <div class="breadcrumbs">
+                  root
+                  <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-arrow-right-short"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    ></path>
+                  </svg>
+                  <a href="#definitions" onclick="anchorLink('definitions')">definitions</a>
+                  <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-arrow-right-short"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    ></path>
+                  </svg>
+                  <a href="#definitions_git" onclick="anchorLink('definitions_git')">git</a>
+                </div>
+                <span class="badge badge-dark value-type">Type: string</span
+                ><span class="badge badge-info value-type">Format: uri</span><br />
+                <span class="description"
+                  ><p>The URL to the git repository of the definitions used on the dataspace.</p>
+                </span>
+                <p>
+                  <span
+                    class="badge badge-light restriction min-length-restriction"
+                    id="definitions_git_minLength"
+                    >Must be at least <code>1</code> characters long</span
+                  >
+                </p>
+                <p>
+                  <span
+                    class="badge badge-light restriction max-length-restriction"
+                    id="definitions_git_maxLength"
+                    >Must be at most <code>2083</code> characters long</span
+                  >
+                </p>
+                <br />
+                <div class="badge badge-secondary">Example:</div>
+                <br />
+                <div id="definitions_git_ex1" class="jumbotron examples">
+                  <div class="highlight">
+                    <pre><span></span><span class="s2">"https://github.com/ioxio-dataspace/sandbox-definitions.git"</span>
+</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion" id="accordiondefinitions_web">
+          <div class="card">
+            <div class="card-header" id="headingdefinitions_web">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link property-name-button"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#definitions_web"
+                  aria-expanded=""
+                  aria-controls="definitions_web"
+                  onclick="setAnchor('#definitions_web')"
+                >
+                  <span class="property-name">web</span>
+                  <span class="badge badge-warning required-property">Required</span>
+                </button>
+              </h2>
+            </div>
+            <div
+              id="definitions_web"
+              class="collapse property-definition-div"
+              aria-labelledby="headingdefinitions_web"
+              data-parent="#accordiondefinitions_web"
+            >
+              <div class="card-body pl-5">
+                <div class="breadcrumbs">
+                  root
+                  <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-arrow-right-short"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    ></path>
+                  </svg>
+                  <a href="#definitions" onclick="anchorLink('definitions')">definitions</a>
+                  <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-arrow-right-short"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    ></path>
+                  </svg>
+                  <a href="#definitions_web" onclick="anchorLink('definitions_web')">web</a>
+                </div>
+                <span class="badge badge-dark value-type">Type: string</span
+                ><span class="badge badge-info value-type">Format: uri</span><br />
+                <span class="description"
+                  ><p>
+                    The URL to a human friendly view of the definitions git repository used on the
+                    dataspace.
+                  </p>
+                </span>
+                <p>
+                  <span
+                    class="badge badge-light restriction min-length-restriction"
+                    id="definitions_web_minLength"
+                    >Must be at least <code>1</code> characters long</span
+                  >
+                </p>
+                <p>
+                  <span
+                    class="badge badge-light restriction max-length-restriction"
+                    id="definitions_web_maxLength"
+                    >Must be at most <code>2083</code> characters long</span
+                  >
+                </p>
+                <br />
+                <div class="badge badge-secondary">Example:</div>
+                <br />
+                <div id="definitions_web_ex1" class="jumbotron examples">
+                  <div class="highlight">
+                    <pre><span></span><span class="s2">"https://github.com/ioxio-dataspace/sandbox-definitions"</span>
+</pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- HTML_TAG_END --> </article> </div> </div> </div> </div></div> <footer class="svelte-earpbm"><div class="top-section-wrapper svelte-earpbm"><div class="container  svelte-3muwzk">  <div class="footer-container mdc-layout-grid"><div class="mdc-layout-grid__inner">  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-phone"><div class="try-out-section svelte-earpbm"><h3 data-svelte-h="svelte-25mv77">Try out our technologies for free on</h3> <a class="icon-link svelte-8d18wx" href="https://sandbox.ioxio-dataspace.com" target="_blank" rel="noreferrer"><span class="svelte-ww9r9u">IOXIO Dataspace™ Sandbox</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" fill="none"><path fill="#3CB08E" d="m12 4.928-1.41 1.41 5.58 5.59H4v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg> </a></div> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div> </div> </div> </div></div> <div class="bottom-section-wrapper svelte-earpbm"><div class="container  svelte-3muwzk">  <div class="mdc-layout-grid"><div class="mdc-layout-grid__inner">  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-9-tablet mdc-layout-grid__cell--span-12-phone"><div class="contact-us-wrapper svelte-earpbm"><h3 data-svelte-h="svelte-1r083he">Contact us by using the available support options</h3> <div class="contact-us-buttons svelte-earpbm"><div class="button-wrapper svelte-j0pf02"><a class="button svelte-8d18wx" href="https://slack.ioxio.com" target="_blank" rel="noreferrer"><span>Slack</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><g clip-path="url(#a)"><path fill="#E91E63" d="M7.574 10.12a2.017 2.017 0 0 0-2.016 2.018v5.045a2.017 2.017 0 0 0 4.033 0v-5.045a2.02 2.02 0 0 0-2.017-2.017ZM.515 12.137a2.019 2.019 0 0 0 4.037 0V10.12H2.534a2.02 2.02 0 0 0-2.019 2.018Z"/><path fill="#00BCD4" d="M7.577 0h-.002a2.019 2.019 0 0 0 0 4.036H9.59V2.014A2.015 2.015 0 0 0 7.577-.001ZM2.52 9.096h5.054a2.019 2.019 0 0 0 0-4.037H2.52a2.019 2.019 0 0 0 0 4.037"/><path fill="#4CAF50" d="M17.666 5.058a2.014 2.014 0 0 0-2.015 2.015v2.022h2.017a2.019 2.019 0 0 0 0-4.037zm-7.053-3.04v5.06a2.017 2.017 0 0 0 4.033 0v-5.06a2.017 2.017 0 0 0-4.033 0"/><path fill="#FF9800" d="M14.645 17.18a2.017 2.017 0 0 0-2.016-2.016h-2.017v2.019a2.017 2.017 0 0 0 4.033-.002Zm3.038-7.06H12.63a2.019 2.019 0 0 0 0 4.036h5.054a2.019 2.019 0 0 0 0-4.037Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.5 0h19.2v19.2H.5z"/></clipPath></defs></svg> </a></div> <div class="button-wrapper svelte-j0pf02"><a class="button monochrome svelte-8d18wx" href="mailto:support@ioxio.com" target="_blank" rel="noreferrer"><span>Email</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><g fill="#EEEFEC" clip-path="url(#a)"><path d="M19.731 3.814 13.908 9.6l5.823 5.785c.105-.22.17-.463.17-.723V4.537c0-.26-.065-.503-.17-.723m-1.519-.964H2.388c-.26 0-.503.064-.723.17l7.442 7.404a1.69 1.69 0 0 0 2.386 0l7.443-7.405a1.7 1.7 0 0 0-.724-.169M.87 3.814a1.66 1.66 0 0 0-.17.723v10.125c0 .26.064.503.17.723L6.691 9.6z"/><path d="m13.113 10.396-.824.823a2.815 2.815 0 0 1-3.978 0l-.823-.823-5.823 5.785c.22.105.463.17.723.17h15.825c.26 0 .502-.065.723-.17z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.7 0h19.2v19.2H.7z"/></clipPath></defs></svg> </a></div></div></div> </div>   <div class="ioxio-logo-grid-item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-12-phone"><img class="ioxio-logo svelte-earpbm" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxMjUgMjMiPjxnIGZpbGw9IiNmZmYiIGNsaXAtcGF0aD0idXJsKCNhKSI+PHBhdGggZD0iTTIuMTYyLjk2OEgtLjVWMjEuNzloMi42NjJ6TTI0LjgzMyAwYTExLjE5IDExLjE5IDAgMSAwIDExLjE5IDExLjE5QTExLjIgMTEuMiAwIDAgMCAyNC44MzQgMFptMCAxOS42NTRhOC40NjcgOC40NjcgMCAxIDEgMC0xNi45MzUgOC40NjcgOC40NjcgMCAwIDEgMCAxNi45MzVNOTAuNTM0Ljk2OGgtMi42NjJWMjEuNzloMi42NjJ6TTExMy4zMTEgMGExMS4xOSAxMS4xOSAwIDAgMC0xMC4zMzkgNi45MDggMTEuMTkgMTEuMTkgMCAwIDAgOC4xNTUgMTUuMjU4IDExLjE5MiAxMS4xOTIgMCAwIDAgMTMuMzc0LTEwLjk3NkExMS4yIDExLjIgMCAwIDAgMTEzLjMxMSAwbTAgMTkuNjU0YTguNDY2IDguNDY2IDAgMCAxLTUuOTg2LTE0LjQ1NyA4LjQ2IDguNDYgMCAwIDEgOS4yMjktMS44MzMgOC40NyA4LjQ3IDAgMCAxIDUuMjI0IDcuODI3IDguNDcgOC40NyAwIDAgMS04LjQ2NyA4LjQ2M000Ni43NDcuNzI4aC00Ljg2MWwxNS4yODEgMTAuNDExLTE1LjYzMiAxMC42NTRoNC44NTdsMTMuMjA0LTguOTk2IDIuNDI4LTEuNjU4LTIuNDI4LTEuNjUzem0xNS45IDE0LjIxMyAxMC4wNiA2Ljg1M2g0LjgzNmwtMTIuNDc3LTguNTAyLTIuNDIgMS42NVpNNzcuMTkyLjcyOGgtNC44NGwtOS43MDYgNi42MTUgMi40MiAxLjY1eiIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDBoMTI1djIyLjM3N0gweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==" alt="IOXIO"> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div> </div> </div>   <div class="mdc-layout-grid"><div class="mdc-layout-grid__inner">  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-11-desktop mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone"><a class="github-link svelte-8d18wx" href="https://github.com/ioxiocom/ioxio-docs" target="_blank" rel="noreferrer"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTIuMDEuNDhDNS4zNjkuNDggMCA1Ljc2IDAgMTIuMjkyYzAgNS4yMjIgMy40NCA5LjY0MSA4LjIxMiAxMS4yMDYuNTk3LjExNy44MTUtLjI1NS44MTUtLjU2NyAwLS4yNzQtLjAyLTEuMjEzLS4wMi0yLjE5LTMuMzQuNzAzLTQuMDM2LTEuNDA5LTQuMDM2LTEuNDA5LS41MzctMS4zNjktMS4zMzItMS43Mi0xLjMzMi0xLjcyLTEuMDk0LS43MjQuMDgtLjcyNC4wOC0uNzI0IDEuMjEyLjA3OCAxLjg0OSAxLjIxMiAxLjg0OSAxLjIxMiAxLjA3MyAxLjggMi44MDMgMS4yOTEgMy41Ljk3OC4wOTgtLjc2My40MTctMS4yOS43NTUtMS41ODQtMi42NjUtLjI3NC01LjQ2OC0xLjI5LTUuNDY4LTUuODI4IDAtMS4yOS40NzctMi4zNDcgMS4yMzItMy4xNjgtLjExOS0uMjkzLS41MzctMS41MDYuMTItMy4xMjkgMCAwIDEuMDE0LS4zMTMgMy4zIDEuMjEzYTExLjggMTEuOCAwIDAgMSAzLjAwMy0uMzkyYzEuMDE0IDAgMi4wNDguMTM3IDMuMDAyLjM5MiAyLjI4Ny0xLjUyNiAzLjMwMS0xLjIxMyAzLjMwMS0xLjIxMy42NTcgMS42MjMuMjM5IDIuODM2LjEyIDMuMTMuNzc1LjgyIDEuMjMyIDEuODc2IDEuMjMyIDMuMTY3IDAgNC41MzctMi44MDMgNS41MzUtNS40ODggNS44MjguNDM4LjM3Mi44MTUgMS4wNzYuODE1IDIuMTkgMCAxLjU4NC0uMDIgMi44NTUtLjAyIDMuMjQ2IDAgLjMxMy4yMi42ODUuODE2LjU2OEMyMC41NiAyMS45MzMgMjQgMTcuNTEzIDI0IDEyLjI5MiAyNC4wMiA1Ljc2IDE4LjYzLjQ4IDEyLjAxLjQ4IiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=" alt="GitHub repository"> <div data-svelte-h="svelte-jxnbiu">Contribute to these docs</div> </a> </div> </div> </div>   <div class="mdc-layout-grid"><div class="mdc-layout-grid__inner">  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12-phone"><div class="body-2 svelte-earpbm" data-svelte-h="svelte-12895e">IOXIO® is a registered trademark of IOXIO Oy. IOXIO Dataspace™ and IOXIO Tags™ are
+            trademarks of IOXIO Oy.</div> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone"><div class="copyright-text body-2 svelte-earpbm" data-svelte-h="svelte-arag5x">Copyright © IOXIO® 2024</div> </div>   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-desktop mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-0-phone"> </div> </div> </div> </div></div> </footer> </section> 
+			
+			<script>
+				{
+					__sveltekit_vbnve = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":null,"uses":{},"slash":"always"},{"type":"data","data":{htmlText:"\u003Ch2>/.well-known/dataspace/dataspace-configuration.json\u003C/h2>\n\u003Cdiv class=\"text-right\">\n  \u003Cbutton\n    class=\"btn btn-primary\"\n    type=\"button\"\n    data-toggle=\"collapse\"\n    data-target=\".collapse:not(.show)\"\n    aria-expanded=\"false\"\n  >\n    Expand all\n  \u003C/button>\n  \u003Cbutton\n    class=\"btn btn-primary\"\n    type=\"button\"\n    data-toggle=\"collapse\"\n    data-target=\".collapse.show\"\n    aria-expanded=\"false\"\n  >\n    Collapse all\n  \u003C/button>\n\u003C/div>\n\u003Cspan class=\"badge badge-dark value-type\">Type: object\u003C/span>\u003Cbr />\n\u003Cspan class=\"description\"\n  >\u003Cp>\n    This configuration is found on the dataspace base domain, for example at\n    \u003Ccode\n      >https://sandbox.ioxio-dataspace.com/.well-known/dataspace/dataspace-configuration.json\u003C/code\n    >. It lists all the relevant configuration of the dataspace, such as endpoints for different\n    dataspace components.\n  \u003C/p>\n\u003C/span>\n\u003Cbr />\n\u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n\u003Cbr />\n\u003Cdiv id=\"root_ex1\" class=\"jumbotron examples\">\n  \u003Cdiv class=\"highlight\">\n    \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"p\">{\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"s2\">\"dataspace_base_domain\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"s2\">\"sandbox.ioxio-dataspace.com\"\u003C/span>\u003Cspan class=\"p\">,\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"s2\">\"product_gateway_url\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"s2\">\"https://gateway.sandbox.ioxio-dataspace.com\"\u003C/span>\u003Cspan class=\"p\">,\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"s2\">\"developer_portal_url\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"s2\">\"https://developer.sandbox.ioxio-dataspace.com\"\u003C/span>\u003Cspan class=\"p\">,\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"s2\">\"docs_url\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"s2\">\"https://docs.sandbox.ioxio-dataspace.com\"\u003C/span>\u003Cspan class=\"p\">,\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"s2\">\"dataspace_name\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"s2\">\"IOXIO Sandbox Dataspace\"\u003C/span>\u003Cspan class=\"p\">,\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"s2\">\"authentication_providers\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"p\">{\u003C/span>\n\u003Cspan class=\"w\">        \u003C/span>\u003Cspan class=\"s2\">\"developer\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"p\">{\u003C/span>\n\u003Cspan class=\"w\">            \u003C/span>\u003Cspan class=\"s2\">\"base_url\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"s2\">\"https://login.sandbox.ioxio-dataspace.com\"\u003C/span>\n\u003Cspan class=\"w\">        \u003C/span>\u003Cspan class=\"p\">},\u003C/span>\n\u003Cspan class=\"w\">        \u003C/span>\u003Cspan class=\"s2\">\"end_user\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"p\">{\u003C/span>\n\u003Cspan class=\"w\">            \u003C/span>\u003Cspan class=\"s2\">\"base_url\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"s2\">\"https://login.sandbox.ioxio-dataspace.com\"\u003C/span>\n\u003Cspan class=\"w\">        \u003C/span>\u003Cspan class=\"p\">}\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"p\">},\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"s2\">\"consent_providers\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"p\">[\u003C/span>\n\u003Cspan class=\"w\">        \u003C/span>\u003Cspan class=\"p\">{\u003C/span>\n\u003Cspan class=\"w\">            \u003C/span>\u003Cspan class=\"s2\">\"base_url\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"s2\">\"https://consent.sandbox.ioxio-dataspace.com\"\u003C/span>\n\u003Cspan class=\"w\">        \u003C/span>\u003Cspan class=\"p\">}\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"p\">],\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"s2\">\"definitions\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"p\">{\u003C/span>\n\u003Cspan class=\"w\">        \u003C/span>\u003Cspan class=\"s2\">\"git\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"s2\">\"https://github.com/ioxio-dataspace/sandbox-definitions.git\"\u003C/span>\u003Cspan class=\"p\">,\u003C/span>\n\u003Cspan class=\"w\">        \u003C/span>\u003Cspan class=\"s2\">\"web\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"s2\">\"https://github.com/ioxio-dataspace/sandbox-definitions\"\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"p\">}\u003C/span>\n\u003Cspan class=\"p\">}\u003C/span>\n\u003C/pre>\n  \u003C/div>\n\u003C/div>\n\u003Cdiv class=\"accordion\" id=\"accordiondataspace_base_domain\">\n  \u003Cdiv class=\"card\">\n    \u003Cdiv class=\"card-header\" id=\"headingdataspace_base_domain\">\n      \u003Ch2 class=\"mb-0\">\n        \u003Cbutton\n          class=\"btn btn-link property-name-button\"\n          type=\"button\"\n          data-toggle=\"collapse\"\n          data-target=\"#dataspace_base_domain\"\n          aria-expanded=\"\"\n          aria-controls=\"dataspace_base_domain\"\n          onclick=\"setAnchor('#dataspace_base_domain')\"\n        >\n          \u003Cspan class=\"property-name\">dataspace_base_domain\u003C/span>\n          \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n        \u003C/button>\n      \u003C/h2>\n    \u003C/div>\n    \u003Cdiv\n      id=\"dataspace_base_domain\"\n      class=\"collapse property-definition-div\"\n      aria-labelledby=\"headingdataspace_base_domain\"\n      data-parent=\"#accordiondataspace_base_domain\"\n    >\n      \u003Cdiv class=\"card-body pl-5\">\n        \u003Cdiv class=\"breadcrumbs\">\n          root\n          \u003Csvg\n            width=\"1em\"\n            height=\"1em\"\n            viewBox=\"0 0 16 16\"\n            class=\"bi bi-arrow-right-short\"\n            fill=\"currentColor\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n          >\n            \u003Cpath\n              fill-rule=\"evenodd\"\n              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n            >\u003C/path>\n          \u003C/svg>\n          \u003Ca href=\"#dataspace_base_domain\" onclick=\"anchorLink('dataspace_base_domain')\"\n            >dataspace_base_domain\u003C/a\n          >\n        \u003C/div>\n        \u003Cspan class=\"badge badge-dark value-type\">Type: string\u003C/span>\u003Cbr />\n        \u003Cspan class=\"description\"\n          >\u003Cp>\n            The base domain for the whole dataspace, without any protocol. This is the domain at\n            which for example the\n            \u003Ccode>/.well-known/dataspace/dataspace-configuration.json\u003C/code> is found.\n          \u003C/p>\n        \u003C/span>\n        \u003Cbr />\n        \u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n        \u003Cbr />\n        \u003Cdiv id=\"dataspace_base_domain_ex1\" class=\"jumbotron examples\">\n          \u003Cdiv class=\"highlight\">\n            \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"s2\">\"sandbox.ioxio-dataspace.com\"\u003C/span>\n\u003C/pre>\n          \u003C/div>\n        \u003C/div>\n      \u003C/div>\n    \u003C/div>\n  \u003C/div>\n\u003C/div>\n\u003Cdiv class=\"accordion\" id=\"accordionproduct_gateway_url\">\n  \u003Cdiv class=\"card\">\n    \u003Cdiv class=\"card-header\" id=\"headingproduct_gateway_url\">\n      \u003Ch2 class=\"mb-0\">\n        \u003Cbutton\n          class=\"btn btn-link property-name-button\"\n          type=\"button\"\n          data-toggle=\"collapse\"\n          data-target=\"#product_gateway_url\"\n          aria-expanded=\"\"\n          aria-controls=\"product_gateway_url\"\n          onclick=\"setAnchor('#product_gateway_url')\"\n        >\n          \u003Cspan class=\"property-name\">product_gateway_url\u003C/span>\n          \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n        \u003C/button>\n      \u003C/h2>\n    \u003C/div>\n    \u003Cdiv\n      id=\"product_gateway_url\"\n      class=\"collapse property-definition-div\"\n      aria-labelledby=\"headingproduct_gateway_url\"\n      data-parent=\"#accordionproduct_gateway_url\"\n    >\n      \u003Cdiv class=\"card-body pl-5\">\n        \u003Cdiv class=\"breadcrumbs\">\n          root\n          \u003Csvg\n            width=\"1em\"\n            height=\"1em\"\n            viewBox=\"0 0 16 16\"\n            class=\"bi bi-arrow-right-short\"\n            fill=\"currentColor\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n          >\n            \u003Cpath\n              fill-rule=\"evenodd\"\n              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n            >\u003C/path>\n          \u003C/svg>\n          \u003Ca href=\"#product_gateway_url\" onclick=\"anchorLink('product_gateway_url')\"\n            >product_gateway_url\u003C/a\n          >\n        \u003C/div>\n        \u003Cspan class=\"badge badge-dark value-type\">Type: string\u003C/span\n        >\u003Cspan class=\"badge badge-info value-type\">Format: uri\u003C/span>\u003Cbr />\n        \u003Cspan class=\"description\"\n          >\u003Cp>\n            The URL at which the Product Gateway of the dataspace is hosted and on which all the\n            data products are accessed.\n          \u003C/p>\n        \u003C/span>\n        \u003Cp>\n          \u003Cspan\n            class=\"badge badge-light restriction min-length-restriction\"\n            id=\"product_gateway_url_minLength\"\n            >Must be at least \u003Ccode>1\u003C/code> characters long\u003C/span\n          >\n        \u003C/p>\n        \u003Cp>\n          \u003Cspan\n            class=\"badge badge-light restriction max-length-restriction\"\n            id=\"product_gateway_url_maxLength\"\n            >Must be at most \u003Ccode>2083\u003C/code> characters long\u003C/span\n          >\n        \u003C/p>\n        \u003Cbr />\n        \u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n        \u003Cbr />\n        \u003Cdiv id=\"product_gateway_url_ex1\" class=\"jumbotron examples\">\n          \u003Cdiv class=\"highlight\">\n            \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"s2\">\"https://gateway.sandbox.ioxio-dataspace.com\"\u003C/span>\n\u003C/pre>\n          \u003C/div>\n        \u003C/div>\n      \u003C/div>\n    \u003C/div>\n  \u003C/div>\n\u003C/div>\n\u003Cdiv class=\"accordion\" id=\"accordiondeveloper_portal_url\">\n  \u003Cdiv class=\"card\">\n    \u003Cdiv class=\"card-header\" id=\"headingdeveloper_portal_url\">\n      \u003Ch2 class=\"mb-0\">\n        \u003Cbutton\n          class=\"btn btn-link property-name-button\"\n          type=\"button\"\n          data-toggle=\"collapse\"\n          data-target=\"#developer_portal_url\"\n          aria-expanded=\"\"\n          aria-controls=\"developer_portal_url\"\n          onclick=\"setAnchor('#developer_portal_url')\"\n        >\n          \u003Cspan class=\"property-name\">developer_portal_url\u003C/span>\n          \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n        \u003C/button>\n      \u003C/h2>\n    \u003C/div>\n    \u003Cdiv\n      id=\"developer_portal_url\"\n      class=\"collapse property-definition-div\"\n      aria-labelledby=\"headingdeveloper_portal_url\"\n      data-parent=\"#accordiondeveloper_portal_url\"\n    >\n      \u003Cdiv class=\"card-body pl-5\">\n        \u003Cdiv class=\"breadcrumbs\">\n          root\n          \u003Csvg\n            width=\"1em\"\n            height=\"1em\"\n            viewBox=\"0 0 16 16\"\n            class=\"bi bi-arrow-right-short\"\n            fill=\"currentColor\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n          >\n            \u003Cpath\n              fill-rule=\"evenodd\"\n              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n            >\u003C/path>\n          \u003C/svg>\n          \u003Ca href=\"#developer_portal_url\" onclick=\"anchorLink('developer_portal_url')\"\n            >developer_portal_url\u003C/a\n          >\n        \u003C/div>\n        \u003Cspan class=\"badge badge-dark value-type\">Type: string\u003C/span\n        >\u003Cspan class=\"badge badge-info value-type\">Format: uri\u003C/span>\u003Cbr />\n        \u003Cspan class=\"description\"\n          >\u003Cp>\n            The URL where the Developer Portal for the dataspace is hosted. This is where developers\n            can register their own data sources and applications.\n          \u003C/p>\n        \u003C/span>\n        \u003Cp>\n          \u003Cspan\n            class=\"badge badge-light restriction min-length-restriction\"\n            id=\"developer_portal_url_minLength\"\n            >Must be at least \u003Ccode>1\u003C/code> characters long\u003C/span\n          >\n        \u003C/p>\n        \u003Cp>\n          \u003Cspan\n            class=\"badge badge-light restriction max-length-restriction\"\n            id=\"developer_portal_url_maxLength\"\n            >Must be at most \u003Ccode>2083\u003C/code> characters long\u003C/span\n          >\n        \u003C/p>\n        \u003Cbr />\n        \u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n        \u003Cbr />\n        \u003Cdiv id=\"developer_portal_url_ex1\" class=\"jumbotron examples\">\n          \u003Cdiv class=\"highlight\">\n            \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"s2\">\"https://developer.sandbox.ioxio-dataspace.com\"\u003C/span>\n\u003C/pre>\n          \u003C/div>\n        \u003C/div>\n      \u003C/div>\n    \u003C/div>\n  \u003C/div>\n\u003C/div>\n\u003Cdiv class=\"accordion\" id=\"accordiondocs_url\">\n  \u003Cdiv class=\"card\">\n    \u003Cdiv class=\"card-header\" id=\"headingdocs_url\">\n      \u003Ch2 class=\"mb-0\">\n        \u003Cbutton\n          class=\"btn btn-link property-name-button\"\n          type=\"button\"\n          data-toggle=\"collapse\"\n          data-target=\"#docs_url\"\n          aria-expanded=\"\"\n          aria-controls=\"docs_url\"\n          onclick=\"setAnchor('#docs_url')\"\n        >\n          \u003Cspan class=\"property-name\">docs_url\u003C/span>\n          \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n        \u003C/button>\n      \u003C/h2>\n    \u003C/div>\n    \u003Cdiv\n      id=\"docs_url\"\n      class=\"collapse property-definition-div\"\n      aria-labelledby=\"headingdocs_url\"\n      data-parent=\"#accordiondocs_url\"\n    >\n      \u003Cdiv class=\"card-body pl-5\">\n        \u003Cdiv class=\"breadcrumbs\">\n          root\n          \u003Csvg\n            width=\"1em\"\n            height=\"1em\"\n            viewBox=\"0 0 16 16\"\n            class=\"bi bi-arrow-right-short\"\n            fill=\"currentColor\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n          >\n            \u003Cpath\n              fill-rule=\"evenodd\"\n              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n            >\u003C/path>\n          \u003C/svg>\n          \u003Ca href=\"#docs_url\" onclick=\"anchorLink('docs_url')\">docs_url\u003C/a>\n        \u003C/div>\n        \u003Cspan class=\"badge badge-dark value-type\">Type: string\u003C/span\n        >\u003Cspan class=\"badge badge-info value-type\">Format: uri\u003C/span>\u003Cbr />\n        \u003Cspan class=\"description\">\u003Cp>The URL at which the API documentation is hosted.\u003C/p> \u003C/span>\n        \u003Cp>\n          \u003Cspan class=\"badge badge-light restriction min-length-restriction\" id=\"docs_url_minLength\"\n            >Must be at least \u003Ccode>1\u003C/code> characters long\u003C/span\n          >\n        \u003C/p>\n        \u003Cp>\n          \u003Cspan class=\"badge badge-light restriction max-length-restriction\" id=\"docs_url_maxLength\"\n            >Must be at most \u003Ccode>2083\u003C/code> characters long\u003C/span\n          >\n        \u003C/p>\n        \u003Cbr />\n        \u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n        \u003Cbr />\n        \u003Cdiv id=\"docs_url_ex1\" class=\"jumbotron examples\">\n          \u003Cdiv class=\"highlight\">\n            \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"s2\">\"https://docs.sandbox.ioxio-dataspace.com\"\u003C/span>\n\u003C/pre>\n          \u003C/div>\n        \u003C/div>\n      \u003C/div>\n    \u003C/div>\n  \u003C/div>\n\u003C/div>\n\u003Cdiv class=\"accordion\" id=\"accordiondataspace_name\">\n  \u003Cdiv class=\"card\">\n    \u003Cdiv class=\"card-header\" id=\"headingdataspace_name\">\n      \u003Ch2 class=\"mb-0\">\n        \u003Cbutton\n          class=\"btn btn-link property-name-button\"\n          type=\"button\"\n          data-toggle=\"collapse\"\n          data-target=\"#dataspace_name\"\n          aria-expanded=\"\"\n          aria-controls=\"dataspace_name\"\n          onclick=\"setAnchor('#dataspace_name')\"\n        >\n          \u003Cspan class=\"property-name\">dataspace_name\u003C/span>\n          \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n        \u003C/button>\n      \u003C/h2>\n    \u003C/div>\n    \u003Cdiv\n      id=\"dataspace_name\"\n      class=\"collapse property-definition-div\"\n      aria-labelledby=\"headingdataspace_name\"\n      data-parent=\"#accordiondataspace_name\"\n    >\n      \u003Cdiv class=\"card-body pl-5\">\n        \u003Cdiv class=\"breadcrumbs\">\n          root\n          \u003Csvg\n            width=\"1em\"\n            height=\"1em\"\n            viewBox=\"0 0 16 16\"\n            class=\"bi bi-arrow-right-short\"\n            fill=\"currentColor\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n          >\n            \u003Cpath\n              fill-rule=\"evenodd\"\n              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n            >\u003C/path>\n          \u003C/svg>\n          \u003Ca href=\"#dataspace_name\" onclick=\"anchorLink('dataspace_name')\">dataspace_name\u003C/a>\n        \u003C/div>\n        \u003Cspan class=\"badge badge-dark value-type\">Type: string\u003C/span>\u003Cbr />\n        \u003Cspan class=\"description\">\u003Cp>A human readable name for the dataspace\u003C/p> \u003C/span> \u003Cbr />\n        \u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n        \u003Cbr />\n        \u003Cdiv id=\"dataspace_name_ex1\" class=\"jumbotron examples\">\n          \u003Cdiv class=\"highlight\">\n            \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"s2\">\"IOXIO Sandbox Dataspace\"\u003C/span>\n\u003C/pre>\n          \u003C/div>\n        \u003C/div>\n      \u003C/div>\n    \u003C/div>\n  \u003C/div>\n\u003C/div>\n\u003Cdiv class=\"accordion\" id=\"accordionauthentication_providers\">\n  \u003Cdiv class=\"card\">\n    \u003Cdiv class=\"card-header\" id=\"headingauthentication_providers\">\n      \u003Ch2 class=\"mb-0\">\n        \u003Cbutton\n          class=\"btn btn-link property-name-button\"\n          type=\"button\"\n          data-toggle=\"collapse\"\n          data-target=\"#authentication_providers\"\n          aria-expanded=\"\"\n          aria-controls=\"authentication_providers\"\n          onclick=\"setAnchor('#authentication_providers')\"\n        >\n          \u003Cspan class=\"property-name\">authentication_providers\u003C/span>\n          \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n        \u003C/button>\n      \u003C/h2>\n    \u003C/div>\n    \u003Cdiv\n      id=\"authentication_providers\"\n      class=\"collapse property-definition-div\"\n      aria-labelledby=\"headingauthentication_providers\"\n      data-parent=\"#accordionauthentication_providers\"\n    >\n      \u003Cdiv class=\"card-body pl-5\">\n        \u003Cdiv class=\"breadcrumbs\">\n          root\n          \u003Csvg\n            width=\"1em\"\n            height=\"1em\"\n            viewBox=\"0 0 16 16\"\n            class=\"bi bi-arrow-right-short\"\n            fill=\"currentColor\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n          >\n            \u003Cpath\n              fill-rule=\"evenodd\"\n              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n            >\u003C/path>\n          \u003C/svg>\n          \u003Ca href=\"#authentication_providers\" onclick=\"anchorLink('authentication_providers')\"\n            >authentication_providers\u003C/a\n          >\n        \u003C/div>\n        \u003Cspan class=\"badge badge-dark value-type\">Type: object\u003C/span>\u003Cbr />\n        \u003Cdiv class=\"accordion\" id=\"accordionauthentication_providers_developer\">\n          \u003Cdiv class=\"card\">\n            \u003Cdiv class=\"card-header\" id=\"headingauthentication_providers_developer\">\n              \u003Ch2 class=\"mb-0\">\n                \u003Cbutton\n                  class=\"btn btn-link property-name-button\"\n                  type=\"button\"\n                  data-toggle=\"collapse\"\n                  data-target=\"#authentication_providers_developer\"\n                  aria-expanded=\"\"\n                  aria-controls=\"authentication_providers_developer\"\n                  onclick=\"setAnchor('#authentication_providers_developer')\"\n                >\n                  \u003Cspan class=\"property-name\">developer\u003C/span>\n                  \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n                \u003C/button>\n              \u003C/h2>\n            \u003C/div>\n            \u003Cdiv\n              id=\"authentication_providers_developer\"\n              class=\"collapse property-definition-div\"\n              aria-labelledby=\"headingauthentication_providers_developer\"\n              data-parent=\"#accordionauthentication_providers_developer\"\n            >\n              \u003Cdiv class=\"card-body pl-5\">\n                \u003Cdiv class=\"breadcrumbs\">\n                  root\n                  \u003Csvg\n                    width=\"1em\"\n                    height=\"1em\"\n                    viewBox=\"0 0 16 16\"\n                    class=\"bi bi-arrow-right-short\"\n                    fill=\"currentColor\"\n                    xmlns=\"http://www.w3.org/2000/svg\"\n                  >\n                    \u003Cpath\n                      fill-rule=\"evenodd\"\n                      d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                    >\u003C/path>\n                  \u003C/svg>\n                  \u003Ca\n                    href=\"#authentication_providers\"\n                    onclick=\"anchorLink('authentication_providers')\"\n                    >authentication_providers\u003C/a\n                  >\n                  \u003Csvg\n                    width=\"1em\"\n                    height=\"1em\"\n                    viewBox=\"0 0 16 16\"\n                    class=\"bi bi-arrow-right-short\"\n                    fill=\"currentColor\"\n                    xmlns=\"http://www.w3.org/2000/svg\"\n                  >\n                    \u003Cpath\n                      fill-rule=\"evenodd\"\n                      d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                    >\u003C/path>\n                  \u003C/svg>\n                  \u003Ca\n                    href=\"#authentication_providers_developer\"\n                    onclick=\"anchorLink('authentication_providers_developer')\"\n                    >developer\u003C/a\n                  >\n                \u003C/div>\n                \u003Cspan class=\"badge badge-dark value-type\">Type: object\u003C/span>\u003Cbr />\n                \u003Cspan class=\"description\"\n                  >\u003Cp>\n                    Details about authentication provider used to identify developers on the\n                    dataspace.\n                  \u003C/p>\n                \u003C/span>\n                \u003Cbr />\n                \u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n                \u003Cbr />\n                \u003Cdiv id=\"authentication_providers_developer_ex1\" class=\"jumbotron examples\">\n                  \u003Cdiv class=\"highlight\">\n                    \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"p\">{\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"s2\">\"base_url\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"s2\">\"https://login.sandbox.ioxio-dataspace.com\"\u003C/span>\n\u003Cspan class=\"p\">}\u003C/span>\n\u003C/pre>\n                  \u003C/div>\n                \u003C/div>\n                \u003Cdiv class=\"accordion\" id=\"accordionauthentication_providers_developer_base_url\">\n                  \u003Cdiv class=\"card\">\n                    \u003Cdiv\n                      class=\"card-header\"\n                      id=\"headingauthentication_providers_developer_base_url\"\n                    >\n                      \u003Ch2 class=\"mb-0\">\n                        \u003Cbutton\n                          class=\"btn btn-link property-name-button\"\n                          type=\"button\"\n                          data-toggle=\"collapse\"\n                          data-target=\"#authentication_providers_developer_base_url\"\n                          aria-expanded=\"\"\n                          aria-controls=\"authentication_providers_developer_base_url\"\n                          onclick=\"setAnchor('#authentication_providers_developer_base_url')\"\n                        >\n                          \u003Cspan class=\"property-name\">base_url\u003C/span>\n                          \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n                        \u003C/button>\n                      \u003C/h2>\n                    \u003C/div>\n                    \u003Cdiv\n                      id=\"authentication_providers_developer_base_url\"\n                      class=\"collapse property-definition-div\"\n                      aria-labelledby=\"headingauthentication_providers_developer_base_url\"\n                      data-parent=\"#accordionauthentication_providers_developer_base_url\"\n                    >\n                      \u003Cdiv class=\"card-body pl-5\">\n                        \u003Cdiv class=\"breadcrumbs\">\n                          root\n                          \u003Csvg\n                            width=\"1em\"\n                            height=\"1em\"\n                            viewBox=\"0 0 16 16\"\n                            class=\"bi bi-arrow-right-short\"\n                            fill=\"currentColor\"\n                            xmlns=\"http://www.w3.org/2000/svg\"\n                          >\n                            \u003Cpath\n                              fill-rule=\"evenodd\"\n                              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                            >\u003C/path>\n                          \u003C/svg>\n                          \u003Ca\n                            href=\"#authentication_providers\"\n                            onclick=\"anchorLink('authentication_providers')\"\n                            >authentication_providers\u003C/a\n                          >\n                          \u003Csvg\n                            width=\"1em\"\n                            height=\"1em\"\n                            viewBox=\"0 0 16 16\"\n                            class=\"bi bi-arrow-right-short\"\n                            fill=\"currentColor\"\n                            xmlns=\"http://www.w3.org/2000/svg\"\n                          >\n                            \u003Cpath\n                              fill-rule=\"evenodd\"\n                              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                            >\u003C/path>\n                          \u003C/svg>\n                          \u003Ca\n                            href=\"#authentication_providers_developer\"\n                            onclick=\"anchorLink('authentication_providers_developer')\"\n                            >developer\u003C/a\n                          >\n                          \u003Csvg\n                            width=\"1em\"\n                            height=\"1em\"\n                            viewBox=\"0 0 16 16\"\n                            class=\"bi bi-arrow-right-short\"\n                            fill=\"currentColor\"\n                            xmlns=\"http://www.w3.org/2000/svg\"\n                          >\n                            \u003Cpath\n                              fill-rule=\"evenodd\"\n                              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                            >\u003C/path>\n                          \u003C/svg>\n                          \u003Ca\n                            href=\"#authentication_providers_developer_base_url\"\n                            onclick=\"anchorLink('authentication_providers_developer_base_url')\"\n                            >base_url\u003C/a\n                          >\n                        \u003C/div>\n                        \u003Cspan class=\"badge badge-dark value-type\">Type: string\u003C/span\n                        >\u003Cspan class=\"badge badge-info value-type\">Format: uri\u003C/span>\u003Cbr />\n                        \u003Cspan class=\"description\"\n                          >\u003Cp>\n                            Base URL for the authentication provider. Appending\n                            \u003Ccode>/.well-known/openid-configuration\u003C/code> will give the full URL to\n                            the openid-configuration.\n                          \u003C/p>\n                        \u003C/span>\n                        \u003Cp>\n                          \u003Cspan\n                            class=\"badge badge-light restriction min-length-restriction\"\n                            id=\"authentication_providers_developer_base_url_minLength\"\n                            >Must be at least \u003Ccode>1\u003C/code> characters long\u003C/span\n                          >\n                        \u003C/p>\n                        \u003Cp>\n                          \u003Cspan\n                            class=\"badge badge-light restriction max-length-restriction\"\n                            id=\"authentication_providers_developer_base_url_maxLength\"\n                            >Must be at most \u003Ccode>2083\u003C/code> characters long\u003C/span\n                          >\n                        \u003C/p>\n                        \u003Cbr />\n                        \u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n                        \u003Cbr />\n                        \u003Cdiv\n                          id=\"authentication_providers_developer_base_url_ex1\"\n                          class=\"jumbotron examples\"\n                        >\n                          \u003Cdiv class=\"highlight\">\n                            \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"s2\">\"https://login.sandbox.ioxio-dataspace.com\"\u003C/span>\n\u003C/pre>\n                          \u003C/div>\n                        \u003C/div>\n                      \u003C/div>\n                    \u003C/div>\n                  \u003C/div>\n                \u003C/div>\n              \u003C/div>\n            \u003C/div>\n          \u003C/div>\n        \u003C/div>\n        \u003Cdiv class=\"accordion\" id=\"accordionauthentication_providers_end_user\">\n          \u003Cdiv class=\"card\">\n            \u003Cdiv class=\"card-header\" id=\"headingauthentication_providers_end_user\">\n              \u003Ch2 class=\"mb-0\">\n                \u003Cbutton\n                  class=\"btn btn-link property-name-button\"\n                  type=\"button\"\n                  data-toggle=\"collapse\"\n                  data-target=\"#authentication_providers_end_user\"\n                  aria-expanded=\"\"\n                  aria-controls=\"authentication_providers_end_user\"\n                  onclick=\"setAnchor('#authentication_providers_end_user')\"\n                >\n                  \u003Cspan class=\"property-name\">end_user\u003C/span>\n                  \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n                \u003C/button>\n              \u003C/h2>\n            \u003C/div>\n            \u003Cdiv\n              id=\"authentication_providers_end_user\"\n              class=\"collapse property-definition-div\"\n              aria-labelledby=\"headingauthentication_providers_end_user\"\n              data-parent=\"#accordionauthentication_providers_end_user\"\n            >\n              \u003Cdiv class=\"card-body pl-5\">\n                \u003Cdiv class=\"breadcrumbs\">\n                  root\n                  \u003Csvg\n                    width=\"1em\"\n                    height=\"1em\"\n                    viewBox=\"0 0 16 16\"\n                    class=\"bi bi-arrow-right-short\"\n                    fill=\"currentColor\"\n                    xmlns=\"http://www.w3.org/2000/svg\"\n                  >\n                    \u003Cpath\n                      fill-rule=\"evenodd\"\n                      d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                    >\u003C/path>\n                  \u003C/svg>\n                  \u003Ca\n                    href=\"#authentication_providers\"\n                    onclick=\"anchorLink('authentication_providers')\"\n                    >authentication_providers\u003C/a\n                  >\n                  \u003Csvg\n                    width=\"1em\"\n                    height=\"1em\"\n                    viewBox=\"0 0 16 16\"\n                    class=\"bi bi-arrow-right-short\"\n                    fill=\"currentColor\"\n                    xmlns=\"http://www.w3.org/2000/svg\"\n                  >\n                    \u003Cpath\n                      fill-rule=\"evenodd\"\n                      d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                    >\u003C/path>\n                  \u003C/svg>\n                  \u003Ca\n                    href=\"#authentication_providers_end_user\"\n                    onclick=\"anchorLink('authentication_providers_end_user')\"\n                    >end_user\u003C/a\n                  >\n                \u003C/div>\n                \u003Cspan class=\"badge badge-dark value-type\">Type: object\u003C/span>\u003Cbr />\n                \u003Cspan class=\"description\"\n                  >\u003Cp>\n                    Details about authentication provider used to identify end users on the\n                    dataspace.\n                  \u003C/p>\n                \u003C/span>\n                \u003Cbr />\n                \u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n                \u003Cbr />\n                \u003Cdiv id=\"authentication_providers_end_user_ex1\" class=\"jumbotron examples\">\n                  \u003Cdiv class=\"highlight\">\n                    \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"p\">{\u003C/span>\n\u003Cspan class=\"w\">    \u003C/span>\u003Cspan class=\"s2\">\"base_url\"\u003C/span>\u003Cspan class=\"o\">:\u003C/span>\u003Cspan class=\"w\"> \u003C/span>\u003Cspan class=\"s2\">\"https://login.sandbox.ioxio-dataspace.com\"\u003C/span>\n\u003Cspan class=\"p\">}\u003C/span>\n\u003C/pre>\n                  \u003C/div>\n                \u003C/div>\n                \u003Cdiv class=\"accordion\" id=\"accordionauthentication_providers_end_user_base_url\">\n                  \u003Cdiv class=\"card\">\n                    \u003Cdiv class=\"card-header\" id=\"headingauthentication_providers_end_user_base_url\">\n                      \u003Ch2 class=\"mb-0\">\n                        \u003Cbutton\n                          class=\"btn btn-link property-name-button\"\n                          type=\"button\"\n                          data-toggle=\"collapse\"\n                          data-target=\"#authentication_providers_end_user_base_url\"\n                          aria-expanded=\"\"\n                          aria-controls=\"authentication_providers_end_user_base_url\"\n                          onclick=\"setAnchor('#authentication_providers_end_user_base_url')\"\n                        >\n                          \u003Cspan class=\"property-name\">base_url\u003C/span>\n                          \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n                        \u003C/button>\n                      \u003C/h2>\n                    \u003C/div>\n                    \u003Cdiv\n                      id=\"authentication_providers_end_user_base_url\"\n                      class=\"collapse property-definition-div\"\n                      aria-labelledby=\"headingauthentication_providers_end_user_base_url\"\n                      data-parent=\"#accordionauthentication_providers_end_user_base_url\"\n                    >\n                      \u003Cdiv class=\"card-body pl-5\">\n                        \u003Cdiv class=\"breadcrumbs\">\n                          root\n                          \u003Csvg\n                            width=\"1em\"\n                            height=\"1em\"\n                            viewBox=\"0 0 16 16\"\n                            class=\"bi bi-arrow-right-short\"\n                            fill=\"currentColor\"\n                            xmlns=\"http://www.w3.org/2000/svg\"\n                          >\n                            \u003Cpath\n                              fill-rule=\"evenodd\"\n                              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                            >\u003C/path>\n                          \u003C/svg>\n                          \u003Ca\n                            href=\"#authentication_providers\"\n                            onclick=\"anchorLink('authentication_providers')\"\n                            >authentication_providers\u003C/a\n                          >\n                          \u003Csvg\n                            width=\"1em\"\n                            height=\"1em\"\n                            viewBox=\"0 0 16 16\"\n                            class=\"bi bi-arrow-right-short\"\n                            fill=\"currentColor\"\n                            xmlns=\"http://www.w3.org/2000/svg\"\n                          >\n                            \u003Cpath\n                              fill-rule=\"evenodd\"\n                              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                            >\u003C/path>\n                          \u003C/svg>\n                          \u003Ca\n                            href=\"#authentication_providers_end_user\"\n                            onclick=\"anchorLink('authentication_providers_end_user')\"\n                            >end_user\u003C/a\n                          >\n                          \u003Csvg\n                            width=\"1em\"\n                            height=\"1em\"\n                            viewBox=\"0 0 16 16\"\n                            class=\"bi bi-arrow-right-short\"\n                            fill=\"currentColor\"\n                            xmlns=\"http://www.w3.org/2000/svg\"\n                          >\n                            \u003Cpath\n                              fill-rule=\"evenodd\"\n                              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                            >\u003C/path>\n                          \u003C/svg>\n                          \u003Ca\n                            href=\"#authentication_providers_end_user_base_url\"\n                            onclick=\"anchorLink('authentication_providers_end_user_base_url')\"\n                            >base_url\u003C/a\n                          >\n                        \u003C/div>\n                        \u003Cspan class=\"badge badge-dark value-type\">Type: string\u003C/span\n                        >\u003Cspan class=\"badge badge-info value-type\">Format: uri\u003C/span>\u003Cbr />\n                        \u003Cspan class=\"description\"\n                          >\u003Cp>\n                            Base URL for the authentication provider. Appending\n                            \u003Ccode>/.well-known/openid-configuration\u003C/code> will give the full URL to\n                            the openid-configuration.\n                          \u003C/p>\n                        \u003C/span>\n                        \u003Cp>\n                          \u003Cspan\n                            class=\"badge badge-light restriction min-length-restriction\"\n                            id=\"authentication_providers_end_user_base_url_minLength\"\n                            >Must be at least \u003Ccode>1\u003C/code> characters long\u003C/span\n                          >\n                        \u003C/p>\n                        \u003Cp>\n                          \u003Cspan\n                            class=\"badge badge-light restriction max-length-restriction\"\n                            id=\"authentication_providers_end_user_base_url_maxLength\"\n                            >Must be at most \u003Ccode>2083\u003C/code> characters long\u003C/span\n                          >\n                        \u003C/p>\n                        \u003Cbr />\n                        \u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n                        \u003Cbr />\n                        \u003Cdiv\n                          id=\"authentication_providers_end_user_base_url_ex1\"\n                          class=\"jumbotron examples\"\n                        >\n                          \u003Cdiv class=\"highlight\">\n                            \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"s2\">\"https://login.sandbox.ioxio-dataspace.com\"\u003C/span>\n\u003C/pre>\n                          \u003C/div>\n                        \u003C/div>\n                      \u003C/div>\n                    \u003C/div>\n                  \u003C/div>\n                \u003C/div>\n              \u003C/div>\n            \u003C/div>\n          \u003C/div>\n        \u003C/div>\n      \u003C/div>\n    \u003C/div>\n  \u003C/div>\n\u003C/div>\n\u003Cdiv class=\"accordion\" id=\"accordionconsent_providers\">\n  \u003Cdiv class=\"card\">\n    \u003Cdiv class=\"card-header\" id=\"headingconsent_providers\">\n      \u003Ch2 class=\"mb-0\">\n        \u003Cbutton\n          class=\"btn btn-link property-name-button\"\n          type=\"button\"\n          data-toggle=\"collapse\"\n          data-target=\"#consent_providers\"\n          aria-expanded=\"\"\n          aria-controls=\"consent_providers\"\n          onclick=\"setAnchor('#consent_providers')\"\n        >\n          \u003Cspan class=\"property-name\">consent_providers\u003C/span>\n          \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n        \u003C/button>\n      \u003C/h2>\n    \u003C/div>\n    \u003Cdiv\n      id=\"consent_providers\"\n      class=\"collapse property-definition-div\"\n      aria-labelledby=\"headingconsent_providers\"\n      data-parent=\"#accordionconsent_providers\"\n    >\n      \u003Cdiv class=\"card-body pl-5\">\n        \u003Cdiv class=\"breadcrumbs\">\n          root\n          \u003Csvg\n            width=\"1em\"\n            height=\"1em\"\n            viewBox=\"0 0 16 16\"\n            class=\"bi bi-arrow-right-short\"\n            fill=\"currentColor\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n          >\n            \u003Cpath\n              fill-rule=\"evenodd\"\n              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n            >\u003C/path>\n          \u003C/svg>\n          \u003Ca href=\"#consent_providers\" onclick=\"anchorLink('consent_providers')\"\n            >consent_providers\u003C/a\n          >\n        \u003C/div>\n        \u003Cspan class=\"badge badge-dark value-type\">Type: array\u003C/span>\u003Cbr />\n        \u003Ch4>Each item of this array must be:\u003C/h4>\n        \u003Cdiv class=\"card\">\n          \u003Cdiv class=\"card-body items-definition\" id=\"consent_providers_items\">\n            \u003Cdiv class=\"breadcrumbs\">\n              root\n              \u003Csvg\n                width=\"1em\"\n                height=\"1em\"\n                viewBox=\"0 0 16 16\"\n                class=\"bi bi-arrow-right-short\"\n                fill=\"currentColor\"\n                xmlns=\"http://www.w3.org/2000/svg\"\n              >\n                \u003Cpath\n                  fill-rule=\"evenodd\"\n                  d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                >\u003C/path>\n              \u003C/svg>\n              \u003Ca href=\"#consent_providers\" onclick=\"anchorLink('consent_providers')\"\n                >consent_providers\u003C/a\n              >\n              \u003Csvg\n                width=\"1em\"\n                height=\"1em\"\n                viewBox=\"0 0 16 16\"\n                class=\"bi bi-arrow-right-short\"\n                fill=\"currentColor\"\n                xmlns=\"http://www.w3.org/2000/svg\"\n              >\n                \u003Cpath\n                  fill-rule=\"evenodd\"\n                  d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                >\u003C/path>\n              \u003C/svg>\n              \u003Ca href=\"#consent_providers_items\" onclick=\"anchorLink('consent_providers_items')\"\n                >ConsentProviders\u003C/a\n              >\n            \u003C/div>\n            \u003Cspan class=\"badge badge-dark value-type\">Type: object\u003C/span>\u003Cbr />\n            \u003Cdiv class=\"accordion\" id=\"accordionconsent_providers_items_base_url\">\n              \u003Cdiv class=\"card\">\n                \u003Cdiv class=\"card-header\" id=\"headingconsent_providers_items_base_url\">\n                  \u003Ch2 class=\"mb-0\">\n                    \u003Cbutton\n                      class=\"btn btn-link property-name-button\"\n                      type=\"button\"\n                      data-toggle=\"collapse\"\n                      data-target=\"#consent_providers_items_base_url\"\n                      aria-expanded=\"\"\n                      aria-controls=\"consent_providers_items_base_url\"\n                      onclick=\"setAnchor('#consent_providers_items_base_url')\"\n                    >\n                      \u003Cspan class=\"property-name\">base_url\u003C/span>\n                      \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n                    \u003C/button>\n                  \u003C/h2>\n                \u003C/div>\n                \u003Cdiv\n                  id=\"consent_providers_items_base_url\"\n                  class=\"collapse property-definition-div\"\n                  aria-labelledby=\"headingconsent_providers_items_base_url\"\n                  data-parent=\"#accordionconsent_providers_items_base_url\"\n                >\n                  \u003Cdiv class=\"card-body pl-5\">\n                    \u003Cdiv class=\"breadcrumbs\">\n                      root\n                      \u003Csvg\n                        width=\"1em\"\n                        height=\"1em\"\n                        viewBox=\"0 0 16 16\"\n                        class=\"bi bi-arrow-right-short\"\n                        fill=\"currentColor\"\n                        xmlns=\"http://www.w3.org/2000/svg\"\n                      >\n                        \u003Cpath\n                          fill-rule=\"evenodd\"\n                          d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                        >\u003C/path>\n                      \u003C/svg>\n                      \u003Ca href=\"#consent_providers\" onclick=\"anchorLink('consent_providers')\"\n                        >consent_providers\u003C/a\n                      >\n                      \u003Csvg\n                        width=\"1em\"\n                        height=\"1em\"\n                        viewBox=\"0 0 16 16\"\n                        class=\"bi bi-arrow-right-short\"\n                        fill=\"currentColor\"\n                        xmlns=\"http://www.w3.org/2000/svg\"\n                      >\n                        \u003Cpath\n                          fill-rule=\"evenodd\"\n                          d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                        >\u003C/path>\n                      \u003C/svg>\n                      \u003Ca\n                        href=\"#consent_providers_items\"\n                        onclick=\"anchorLink('consent_providers_items')\"\n                        >ConsentProviders\u003C/a\n                      >\n                      \u003Csvg\n                        width=\"1em\"\n                        height=\"1em\"\n                        viewBox=\"0 0 16 16\"\n                        class=\"bi bi-arrow-right-short\"\n                        fill=\"currentColor\"\n                        xmlns=\"http://www.w3.org/2000/svg\"\n                      >\n                        \u003Cpath\n                          fill-rule=\"evenodd\"\n                          d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                        >\u003C/path>\n                      \u003C/svg>\n                      \u003Ca\n                        href=\"#consent_providers_items_base_url\"\n                        onclick=\"anchorLink('consent_providers_items_base_url')\"\n                        >base_url\u003C/a\n                      >\n                    \u003C/div>\n                    \u003Cspan class=\"badge badge-dark value-type\">Type: string\u003C/span\n                    >\u003Cspan class=\"badge badge-info value-type\">Format: uri\u003C/span>\u003Cbr />\n                    \u003Cspan class=\"description\"\n                      >\u003Cp>\n                        Base URL for the consent provider. Appending\n                        \u003Ccode>/.well-known/dataspace/consent-configuration.json\u003C/code> will give the\n                        full URL to the consent configuration.\n                      \u003C/p>\n                    \u003C/span>\n                    \u003Cp>\n                      \u003Cspan\n                        class=\"badge badge-light restriction min-length-restriction\"\n                        id=\"consent_providers_items_base_url_minLength\"\n                        >Must be at least \u003Ccode>1\u003C/code> characters long\u003C/span\n                      >\n                    \u003C/p>\n                    \u003Cp>\n                      \u003Cspan\n                        class=\"badge badge-light restriction max-length-restriction\"\n                        id=\"consent_providers_items_base_url_maxLength\"\n                        >Must be at most \u003Ccode>2083\u003C/code> characters long\u003C/span\n                      >\n                    \u003C/p>\n                    \u003Cbr />\n                    \u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n                    \u003Cbr />\n                    \u003Cdiv id=\"consent_providers_items_base_url_ex1\" class=\"jumbotron examples\">\n                      \u003Cdiv class=\"highlight\">\n                        \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"s2\">\"https://consent.sandbox.ioxio-dataspace.com\"\u003C/span>\n\u003C/pre>\n                      \u003C/div>\n                    \u003C/div>\n                  \u003C/div>\n                \u003C/div>\n              \u003C/div>\n            \u003C/div>\n          \u003C/div>\n        \u003C/div>\n      \u003C/div>\n    \u003C/div>\n  \u003C/div>\n\u003C/div>\n\u003Cdiv class=\"accordion\" id=\"accordiondefinitions\">\n  \u003Cdiv class=\"card\">\n    \u003Cdiv class=\"card-header\" id=\"headingdefinitions\">\n      \u003Ch2 class=\"mb-0\">\n        \u003Cbutton\n          class=\"btn btn-link property-name-button\"\n          type=\"button\"\n          data-toggle=\"collapse\"\n          data-target=\"#definitions\"\n          aria-expanded=\"\"\n          aria-controls=\"definitions\"\n          onclick=\"setAnchor('#definitions')\"\n        >\n          \u003Cspan class=\"property-name\">definitions\u003C/span>\n          \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n        \u003C/button>\n      \u003C/h2>\n    \u003C/div>\n    \u003Cdiv\n      id=\"definitions\"\n      class=\"collapse property-definition-div\"\n      aria-labelledby=\"headingdefinitions\"\n      data-parent=\"#accordiondefinitions\"\n    >\n      \u003Cdiv class=\"card-body pl-5\">\n        \u003Cdiv class=\"breadcrumbs\">\n          root\n          \u003Csvg\n            width=\"1em\"\n            height=\"1em\"\n            viewBox=\"0 0 16 16\"\n            class=\"bi bi-arrow-right-short\"\n            fill=\"currentColor\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n          >\n            \u003Cpath\n              fill-rule=\"evenodd\"\n              d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n            >\u003C/path>\n          \u003C/svg>\n          \u003Ca href=\"#definitions\" onclick=\"anchorLink('definitions')\">definitions\u003C/a>\n        \u003C/div>\n        \u003Cspan class=\"badge badge-dark value-type\">Type: object\u003C/span>\u003Cbr />\n        \u003Cdiv class=\"accordion\" id=\"accordiondefinitions_git\">\n          \u003Cdiv class=\"card\">\n            \u003Cdiv class=\"card-header\" id=\"headingdefinitions_git\">\n              \u003Ch2 class=\"mb-0\">\n                \u003Cbutton\n                  class=\"btn btn-link property-name-button\"\n                  type=\"button\"\n                  data-toggle=\"collapse\"\n                  data-target=\"#definitions_git\"\n                  aria-expanded=\"\"\n                  aria-controls=\"definitions_git\"\n                  onclick=\"setAnchor('#definitions_git')\"\n                >\n                  \u003Cspan class=\"property-name\">git\u003C/span>\n                  \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n                \u003C/button>\n              \u003C/h2>\n            \u003C/div>\n            \u003Cdiv\n              id=\"definitions_git\"\n              class=\"collapse property-definition-div\"\n              aria-labelledby=\"headingdefinitions_git\"\n              data-parent=\"#accordiondefinitions_git\"\n            >\n              \u003Cdiv class=\"card-body pl-5\">\n                \u003Cdiv class=\"breadcrumbs\">\n                  root\n                  \u003Csvg\n                    width=\"1em\"\n                    height=\"1em\"\n                    viewBox=\"0 0 16 16\"\n                    class=\"bi bi-arrow-right-short\"\n                    fill=\"currentColor\"\n                    xmlns=\"http://www.w3.org/2000/svg\"\n                  >\n                    \u003Cpath\n                      fill-rule=\"evenodd\"\n                      d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                    >\u003C/path>\n                  \u003C/svg>\n                  \u003Ca href=\"#definitions\" onclick=\"anchorLink('definitions')\">definitions\u003C/a>\n                  \u003Csvg\n                    width=\"1em\"\n                    height=\"1em\"\n                    viewBox=\"0 0 16 16\"\n                    class=\"bi bi-arrow-right-short\"\n                    fill=\"currentColor\"\n                    xmlns=\"http://www.w3.org/2000/svg\"\n                  >\n                    \u003Cpath\n                      fill-rule=\"evenodd\"\n                      d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                    >\u003C/path>\n                  \u003C/svg>\n                  \u003Ca href=\"#definitions_git\" onclick=\"anchorLink('definitions_git')\">git\u003C/a>\n                \u003C/div>\n                \u003Cspan class=\"badge badge-dark value-type\">Type: string\u003C/span\n                >\u003Cspan class=\"badge badge-info value-type\">Format: uri\u003C/span>\u003Cbr />\n                \u003Cspan class=\"description\"\n                  >\u003Cp>The URL to the git repository of the definitions used on the dataspace.\u003C/p>\n                \u003C/span>\n                \u003Cp>\n                  \u003Cspan\n                    class=\"badge badge-light restriction min-length-restriction\"\n                    id=\"definitions_git_minLength\"\n                    >Must be at least \u003Ccode>1\u003C/code> characters long\u003C/span\n                  >\n                \u003C/p>\n                \u003Cp>\n                  \u003Cspan\n                    class=\"badge badge-light restriction max-length-restriction\"\n                    id=\"definitions_git_maxLength\"\n                    >Must be at most \u003Ccode>2083\u003C/code> characters long\u003C/span\n                  >\n                \u003C/p>\n                \u003Cbr />\n                \u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n                \u003Cbr />\n                \u003Cdiv id=\"definitions_git_ex1\" class=\"jumbotron examples\">\n                  \u003Cdiv class=\"highlight\">\n                    \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"s2\">\"https://github.com/ioxio-dataspace/sandbox-definitions.git\"\u003C/span>\n\u003C/pre>\n                  \u003C/div>\n                \u003C/div>\n              \u003C/div>\n            \u003C/div>\n          \u003C/div>\n        \u003C/div>\n        \u003Cdiv class=\"accordion\" id=\"accordiondefinitions_web\">\n          \u003Cdiv class=\"card\">\n            \u003Cdiv class=\"card-header\" id=\"headingdefinitions_web\">\n              \u003Ch2 class=\"mb-0\">\n                \u003Cbutton\n                  class=\"btn btn-link property-name-button\"\n                  type=\"button\"\n                  data-toggle=\"collapse\"\n                  data-target=\"#definitions_web\"\n                  aria-expanded=\"\"\n                  aria-controls=\"definitions_web\"\n                  onclick=\"setAnchor('#definitions_web')\"\n                >\n                  \u003Cspan class=\"property-name\">web\u003C/span>\n                  \u003Cspan class=\"badge badge-warning required-property\">Required\u003C/span>\n                \u003C/button>\n              \u003C/h2>\n            \u003C/div>\n            \u003Cdiv\n              id=\"definitions_web\"\n              class=\"collapse property-definition-div\"\n              aria-labelledby=\"headingdefinitions_web\"\n              data-parent=\"#accordiondefinitions_web\"\n            >\n              \u003Cdiv class=\"card-body pl-5\">\n                \u003Cdiv class=\"breadcrumbs\">\n                  root\n                  \u003Csvg\n                    width=\"1em\"\n                    height=\"1em\"\n                    viewBox=\"0 0 16 16\"\n                    class=\"bi bi-arrow-right-short\"\n                    fill=\"currentColor\"\n                    xmlns=\"http://www.w3.org/2000/svg\"\n                  >\n                    \u003Cpath\n                      fill-rule=\"evenodd\"\n                      d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                    >\u003C/path>\n                  \u003C/svg>\n                  \u003Ca href=\"#definitions\" onclick=\"anchorLink('definitions')\">definitions\u003C/a>\n                  \u003Csvg\n                    width=\"1em\"\n                    height=\"1em\"\n                    viewBox=\"0 0 16 16\"\n                    class=\"bi bi-arrow-right-short\"\n                    fill=\"currentColor\"\n                    xmlns=\"http://www.w3.org/2000/svg\"\n                  >\n                    \u003Cpath\n                      fill-rule=\"evenodd\"\n                      d=\"M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z\"\n                    >\u003C/path>\n                  \u003C/svg>\n                  \u003Ca href=\"#definitions_web\" onclick=\"anchorLink('definitions_web')\">web\u003C/a>\n                \u003C/div>\n                \u003Cspan class=\"badge badge-dark value-type\">Type: string\u003C/span\n                >\u003Cspan class=\"badge badge-info value-type\">Format: uri\u003C/span>\u003Cbr />\n                \u003Cspan class=\"description\"\n                  >\u003Cp>\n                    The URL to a human friendly view of the definitions git repository used on the\n                    dataspace.\n                  \u003C/p>\n                \u003C/span>\n                \u003Cp>\n                  \u003Cspan\n                    class=\"badge badge-light restriction min-length-restriction\"\n                    id=\"definitions_web_minLength\"\n                    >Must be at least \u003Ccode>1\u003C/code> characters long\u003C/span\n                  >\n                \u003C/p>\n                \u003Cp>\n                  \u003Cspan\n                    class=\"badge badge-light restriction max-length-restriction\"\n                    id=\"definitions_web_maxLength\"\n                    >Must be at most \u003Ccode>2083\u003C/code> characters long\u003C/span\n                  >\n                \u003C/p>\n                \u003Cbr />\n                \u003Cdiv class=\"badge badge-secondary\">Example:\u003C/div>\n                \u003Cbr />\n                \u003Cdiv id=\"definitions_web_ex1\" class=\"jumbotron examples\">\n                  \u003Cdiv class=\"highlight\">\n                    \u003Cpre>\u003Cspan>\u003C/span>\u003Cspan class=\"s2\">\"https://github.com/ioxio-dataspace/sandbox-definitions\"\u003C/span>\n\u003C/pre>\n                  \u003C/div>\n                \u003C/div>\n              \u003C/div>\n            \u003C/div>\n          \u003C/div>\n        \u003C/div>\n      \u003C/div>\n    \u003C/div>\n  \u003C/div>\n\u003C/div>\n",path:"/schemas/dataspace-configuration/",route:"/schemas/[schema]"},"uses":{"params":["schema"],"route":1,"url":1}}];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.4d508623.js"),
+						import("../../_app/immutable/entry/app.6aaf801a.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 20],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
